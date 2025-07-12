@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_QuanLyCuaHang
 {
-    partial class NhanVien
+    public class NhanVien
     {
         public string MaVN {  get; set; }
         public string TenNV {  get; set; }
