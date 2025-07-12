@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "E+nQPz1gPVI=",
+  "success": true,
+  "projectFilePath": "D:\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

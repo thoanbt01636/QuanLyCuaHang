@@ -1,0 +1,15 @@
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\bin\Debug\net8.0\DAL_QuanLyCuaHang.deps.json
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\bin\Debug\net8.0\DAL_QuanLyCuaHang.dll
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\bin\Debug\net8.0\DAL_QuanLyCuaHang.pdb
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\bin\Debug\net8.0\DTO_QuanLyCuaHang.dll
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\bin\Debug\net8.0\DTO_QuanLyCuaHang.pdb
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\obj\Debug\net8.0\DAL_QuanLyCuaHang.csproj.AssemblyReference.cache
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\obj\Debug\net8.0\DAL_QuanLyCuaHang.GeneratedMSBuildEditorConfig.editorconfig
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\obj\Debug\net8.0\DAL_QuanLyCuaHang.AssemblyInfoInputs.cache
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\obj\Debug\net8.0\DAL_QuanLyCuaHang.AssemblyInfo.cs
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\obj\Debug\net8.0\DAL_QuanLyCuaHang.csproj.CoreCompileInputs.cache
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\obj\Debug\net8.0\DAL_Quan.69E57157.Up2Date
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\obj\Debug\net8.0\DAL_QuanLyCuaHang.dll
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\obj\Debug\net8.0\refint\DAL_QuanLyCuaHang.dll
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\obj\Debug\net8.0\DAL_QuanLyCuaHang.pdb
+D:\QuanLyCuaHang\DAL_QuanLyCuaHang\obj\Debug\net8.0\ref\DAL_QuanLyCuaHang.dll
