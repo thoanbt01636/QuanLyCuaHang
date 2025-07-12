@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\QuanLyCuaHang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\quanlycuahang\\gui_quanlycuahang\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\quanlycuahang\\gui_quanlycuahang\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -43,31 +39,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmmain.Designer.cs",
-              "DocumentMoniker": "D:\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmmain.Designer.cs",
-              "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmmain.Designer.cs",
-              "ToolTip": "D:\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmmain.Designer.cs*",
-              "RelativeToolTip": "GUI_QuanLyCuaHang\\frmmain.Designer.cs*",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAswIQAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T06:44:47.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "frmmain.cs [Design]",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmmain.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmmain.cs",
               "ToolTip": "D:\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmmain.cs [Design]",
               "RelativeToolTip": "GUI_QuanLyCuaHang\\frmmain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T06:44:45.367Z",
+              "WhenOpened": "2025-07-12T06:45:19.147Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\Form1.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\Form1.cs",
@@ -79,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\Class1.cs",
               "RelativeDocumentMoniker": "DTO_QuanLyCuaHang\\Class1.cs",
