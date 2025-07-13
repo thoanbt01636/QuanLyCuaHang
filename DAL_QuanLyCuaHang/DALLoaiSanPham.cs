@@ -34,9 +34,9 @@ namespace DAL_QuanLyCuaHang
                         }
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    throw new Exception("Error executing SQL query: " + ex.Message, ex);
+                    throw;
                 }
 
                 return list;
@@ -66,8 +66,6 @@ namespace DAL_QuanLyCuaHang
             { "@0", $"{prefix}%" }
         };
 
-                try
-                {
                     var result = DBUtil.ScalarQuery(sql, parameters.Values.ToList());
                     if (result != null && result != DBNull.Value && result.ToString().StartsWith(prefix))
                     {
@@ -76,11 +74,6 @@ namespace DAL_QuanLyCuaHang
                         return $"{prefix}{(number + 1):D3}";
                     }
                     return $"{prefix}001";
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception("Error generating new product category code: " + ex.Message, ex);
-                }
             }
 
             public int Insert(LoaiSanPham loaiSP)
@@ -99,9 +92,9 @@ namespace DAL_QuanLyCuaHang
                     DBUtil.Update(sql, parameters.Values.ToList());
                     return 1;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    throw new Exception("Error inserting product category: " + ex.Message, ex);
+                    throw;
                 }
             }
 
@@ -122,9 +115,9 @@ namespace DAL_QuanLyCuaHang
                     DBUtil.Update(sql, parameters.Values.ToList());
                     return 1;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    throw new Exception("Error updating product category: " + ex.Message, ex);
+                    throw;
                 }
             }
 
@@ -138,9 +131,9 @@ namespace DAL_QuanLyCuaHang
                     DBUtil.Update(sql, parameters.Values.ToList());
                     return 1;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    throw new Exception("Error deleting product category: " + ex.Message, ex);
+                    throw;
                 }
             }
         }
