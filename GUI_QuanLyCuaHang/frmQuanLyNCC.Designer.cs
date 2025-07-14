@@ -99,8 +99,6 @@
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            btntimkiem = new Guna.UI2.WinForms.Guna2ImageButton();
-            txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             panel2 = new Panel();
             guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
@@ -558,9 +556,7 @@
             guna2Panel3.BackColor = Color.FromArgb(255, 237, 168);
             guna2Panel3.Controls.Add(guna2ImageButton1);
             guna2Panel3.Controls.Add(guna2TextBox1);
-            guna2Panel3.Controls.Add(btntimkiem);
             guna2Panel3.Controls.Add(lblQLNV);
-            guna2Panel3.Controls.Add(txtTimKiem);
             guna2Panel3.CustomizableEdges = customizableEdges39;
             guna2Panel3.Dock = DockStyle.Top;
             guna2Panel3.Location = new Point(0, 0);
@@ -608,45 +604,6 @@
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges35;
             guna2TextBox1.Size = new Size(382, 45);
             guna2TextBox1.TabIndex = 79;
-            // 
-            // btntimkiem
-            // 
-            btntimkiem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btntimkiem.BackColor = Color.White;
-            btntimkiem.CheckedState.ImageSize = new Size(64, 64);
-            btntimkiem.HoverState.ImageSize = new Size(64, 64);
-            btntimkiem.Image = (Image)resources.GetObject("btntimkiem.Image");
-            btntimkiem.ImageOffset = new Point(0, 0);
-            btntimkiem.ImageRotate = 0F;
-            btntimkiem.ImageSize = new Size(45, 45);
-            btntimkiem.Location = new Point(2974, 37);
-            btntimkiem.Name = "btntimkiem";
-            btntimkiem.PressedState.ImageSize = new Size(64, 64);
-            btntimkiem.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            btntimkiem.Size = new Size(46, 45);
-            btntimkiem.TabIndex = 78;
-            // 
-            // txtTimKiem
-            // 
-            txtTimKiem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtTimKiem.CustomizableEdges = customizableEdges37;
-            txtTimKiem.DefaultText = "";
-            txtTimKiem.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtTimKiem.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtTimKiem.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtTimKiem.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtTimKiem.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTimKiem.Font = new Font("Segoe UI", 9F);
-            txtTimKiem.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTimKiem.Location = new Point(2638, 37);
-            txtTimKiem.Margin = new Padding(3, 4, 3, 4);
-            txtTimKiem.Name = "txtTimKiem";
-            txtTimKiem.PasswordChar = '\0';
-            txtTimKiem.PlaceholderText = "";
-            txtTimKiem.SelectedText = "";
-            txtTimKiem.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            txtTimKiem.Size = new Size(382, 45);
-            txtTimKiem.TabIndex = 14;
             // 
             // panel2
             // 
@@ -698,8 +655,6 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblQLNV;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2ImageButton btntimkiem;
-        private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
         private Panel panel2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
