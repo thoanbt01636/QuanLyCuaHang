@@ -102,12 +102,12 @@ namespace GUI_QuanLyThuVien
             txtmk = new Guna2TextBox();
             guna2HtmlLabel7 = new Guna2HtmlLabel();
             guna2HtmlLabel9 = new Guna2HtmlLabel();
+            guna2GroupBox1 = new Guna2GroupBox();
             guna2GroupBox3 = new Guna2GroupBox();
             guna2HtmlLabel6 = new Guna2HtmlLabel();
             guna2RadioButton3 = new Guna2RadioButton();
             guna2RadioButton4 = new Guna2RadioButton();
             guna2DateTimePicker1 = new Guna2DateTimePicker();
-            guna2GroupBox1 = new Guna2GroupBox();
             guna2GradientButton5 = new Guna2GradientButton();
             guna2GradientButton6 = new Guna2GradientButton();
             guna2GradientButton7 = new Guna2GradientButton();
@@ -122,8 +122,8 @@ namespace GUI_QuanLyThuVien
             guna2GradientPanel2.SuspendLayout();
             guna2Panel3.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
-            guna2GroupBox3.SuspendLayout();
             guna2GroupBox1.SuspendLayout();
+            guna2GroupBox3.SuspendLayout();
             panel2.SuspendLayout();
             guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
@@ -140,7 +140,7 @@ namespace GUI_QuanLyThuVien
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 9F);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(2734, 26);
+            guna2TextBox1.Location = new Point(1970, 26);
             guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
@@ -163,10 +163,10 @@ namespace GUI_QuanLyThuVien
             guna2GradientButton1.FillColor2 = Color.FromArgb(0, 192, 0);
             guna2GradientButton1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientButton1.ForeColor = Color.White;
-            guna2GradientButton1.Location = new Point(456, 1058);
+            guna2GradientButton1.Location = new Point(489, 1152);
             guna2GradientButton1.Name = "guna2GradientButton1";
             guna2GradientButton1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2GradientButton1.Size = new Size(200, 55);
+            guna2GradientButton1.Size = new Size(225, 55);
             guna2GradientButton1.TabIndex = 129;
             guna2GradientButton1.Text = "Làm Mới";
             // 
@@ -183,10 +183,10 @@ namespace GUI_QuanLyThuVien
             guna2GradientButton2.FillColor2 = Color.FromArgb(0, 192, 0);
             guna2GradientButton2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientButton2.ForeColor = Color.White;
-            guna2GradientButton2.Location = new Point(170, 1145);
+            guna2GradientButton2.Location = new Point(167, 1239);
             guna2GradientButton2.Name = "guna2GradientButton2";
             guna2GradientButton2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2GradientButton2.Size = new Size(200, 55);
+            guna2GradientButton2.Size = new Size(225, 55);
             guna2GradientButton2.TabIndex = 127;
             guna2GradientButton2.Text = "Cập Nhật";
             // 
@@ -203,10 +203,10 @@ namespace GUI_QuanLyThuVien
             guna2GradientButton3.FillColor2 = Color.FromArgb(0, 192, 0);
             guna2GradientButton3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientButton3.ForeColor = Color.White;
-            guna2GradientButton3.Location = new Point(456, 1145);
+            guna2GradientButton3.Location = new Point(489, 1239);
             guna2GradientButton3.Name = "guna2GradientButton3";
             guna2GradientButton3.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2GradientButton3.Size = new Size(200, 55);
+            guna2GradientButton3.Size = new Size(225, 55);
             guna2GradientButton3.TabIndex = 128;
             guna2GradientButton3.Text = "Xóa";
             // 
@@ -223,10 +223,10 @@ namespace GUI_QuanLyThuVien
             guna2GradientButton4.FillColor2 = Color.FromArgb(0, 192, 0);
             guna2GradientButton4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientButton4.ForeColor = Color.White;
-            guna2GradientButton4.Location = new Point(170, 1058);
+            guna2GradientButton4.Location = new Point(167, 1152);
             guna2GradientButton4.Name = "guna2GradientButton4";
             guna2GradientButton4.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2GradientButton4.Size = new Size(200, 55);
+            guna2GradientButton4.Size = new Size(225, 55);
             guna2GradientButton4.TabIndex = 126;
             guna2GradientButton4.Text = "Thêm";
             // 
@@ -239,16 +239,16 @@ namespace GUI_QuanLyThuVien
             guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            guna2TextBox3.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold);
             guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(199, 331);
-            guna2TextBox3.Margin = new Padding(4, 5, 4, 5);
+            guna2TextBox3.Location = new Point(169, 305);
+            guna2TextBox3.Margin = new Padding(6, 5, 6, 5);
             guna2TextBox3.Name = "guna2TextBox3";
             guna2TextBox3.PasswordChar = '\0';
             guna2TextBox3.PlaceholderText = "";
             guna2TextBox3.SelectedText = "";
             guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2TextBox3.Size = new Size(302, 31);
+            guna2TextBox3.Size = new Size(338, 31);
             guna2TextBox3.TabIndex = 124;
             // 
             // guna2TextBox6
@@ -260,16 +260,16 @@ namespace GUI_QuanLyThuVien
             guna2TextBox6.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox6.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox6.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            guna2TextBox6.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold);
             guna2TextBox6.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox6.Location = new Point(198, 223);
-            guna2TextBox6.Margin = new Padding(5);
+            guna2TextBox6.Location = new Point(169, 204);
+            guna2TextBox6.Margin = new Padding(7, 5, 7, 5);
             guna2TextBox6.Name = "guna2TextBox6";
             guna2TextBox6.PasswordChar = '\0';
             guna2TextBox6.PlaceholderText = "";
             guna2TextBox6.SelectedText = "";
             guna2TextBox6.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2TextBox6.Size = new Size(303, 31);
+            guna2TextBox6.Size = new Size(338, 31);
             guna2TextBox6.TabIndex = 123;
             // 
             // guna2TextBox7
@@ -281,16 +281,16 @@ namespace GUI_QuanLyThuVien
             guna2TextBox7.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox7.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox7.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            guna2TextBox7.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold);
             guna2TextBox7.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox7.Location = new Point(198, 119);
-            guna2TextBox7.Margin = new Padding(5);
+            guna2TextBox7.Location = new Point(169, 101);
+            guna2TextBox7.Margin = new Padding(7, 5, 7, 5);
             guna2TextBox7.Name = "guna2TextBox7";
             guna2TextBox7.PasswordChar = '\0';
             guna2TextBox7.PlaceholderText = "";
             guna2TextBox7.SelectedText = "";
             guna2TextBox7.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2TextBox7.Size = new Size(303, 31);
+            guna2TextBox7.Size = new Size(338, 31);
             guna2TextBox7.TabIndex = 122;
             // 
             // guna2TextBox8
@@ -302,16 +302,16 @@ namespace GUI_QuanLyThuVien
             guna2TextBox8.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox8.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox8.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            guna2TextBox8.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold);
             guna2TextBox8.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox8.Location = new Point(198, 59);
-            guna2TextBox8.Margin = new Padding(4, 5, 4, 5);
+            guna2TextBox8.Location = new Point(174, 55);
+            guna2TextBox8.Margin = new Padding(6, 5, 6, 5);
             guna2TextBox8.Name = "guna2TextBox8";
             guna2TextBox8.PasswordChar = '\0';
             guna2TextBox8.PlaceholderText = "";
             guna2TextBox8.SelectedText = "";
             guna2TextBox8.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2TextBox8.Size = new Size(302, 31);
+            guna2TextBox8.Size = new Size(333, 31);
             guna2TextBox8.TabIndex = 121;
             // 
             // guna2ImageButton1
@@ -324,11 +324,12 @@ namespace GUI_QuanLyThuVien
             guna2ImageButton1.ImageOffset = new Point(0, 0);
             guna2ImageButton1.ImageRotate = 0F;
             guna2ImageButton1.ImageSize = new Size(45, 45);
-            guna2ImageButton1.Location = new Point(3070, 26);
+            guna2ImageButton1.Location = new Point(4121, 32);
+            guna2ImageButton1.Margin = new Padding(4, 4, 4, 4);
             guna2ImageButton1.Name = "guna2ImageButton1";
             guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
             guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            guna2ImageButton1.Size = new Size(46, 45);
+            guna2ImageButton1.Size = new Size(75, 56);
             guna2ImageButton1.TabIndex = 80;
             // 
             // guna2RadioButton2
@@ -339,10 +340,10 @@ namespace GUI_QuanLyThuVien
             guna2RadioButton2.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             guna2RadioButton2.CheckedState.InnerColor = Color.White;
             guna2RadioButton2.CheckedState.InnerOffset = -4;
-            guna2RadioButton2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            guna2RadioButton2.Font = new Font("Microsoft Sans Serif", 10.2F);
             guna2RadioButton2.Location = new Point(304, 47);
             guna2RadioButton2.Name = "guna2RadioButton2";
-            guna2RadioButton2.Size = new Size(192, 32);
+            guna2RadioButton2.Size = new Size(154, 24);
             guna2RadioButton2.TabIndex = 120;
             guna2RadioButton2.Text = "Đang Hoạt Động";
             guna2RadioButton2.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -358,10 +359,10 @@ namespace GUI_QuanLyThuVien
             guna2RadioButton1.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             guna2RadioButton1.CheckedState.InnerColor = Color.White;
             guna2RadioButton1.CheckedState.InnerOffset = -4;
-            guna2RadioButton1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            guna2RadioButton1.Font = new Font("Microsoft Sans Serif", 10.2F);
             guna2RadioButton1.Location = new Point(138, 47);
             guna2RadioButton1.Name = "guna2RadioButton1";
-            guna2RadioButton1.Size = new Size(145, 32);
+            guna2RadioButton1.Size = new Size(116, 24);
             guna2RadioButton1.TabIndex = 119;
             guna2RadioButton1.Text = "Tạm Ngưng";
             guna2RadioButton1.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -372,7 +373,7 @@ namespace GUI_QuanLyThuVien
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            guna2HtmlLabel1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.Location = new Point(10, 47);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(109, 27);
@@ -386,7 +387,7 @@ namespace GUI_QuanLyThuVien
             guna2DataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -396,18 +397,19 @@ namespace GUI_QuanLyThuVien
             guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(3, 3);
+            guna2DataGridView1.Location = new Point(4, 8);
+            guna2DataGridView1.Margin = new Padding(4, 4, 4, 4);
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.Size = new Size(1132, 780);
+            guna2DataGridView1.Size = new Size(1278, 869);
             guna2DataGridView1.TabIndex = 0;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -445,10 +447,10 @@ namespace GUI_QuanLyThuVien
             btnlamoi.FillColor2 = Color.FromArgb(0, 192, 0);
             btnlamoi.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnlamoi.ForeColor = Color.White;
-            btnlamoi.Location = new Point(574, 1462);
+            btnlamoi.Location = new Point(622, 1556);
             btnlamoi.Name = "btnlamoi";
             btnlamoi.ShadowDecoration.CustomizableEdges = customizableEdges21;
-            btnlamoi.Size = new Size(200, 55);
+            btnlamoi.Size = new Size(225, 55);
             btnlamoi.TabIndex = 105;
             btnlamoi.Text = "Làm Mới";
             // 
@@ -465,10 +467,10 @@ namespace GUI_QuanLyThuVien
             btncapnhat.FillColor2 = Color.FromArgb(0, 192, 0);
             btncapnhat.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btncapnhat.ForeColor = Color.White;
-            btncapnhat.Location = new Point(288, 1549);
+            btncapnhat.Location = new Point(300, 1643);
             btncapnhat.Name = "btncapnhat";
             btncapnhat.ShadowDecoration.CustomizableEdges = customizableEdges23;
-            btncapnhat.Size = new Size(200, 55);
+            btncapnhat.Size = new Size(225, 55);
             btncapnhat.TabIndex = 103;
             btncapnhat.Text = "Cập Nhật";
             // 
@@ -485,10 +487,10 @@ namespace GUI_QuanLyThuVien
             btnxoa.FillColor2 = Color.FromArgb(0, 192, 0);
             btnxoa.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnxoa.ForeColor = Color.White;
-            btnxoa.Location = new Point(574, 1549);
+            btnxoa.Location = new Point(622, 1643);
             btnxoa.Name = "btnxoa";
             btnxoa.ShadowDecoration.CustomizableEdges = customizableEdges25;
-            btnxoa.Size = new Size(200, 55);
+            btnxoa.Size = new Size(225, 55);
             btnxoa.TabIndex = 104;
             btnxoa.Text = "Xóa";
             // 
@@ -505,10 +507,10 @@ namespace GUI_QuanLyThuVien
             btnthem1111.FillColor2 = Color.FromArgb(0, 192, 0);
             btnthem1111.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnthem1111.ForeColor = Color.White;
-            btnthem1111.Location = new Point(288, 1462);
+            btnthem1111.Location = new Point(300, 1556);
             btnthem1111.Name = "btnthem1111";
             btnthem1111.ShadowDecoration.CustomizableEdges = customizableEdges27;
-            btnthem1111.Size = new Size(200, 55);
+            btnthem1111.Size = new Size(225, 55);
             btnthem1111.TabIndex = 102;
             btnthem1111.Text = "Thêm";
             // 
@@ -517,10 +519,11 @@ namespace GUI_QuanLyThuVien
             guna2GradientPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2GradientPanel2.Controls.Add(guna2DataGridView1);
             guna2GradientPanel2.CustomizableEdges = customizableEdges28;
-            guna2GradientPanel2.Location = new Point(580, 101);
+            guna2GradientPanel2.Location = new Point(607, 126);
+            guna2GradientPanel2.Margin = new Padding(4, 4, 4, 4);
             guna2GradientPanel2.Name = "guna2GradientPanel2";
             guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges29;
-            guna2GradientPanel2.Size = new Size(1135, 786);
+            guna2GradientPanel2.Size = new Size(1311, 876);
             guna2GradientPanel2.TabIndex = 121;
             // 
             // guna2Panel3
@@ -535,10 +538,10 @@ namespace GUI_QuanLyThuVien
             guna2Panel3.CustomizableEdges = customizableEdges33;
             guna2Panel3.Dock = DockStyle.Top;
             guna2Panel3.Location = new Point(0, 0);
-            guna2Panel3.Margin = new Padding(3, 5, 3, 5);
+            guna2Panel3.Margin = new Padding(4, 6, 4, 6);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            guna2Panel3.Size = new Size(1718, 99);
+            guna2Panel3.Size = new Size(1924, 124);
             guna2Panel3.TabIndex = 103;
             // 
             // bttntimkiem
@@ -551,11 +554,12 @@ namespace GUI_QuanLyThuVien
             bttntimkiem.ImageOffset = new Point(0, 0);
             bttntimkiem.ImageRotate = 0F;
             bttntimkiem.ImageSize = new Size(45, 45);
-            bttntimkiem.Location = new Point(1635, 26);
+            bttntimkiem.Location = new Point(1789, 32);
+            bttntimkiem.Margin = new Padding(4, 4, 4, 4);
             bttntimkiem.Name = "bttntimkiem";
             bttntimkiem.PressedState.ImageSize = new Size(64, 64);
             bttntimkiem.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            bttntimkiem.Size = new Size(46, 45);
+            bttntimkiem.Size = new Size(75, 56);
             bttntimkiem.TabIndex = 82;
             // 
             // guna2TextBox4
@@ -570,7 +574,7 @@ namespace GUI_QuanLyThuVien
             guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox4.Font = new Font("Segoe UI", 9F);
             guna2TextBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Location = new Point(1299, 26);
+            guna2TextBox4.Location = new Point(535, 26);
             guna2TextBox4.Margin = new Padding(3, 4, 3, 4);
             guna2TextBox4.Name = "guna2TextBox4";
             guna2TextBox4.PasswordChar = '\0';
@@ -584,8 +588,8 @@ namespace GUI_QuanLyThuVien
             // 
             lblQLNV.BackColor = Color.Transparent;
             lblQLNV.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblQLNV.Location = new Point(23, 26);
-            lblQLNV.Margin = new Padding(3, 5, 3, 5);
+            lblQLNV.Location = new Point(38, 32);
+            lblQLNV.Margin = new Padding(4, 6, 4, 6);
             lblQLNV.Name = "lblQLNV";
             lblQLNV.Size = new Size(364, 56);
             lblQLNV.TabIndex = 77;
@@ -597,9 +601,9 @@ namespace GUI_QuanLyThuVien
             guna2GroupBox2.Controls.Add(txtmk);
             guna2GroupBox2.Controls.Add(guna2HtmlLabel7);
             guna2GroupBox2.Controls.Add(guna2HtmlLabel9);
+            guna2GroupBox2.Controls.Add(guna2GroupBox1);
             guna2GroupBox2.Controls.Add(guna2GroupBox3);
             guna2GroupBox2.Controls.Add(guna2DateTimePicker1);
-            guna2GroupBox2.Controls.Add(guna2GroupBox1);
             guna2GroupBox2.Controls.Add(guna2GradientButton5);
             guna2GroupBox2.Controls.Add(guna2GradientButton6);
             guna2GroupBox2.Controls.Add(guna2GradientButton7);
@@ -622,12 +626,12 @@ namespace GUI_QuanLyThuVien
             guna2GroupBox2.Controls.Add(btnthem1111);
             guna2GroupBox2.CustomBorderColor = Color.FromArgb(255, 237, 168);
             guna2GroupBox2.CustomizableEdges = customizableEdges51;
-            guna2GroupBox2.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox2.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
             guna2GroupBox2.ForeColor = Color.FromArgb(125, 137, 149);
             guna2GroupBox2.Location = new Point(3, 6);
             guna2GroupBox2.Name = "guna2GroupBox2";
             guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges52;
-            guna2GroupBox2.Size = new Size(568, 768);
+            guna2GroupBox2.Size = new Size(593, 862);
             guna2GroupBox2.TabIndex = 103;
             guna2GroupBox2.TabStop = false;
             guna2GroupBox2.Text = "Thông Tin Nhân Viên";
@@ -641,23 +645,23 @@ namespace GUI_QuanLyThuVien
             txtmk.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtmk.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtmk.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtmk.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            txtmk.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold);
             txtmk.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtmk.Location = new Point(198, 276);
-            txtmk.Margin = new Padding(5);
+            txtmk.Location = new Point(169, 254);
+            txtmk.Margin = new Padding(7, 5, 7, 5);
             txtmk.Name = "txtmk";
             txtmk.PasswordChar = '\0';
             txtmk.PlaceholderText = "";
             txtmk.SelectedText = "";
             txtmk.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            txtmk.Size = new Size(303, 31);
+            txtmk.Size = new Size(338, 31);
             txtmk.TabIndex = 137;
             // 
             // guna2HtmlLabel7
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            guna2HtmlLabel7.Location = new Point(20, 276);
+            guna2HtmlLabel7.Location = new Point(22, 263);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             guna2HtmlLabel7.Size = new Size(96, 27);
             guna2HtmlLabel7.TabIndex = 136;
@@ -667,11 +671,28 @@ namespace GUI_QuanLyThuVien
             // 
             guna2HtmlLabel9.BackColor = Color.Transparent;
             guna2HtmlLabel9.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            guna2HtmlLabel9.Location = new Point(19, 167);
+            guna2HtmlLabel9.Location = new Point(22, 155);
             guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             guna2HtmlLabel9.Size = new Size(97, 27);
             guna2HtmlLabel9.TabIndex = 108;
             guna2HtmlLabel9.Text = "Ngày Tạo";
+            // 
+            // guna2GroupBox1
+            // 
+            guna2GroupBox1.BorderColor = Color.White;
+            guna2GroupBox1.Controls.Add(guna2RadioButton1);
+            guna2GroupBox1.Controls.Add(guna2HtmlLabel1);
+            guna2GroupBox1.Controls.Add(guna2RadioButton2);
+            guna2GroupBox1.CustomBorderColor = Color.Gainsboro;
+            guna2GroupBox1.CustomizableEdges = customizableEdges37;
+            guna2GroupBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2GroupBox1.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox1.Location = new Point(22, 496);
+            guna2GroupBox1.Name = "guna2GroupBox1";
+            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            guna2GroupBox1.Size = new Size(514, 88);
+            guna2GroupBox1.TabIndex = 134;
+            guna2GroupBox1.Text = "Trạng Thái";
             // 
             // guna2GroupBox3
             // 
@@ -680,20 +701,20 @@ namespace GUI_QuanLyThuVien
             guna2GroupBox3.Controls.Add(guna2RadioButton3);
             guna2GroupBox3.Controls.Add(guna2RadioButton4);
             guna2GroupBox3.CustomBorderColor = Color.Gainsboro;
-            guna2GroupBox3.CustomizableEdges = customizableEdges37;
-            guna2GroupBox3.Font = new Font("Segoe UI", 9F);
+            guna2GroupBox3.CustomizableEdges = customizableEdges39;
+            guna2GroupBox3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GroupBox3.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2GroupBox3.Location = new Point(17, 370);
+            guna2GroupBox3.Location = new Point(22, 378);
             guna2GroupBox3.Name = "guna2GroupBox3";
-            guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            guna2GroupBox3.Size = new Size(514, 88);
+            guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            guna2GroupBox3.Size = new Size(514, 89);
             guna2GroupBox3.TabIndex = 135;
             guna2GroupBox3.Text = "Chức Vụ";
             // 
             // guna2HtmlLabel6
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
-            guna2HtmlLabel6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            guna2HtmlLabel6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel6.Location = new Point(16, 52);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             guna2HtmlLabel6.Size = new Size(74, 27);
@@ -708,10 +729,10 @@ namespace GUI_QuanLyThuVien
             guna2RadioButton3.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             guna2RadioButton3.CheckedState.InnerColor = Color.White;
             guna2RadioButton3.CheckedState.InnerOffset = -4;
-            guna2RadioButton3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            guna2RadioButton3.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold);
             guna2RadioButton3.Location = new Point(138, 47);
             guna2RadioButton3.Name = "guna2RadioButton3";
-            guna2RadioButton3.Size = new Size(109, 32);
+            guna2RadioButton3.Size = new Size(100, 24);
             guna2RadioButton3.TabIndex = 119;
             guna2RadioButton3.Text = "Quản Lý";
             guna2RadioButton3.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -727,10 +748,10 @@ namespace GUI_QuanLyThuVien
             guna2RadioButton4.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             guna2RadioButton4.CheckedState.InnerColor = Color.White;
             guna2RadioButton4.CheckedState.InnerOffset = -4;
-            guna2RadioButton4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            guna2RadioButton4.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold);
             guna2RadioButton4.Location = new Point(304, 47);
             guna2RadioButton4.Name = "guna2RadioButton4";
-            guna2RadioButton4.Size = new Size(132, 32);
+            guna2RadioButton4.Size = new Size(116, 24);
             guna2RadioButton4.TabIndex = 120;
             guna2RadioButton4.Text = "Nhân Viên";
             guna2RadioButton4.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -741,35 +762,18 @@ namespace GUI_QuanLyThuVien
             // guna2DateTimePicker1
             // 
             guna2DateTimePicker1.Checked = true;
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges39;
+            guna2DateTimePicker1.CustomizableEdges = customizableEdges41;
             guna2DateTimePicker1.FillColor = Color.White;
-            guna2DateTimePicker1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            guna2DateTimePicker1.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold);
             guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker1.Location = new Point(198, 169);
+            guna2DateTimePicker1.Location = new Point(174, 152);
             guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            guna2DateTimePicker1.Size = new Size(302, 25);
+            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            guna2DateTimePicker1.Size = new Size(333, 25);
             guna2DateTimePicker1.TabIndex = 111;
             guna2DateTimePicker1.Value = new DateTime(2025, 5, 23, 11, 43, 28, 343);
-            // 
-            // guna2GroupBox1
-            // 
-            guna2GroupBox1.BorderColor = Color.White;
-            guna2GroupBox1.Controls.Add(guna2RadioButton1);
-            guna2GroupBox1.Controls.Add(guna2HtmlLabel1);
-            guna2GroupBox1.Controls.Add(guna2RadioButton2);
-            guna2GroupBox1.CustomBorderColor = Color.Gainsboro;
-            guna2GroupBox1.CustomizableEdges = customizableEdges41;
-            guna2GroupBox1.Font = new Font("Segoe UI", 9F);
-            guna2GroupBox1.ForeColor = Color.FromArgb(125, 137, 149);
-            guna2GroupBox1.Location = new Point(20, 464);
-            guna2GroupBox1.Name = "guna2GroupBox1";
-            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges42;
-            guna2GroupBox1.Size = new Size(514, 88);
-            guna2GroupBox1.TabIndex = 134;
-            guna2GroupBox1.Text = "Trạng Thái";
             // 
             // guna2GradientButton5
             // 
@@ -782,12 +786,12 @@ namespace GUI_QuanLyThuVien
             guna2GradientButton5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2GradientButton5.FillColor = Color.FromArgb(0, 192, 0);
             guna2GradientButton5.FillColor2 = Color.FromArgb(0, 192, 0);
-            guna2GradientButton5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2GradientButton5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientButton5.ForeColor = Color.White;
-            guna2GradientButton5.Location = new Point(316, 605);
+            guna2GradientButton5.Location = new Point(311, 786);
             guna2GradientButton5.Name = "guna2GradientButton5";
             guna2GradientButton5.ShadowDecoration.CustomizableEdges = customizableEdges44;
-            guna2GradientButton5.Size = new Size(200, 55);
+            guna2GradientButton5.Size = new Size(196, 55);
             guna2GradientButton5.TabIndex = 133;
             guna2GradientButton5.Text = "Làm Mới";
             // 
@@ -802,12 +806,12 @@ namespace GUI_QuanLyThuVien
             guna2GradientButton6.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2GradientButton6.FillColor = Color.FromArgb(0, 192, 0);
             guna2GradientButton6.FillColor2 = Color.FromArgb(0, 192, 0);
-            guna2GradientButton6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2GradientButton6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientButton6.ForeColor = Color.White;
-            guna2GradientButton6.Location = new Point(30, 692);
+            guna2GradientButton6.Location = new Point(10, 786);
             guna2GradientButton6.Name = "guna2GradientButton6";
             guna2GradientButton6.ShadowDecoration.CustomizableEdges = customizableEdges46;
-            guna2GradientButton6.Size = new Size(200, 55);
+            guna2GradientButton6.Size = new Size(196, 55);
             guna2GradientButton6.TabIndex = 131;
             guna2GradientButton6.Text = "Cập Nhật";
             // 
@@ -822,12 +826,12 @@ namespace GUI_QuanLyThuVien
             guna2GradientButton7.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2GradientButton7.FillColor = Color.FromArgb(0, 192, 0);
             guna2GradientButton7.FillColor2 = Color.FromArgb(0, 192, 0);
-            guna2GradientButton7.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2GradientButton7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientButton7.ForeColor = Color.White;
-            guna2GradientButton7.Location = new Point(316, 692);
+            guna2GradientButton7.Location = new Point(311, 699);
             guna2GradientButton7.Name = "guna2GradientButton7";
             guna2GradientButton7.ShadowDecoration.CustomizableEdges = customizableEdges48;
-            guna2GradientButton7.Size = new Size(200, 55);
+            guna2GradientButton7.Size = new Size(196, 55);
             guna2GradientButton7.TabIndex = 132;
             guna2GradientButton7.Text = "Xóa";
             // 
@@ -842,12 +846,12 @@ namespace GUI_QuanLyThuVien
             guna2GradientButton8.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2GradientButton8.FillColor = Color.FromArgb(0, 192, 0);
             guna2GradientButton8.FillColor2 = Color.FromArgb(0, 192, 0);
-            guna2GradientButton8.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2GradientButton8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientButton8.ForeColor = Color.White;
-            guna2GradientButton8.Location = new Point(30, 605);
+            guna2GradientButton8.Location = new Point(10, 699);
             guna2GradientButton8.Name = "guna2GradientButton8";
             guna2GradientButton8.ShadowDecoration.CustomizableEdges = customizableEdges50;
-            guna2GradientButton8.Size = new Size(200, 55);
+            guna2GradientButton8.Size = new Size(196, 55);
             guna2GradientButton8.TabIndex = 130;
             guna2GradientButton8.Text = "Thêm";
             // 
@@ -855,7 +859,7 @@ namespace GUI_QuanLyThuVien
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            guna2HtmlLabel5.Location = new Point(20, 333);
+            guna2HtmlLabel5.Location = new Point(19, 309);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(141, 27);
             guna2HtmlLabel5.TabIndex = 113;
@@ -865,7 +869,7 @@ namespace GUI_QuanLyThuVien
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            guna2HtmlLabel4.Location = new Point(20, 223);
+            guna2HtmlLabel4.Location = new Point(22, 213);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(56, 27);
             guna2HtmlLabel4.TabIndex = 112;
@@ -875,7 +879,7 @@ namespace GUI_QuanLyThuVien
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            guna2HtmlLabel3.Location = new Point(20, 119);
+            guna2HtmlLabel3.Location = new Point(22, 110);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(41, 27);
             guna2HtmlLabel3.TabIndex = 107;
@@ -885,7 +889,7 @@ namespace GUI_QuanLyThuVien
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            guna2HtmlLabel2.Location = new Point(20, 59);
+            guna2HtmlLabel2.Location = new Point(22, 59);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(140, 27);
             guna2HtmlLabel2.TabIndex = 106;
@@ -896,8 +900,9 @@ namespace GUI_QuanLyThuVien
             panel2.Controls.Add(guna2Panel3);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(4, 4, 4, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1718, 101);
+            panel2.Size = new Size(1924, 126);
             panel2.TabIndex = 119;
             // 
             // guna2CustomGradientPanel1
@@ -905,22 +910,24 @@ namespace GUI_QuanLyThuVien
             guna2CustomGradientPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             guna2CustomGradientPanel1.Controls.Add(guna2GroupBox2);
             guna2CustomGradientPanel1.CustomizableEdges = customizableEdges53;
-            guna2CustomGradientPanel1.Location = new Point(0, 101);
+            guna2CustomGradientPanel1.Location = new Point(0, 126);
+            guna2CustomGradientPanel1.Margin = new Padding(4, 4, 4, 4);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges54;
-            guna2CustomGradientPanel1.Size = new Size(574, 783);
+            guna2CustomGradientPanel1.Size = new Size(599, 876);
             guna2CustomGradientPanel1.TabIndex = 120;
             // 
             // frmQuanLyNhanVien
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1718, 887);
+            ClientSize = new Size(1924, 1006);
             Controls.Add(guna2GradientPanel2);
             Controls.Add(panel2);
             Controls.Add(guna2CustomGradientPanel1);
-            Margin = new Padding(5, 4, 5, 4);
+            Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            Margin = new Padding(9, 5, 9, 5);
             Name = "frmQuanLyNhanVien";
             Text = "Quản Lý Nhân Viên";
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
@@ -929,10 +936,10 @@ namespace GUI_QuanLyThuVien
             guna2Panel3.PerformLayout();
             guna2GroupBox2.ResumeLayout(false);
             guna2GroupBox2.PerformLayout();
-            guna2GroupBox3.ResumeLayout(false);
-            guna2GroupBox3.PerformLayout();
             guna2GroupBox1.ResumeLayout(false);
             guna2GroupBox1.PerformLayout();
+            guna2GroupBox3.ResumeLayout(false);
+            guna2GroupBox3.PerformLayout();
             panel2.ResumeLayout(false);
             guna2CustomGradientPanel1.ResumeLayout(false);
             ResumeLayout(false);
