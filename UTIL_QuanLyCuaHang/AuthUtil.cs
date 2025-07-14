@@ -15,7 +15,7 @@ namespace UTIL_QuanLyCuaHang
             {
                 return false;
             }
-            if (string.IsNullOrEmpty(User.MaVN))
+            if (string.IsNullOrEmpty(User.MaNV))
             {
                 return false;
             }

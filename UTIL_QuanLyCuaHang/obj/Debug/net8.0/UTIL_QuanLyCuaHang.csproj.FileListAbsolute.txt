@@ -13,3 +13,4 @@ D:\QuanLyCuaHang\UTIL_QuanLyCuaHang\obj\Debug\net8.0\UTIL_QuanLyCuaHang.dll
 D:\QuanLyCuaHang\UTIL_QuanLyCuaHang\obj\Debug\net8.0\refint\UTIL_QuanLyCuaHang.dll
 D:\QuanLyCuaHang\UTIL_QuanLyCuaHang\obj\Debug\net8.0\UTIL_QuanLyCuaHang.pdb
 D:\QuanLyCuaHang\UTIL_QuanLyCuaHang\obj\Debug\net8.0\ref\UTIL_QuanLyCuaHang.dll
+D:\QuanLyCuaHang\UTIL_QuanLyCuaHang\obj\Debug\net8.0\UTIL_QuanLyCuaHang.sourcelink.json

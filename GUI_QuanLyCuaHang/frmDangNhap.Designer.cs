@@ -106,6 +106,7 @@
             guna2Button4.Size = new Size(166, 62);
             guna2Button4.TabIndex = 19;
             guna2Button4.Text = "Thoát";
+            guna2Button4.Click += guna2Button4_Click;
             // 
             // guna2Button3
             // 
@@ -122,6 +123,7 @@
             guna2Button3.Size = new Size(166, 62);
             guna2Button3.TabIndex = 18;
             guna2Button3.Text = "Đăng Nhập";
+            guna2Button3.Click += guna2Button3_Click;
             // 
             // guna2Button2
             // 

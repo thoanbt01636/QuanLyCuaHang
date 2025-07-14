@@ -138,6 +138,7 @@
             guna2GradientButton9.Size = new Size(359, 51);
             guna2GradientButton9.TabIndex = 116;
             guna2GradientButton9.Text = "Quản Lý Nhân Viên";
+            guna2GradientButton9.Click += guna2GradientButton9_Click;
             // 
             // guna2GradientButton8
             // 
@@ -183,6 +184,7 @@
             guna2GradientButton7.Size = new Size(359, 51);
             guna2GradientButton7.TabIndex = 114;
             guna2GradientButton7.Text = "Quản Lý Thống Kê";
+            guna2GradientButton7.Click += guna2GradientButton7_Click;
             // 
             // guna2GradientButton6
             // 
@@ -206,6 +208,7 @@
             guna2GradientButton6.Size = new Size(359, 51);
             guna2GradientButton6.TabIndex = 113;
             guna2GradientButton6.Text = "Quản Lý Sản Phẩm";
+            guna2GradientButton6.Click += guna2GradientButton6_Click;
             // 
             // guna2GradientButton5
             // 
@@ -320,6 +323,7 @@
             guna2GradientButton2.Size = new Size(359, 54);
             guna2GradientButton2.TabIndex = 106;
             guna2GradientButton2.Text = "Quản Lý Phiếu Nhập";
+            guna2GradientButton2.Click += guna2GradientButton2_Click_1;
             // 
             // guna2PictureBox1
             // 

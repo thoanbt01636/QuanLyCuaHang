@@ -8,7 +8,7 @@ namespace DTO_QuanLyCuaHang
 {
     public class NhanVien
     {
-        public string MaVN {  get; set; }
+        public string MaNV {  get; set; }
         public string TenNV {  get; set; }
         public DateTime  NgaySinh {  get; set; }
         public string DienThoai {  get; set; }

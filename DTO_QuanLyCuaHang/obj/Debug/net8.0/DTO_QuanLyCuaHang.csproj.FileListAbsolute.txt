@@ -9,3 +9,4 @@ D:\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\DTO_QuanLyCuaHang.dll
 D:\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\refint\DTO_QuanLyCuaHang.dll
 D:\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\DTO_QuanLyCuaHang.pdb
 D:\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\ref\DTO_QuanLyCuaHang.dll
+D:\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\DTO_QuanLyCuaHang.sourcelink.json
