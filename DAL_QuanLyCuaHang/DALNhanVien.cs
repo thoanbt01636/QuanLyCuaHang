@@ -66,5 +66,20 @@ namespace DAL_QuanLyCuaHang
             }
             return list;
         }
+        public string generateMaNhanVien()
+        {
+            string prefix = "NV";
+            string sql = "SELECT MAX(MaNhanVien) FROM NhanVien";
+            List<object> thamSo = new List<object>();
+            object result = DBUtil.ScalarQuery(sql, thamSo);
+            if (result != null && result.ToString().StartsWith(prefix))
+            {
+                string maxCode = result.ToString().Substring(2);
+                int newNumber = int.Parse(maxCode) + 1;
+                return $"{prefix}{newNumber:D3}";
+            }
+
+            return $"{prefix}001";
+        }
     }
 }
