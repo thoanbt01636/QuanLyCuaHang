@@ -77,14 +77,7 @@ namespace GUI_QuanLyThuVien
 
         private void guna2GradientButton9_Click(object sender, EventArgs e)
         {
-            if (!AuthUtil.User.ChucVu)
-            {
-                MessageBox.Show("Bạn không có quyền truy cập vào danh sách nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                openChildForm(new frmQuanLyNhanVien());
-            }
+            openChildForm(new frmQuanLyNhanVien());
         }
 
         private void guna2GradientButton7_Click(object sender, EventArgs e)

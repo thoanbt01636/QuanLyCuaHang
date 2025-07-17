@@ -17,7 +17,7 @@ namespace GUI_QuanLyCuaHang
 
             //Application.Run(new frmDangNhap());
 
-            Application.Run(new frmQuanLyNhanVien());
+            Application.Run(new frmmain());
         }
     }
 }
