@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "E:\\SO_TB01844\\QuanLyCuaHang\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|e:\\so_tb01844\\quanlycuahang\\gui_quanlycuahang\\frmthongkesp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmthongkesp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|e:\\so_tb01844\\quanlycuahang\\gui_quanlycuahang\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|e:\\so_tb01844\\quanlycuahang\\gui_quanlycuahang\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|E:\\SO_TB01844\\QuanLyCuaHang\\gui_quanlycuahang\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -39,31 +43,42 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frmthongkeSP.cs [Design]",
+              "DocumentMoniker": "E:\\SO_TB01844\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmthongkeSP.cs",
+              "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmthongkeSP.cs",
+              "ToolTip": "E:\\SO_TB01844\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmthongkeSP.cs [Design]",
+              "RelativeToolTip": "GUI_QuanLyCuaHang\\frmthongkeSP.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T04:28:39.371Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "frmmain.cs",
               "DocumentMoniker": "E:\\SO_TB01844\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmmain.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmmain.cs",
               "ToolTip": "E:\\SO_TB01844\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmmain.cs",
               "RelativeToolTip": "GUI_QuanLyCuaHang\\frmmain.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAIAzwDMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAEwFQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-17T04:19:01.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "frmmain.cs [Design]",
               "DocumentMoniker": "E:\\SO_TB01844\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmmain.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmmain.cs",
               "ToolTip": "E:\\SO_TB01844\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmmain.cs [Design]",
               "RelativeToolTip": "GUI_QuanLyCuaHang\\frmmain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T04:18:55.704Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-07-17T04:18:55.704Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\SO_TB01844\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\Program.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\Program.cs",
@@ -71,8 +86,7 @@
               "RelativeToolTip": "GUI_QuanLyCuaHang\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T04:18:35.392Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-17T04:18:35.392Z"
             }
           ]
         }

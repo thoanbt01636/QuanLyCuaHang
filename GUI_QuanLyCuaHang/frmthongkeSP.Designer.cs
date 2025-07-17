@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             groupBox1 = new GroupBox();
             comboBox1 = new ComboBox();
             dtDenNgay = new DateTimePicker();
             label4 = new Label();
-            button1 = new Button();
             dtTuNgay = new DateTimePicker();
             label3 = new Label();
             label2 = new Label();
             guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             groupBox1.SuspendLayout();
             guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView2).BeginInit();
@@ -64,10 +66,10 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox1.Controls.Add(guna2Button1);
             groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(dtDenNgay);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(dtTuNgay);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
@@ -110,16 +112,6 @@
             label4.TabIndex = 4;
             label4.Text = "Đến Ngày";
             // 
-            // button1
-            // 
-            button1.Location = new Point(1578, 28);
-            button1.Margin = new Padding(4, 3, 4, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(129, 39);
-            button1.TabIndex = 3;
-            button1.Text = "Thống Kê";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // dtTuNgay
             // 
             dtTuNgay.Format = DateTimePickerFormat.Short;
@@ -156,10 +148,10 @@
             // 
             guna2GradientPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2GradientPanel2.Controls.Add(guna2DataGridView2);
-            guna2GradientPanel2.CustomizableEdges = customizableEdges1;
+            guna2GradientPanel2.CustomizableEdges = customizableEdges3;
             guna2GradientPanel2.Location = new Point(0, 222);
             guna2GradientPanel2.Name = "guna2GradientPanel2";
-            guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2GradientPanel2.Size = new Size(1790, 490);
             guna2GradientPanel2.TabIndex = 118;
             // 
@@ -215,6 +207,23 @@
             guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
+            // guna2Button1
+            // 
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.White;
+            guna2Button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.Black;
+            guna2Button1.Location = new Point(1594, 21);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(156, 40);
+            guna2Button1.TabIndex = 7;
+            guna2Button1.Text = "Thống kê";
+            // 
             // frmthongkeSP
             // 
             AutoScaleDimensions = new SizeF(10F, 23F);
@@ -241,12 +250,12 @@
         private GroupBox groupBox1;
         private Label label3;
         private Label label2;
-        private Button button1;
         private DateTimePicker dtTuNgay;
         private DateTimePicker dtDenNgay;
         private Label label4;
         private ComboBox comboBox1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
