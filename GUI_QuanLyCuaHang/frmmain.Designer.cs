@@ -258,6 +258,7 @@
             guna2GradientButton4.Size = new Size(372, 51);
             guna2GradientButton4.TabIndex = 111;
             guna2GradientButton4.Text = "Quản Lý Hóa Đơn";
+            guna2GradientButton4.Click += guna2GradientButton4_Click;
             // 
             // guna2GradientButton3
             // 
@@ -304,6 +305,7 @@
             guna2GradientButton1.Size = new Size(372, 51);
             guna2GradientButton1.TabIndex = 109;
             guna2GradientButton1.Text = "Quản Lý Loại Sản Phẩm";
+            guna2GradientButton1.Click += guna2GradientButton1_Click;
             // 
             // guna2GradientButton2
             // 

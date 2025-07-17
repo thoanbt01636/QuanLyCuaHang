@@ -16,5 +16,10 @@ namespace GUI_QuanLyThuVien
         {
             InitializeComponent();
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -113,7 +113,7 @@ namespace GUI_QuanLyThuVien
 
         private void guna2GradientButton6_Click(object sender, EventArgs e)
         {
-            if(!AuthUtil.User.ChucVu)
+            if (!AuthUtil.User.ChucVu)
             {
                 MessageBox.Show("Bạn không có quyền truy cập vào danh sách nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -121,6 +121,18 @@ namespace GUI_QuanLyThuVien
             {
                 openChildForm(new frmSP());
             }
+        }
+
+        private void guna2GradientButton4_Click(object sender, EventArgs e)
+        {
+
+            openChildForm(new frmHD());
+
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmloaiSP());
         }
     }
 }

@@ -119,7 +119,7 @@
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.Size = new Size(889, 671);
+            guna2DataGridView1.Size = new Size(831, 583);
             guna2DataGridView1.TabIndex = 0;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -151,7 +151,7 @@
             guna2GradientPanel2.Location = new Point(883, 210);
             guna2GradientPanel2.Name = "guna2GradientPanel2";
             guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2GradientPanel2.Size = new Size(892, 677);
+            guna2GradientPanel2.Size = new Size(834, 589);
             guna2GradientPanel2.TabIndex = 120;
             // 
             // btntimkiem
@@ -164,7 +164,7 @@
             btntimkiem.ImageOffset = new Point(0, 0);
             btntimkiem.ImageRotate = 0F;
             btntimkiem.ImageSize = new Size(45, 45);
-            btntimkiem.Location = new Point(3143, 37);
+            btntimkiem.Location = new Point(3085, 37);
             btntimkiem.Name = "btntimkiem";
             btntimkiem.PressedState.ImageSize = new Size(64, 64);
             btntimkiem.ShadowDecoration.CustomizableEdges = customizableEdges3;
@@ -183,7 +183,7 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 9F);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(2807, 37);
+            guna2TextBox1.Location = new Point(2749, 37);
             guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
@@ -202,7 +202,7 @@
             guna2ImageButton3.ImageOffset = new Point(0, 0);
             guna2ImageButton3.ImageRotate = 0F;
             guna2ImageButton3.ImageSize = new Size(45, 45);
-            guna2ImageButton3.Location = new Point(4530, 37);
+            guna2ImageButton3.Location = new Point(4472, 37);
             guna2ImageButton3.Name = "guna2ImageButton3";
             guna2ImageButton3.PressedState.ImageSize = new Size(64, 64);
             guna2ImageButton3.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -213,7 +213,7 @@
             // 
             lblQLNV.BackColor = Color.Transparent;
             lblQLNV.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblQLNV.Location = new Point(23, 26);
+            lblQLNV.Location = new Point(12, 5);
             lblQLNV.Margin = new Padding(3, 5, 3, 5);
             lblQLNV.Name = "lblQLNV";
             lblQLNV.Size = new Size(382, 56);
@@ -232,7 +232,7 @@
             txtTimKiem.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTimKiem.Font = new Font("Segoe UI", 9F);
             txtTimKiem.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTimKiem.Location = new Point(4116, 37);
+            txtTimKiem.Location = new Point(4058, 37);
             txtTimKiem.Margin = new Padding(3, 4, 3, 4);
             txtTimKiem.Name = "txtTimKiem";
             txtTimKiem.PasswordChar = '\0';
@@ -256,7 +256,7 @@
             guna2Panel3.Margin = new Padding(3, 5, 3, 5);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Panel3.Size = new Size(1775, 99);
+            guna2Panel3.Size = new Size(1717, 77);
             guna2Panel3.TabIndex = 103;
             // 
             // panel2
@@ -265,7 +265,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1775, 101);
+            panel2.Size = new Size(1717, 81);
             panel2.TabIndex = 118;
             // 
             // guna2Panel1
@@ -276,7 +276,7 @@
             guna2Panel1.Location = new Point(0, 210);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Panel1.Size = new Size(697, 530);
+            guna2Panel1.Size = new Size(697, 442);
             guna2Panel1.TabIndex = 121;
             // 
             // guna2DataGridView2
@@ -307,7 +307,7 @@
             guna2DataGridView2.Name = "guna2DataGridView2";
             guna2DataGridView2.RowHeadersVisible = false;
             guna2DataGridView2.RowHeadersWidth = 51;
-            guna2DataGridView2.Size = new Size(691, 524);
+            guna2DataGridView2.Size = new Size(691, 436);
             guna2DataGridView2.TabIndex = 0;
             guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -439,7 +439,7 @@
             guna2Panel2.Controls.Add(guna2HtmlLabel8);
             guna2Panel2.Controls.Add(guna2TextBox2);
             guna2Panel2.CustomizableEdges = customizableEdges21;
-            guna2Panel2.Location = new Point(3, 746);
+            guna2Panel2.Location = new Point(6, 655);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2Panel2.Size = new Size(691, 138);
@@ -511,7 +511,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1775, 887);
+            ClientSize = new Size(1717, 799);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2HtmlLabel6);
             Controls.Add(guna2HtmlLabel7);

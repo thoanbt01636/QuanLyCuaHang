@@ -1682,23 +1682,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Users\\tohoa\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj",
+      "projectUniqueName": "E:\\SO_TB01844\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj",
       "projectName": "DAL_QuanLyCuaHang",
-      "projectPath": "D:\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\obj\\",
+      "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj",
+      "packagesPath": "C:\\Users\\tohoa\\.nuget\\packages\\",
+      "outputPath": "E:\\SO_TB01844\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tohoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1707,15 +1707,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
-              "projectPath": "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj"
+            "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
+              "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj"
             }
           }
         }
@@ -1757,7 +1756,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
