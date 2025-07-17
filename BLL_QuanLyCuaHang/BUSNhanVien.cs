@@ -23,5 +23,76 @@ namespace BLL_QuanLyCuaHang
         {
             return dalNhanVien.seletAll();
         }
+        public bool ResetMatKhau(string email, string mk)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(mk))
+                {
+                    return false;
+                }
+                dalNhanVien.ResetMatKhau(mk, email);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+        public string UpdateNhanVien(NhanVien nv)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(nv.MaNV))
+                {
+                    return "Mã nhân viên không hợp lệ.";
+                }
+
+                dalNhanVien.updateNhanVien(nv);
+                return string.Empty;
+            }
+            catch (Exception e)
+            {
+                return "Lỗi: " + e.Message;
+            }
+        }
+
+        public string AddNhanVien(NhanVien nv)
+        {
+            try
+            {
+                nv.MaNV = dalNhanVien.generateMaNhanVien();
+                if (string.IsNullOrEmpty(nv.MaNV))
+                {
+                    return "Mã nhân viên không hợp lệ.";
+                }
+
+                dalNhanVien.addNhanVien(nv);
+                return string.Empty;
+            }
+            catch (Exception e)
+            {
+                return "Lỗi: " + e.Message;
+            }
+        }
+
+        public string DeleteNhanVien(string maNv)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(maNv))
+                {
+                    return "Mã nhân viên không hợp lệ.";
+                }
+
+                dalNhanVien.deleteNhanVien(maNv);
+                return string.Empty;
+            }
+            catch (Exception ex)
+            {
+                return "Lỗi: " + ex.Message;
+            }
+        }
+
     }
 }

@@ -11,130 +11,99 @@ namespace DAL_QuanLyCuaHang
 {
     public class DALLoaiSanPham
     {
-            public List<LoaiSanPham> SelectBySql(string sql, Dictionary<string, object> parameters = null, CommandType cmdType = CommandType.Text)
-            {
-                var list = new List<LoaiSanPham>();
-
-                try
-                {
-                    var args = parameters != null ?
-                        parameters.Values.ToList() :
-                        new List<object>();
-
-                    using (var reader = DBUtil.Query(sql, args, cmdType))
-                    {
-                        while (reader.Read())
-                        {
-                            var entity = new LoaiSanPham
-                            {
-                                MaLoai = reader["MaLoai"].ToString(),
-                                TenLoai = reader["TenLoai"].ToString()
-                            };
-                            list.Add(entity);
-                        }
-                    }
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-
-                return list;
-            }
-
-            public List<LoaiSanPham> SelectAll()
-            {
-                const string sql = "SELECT MaLoai, TenLoai FROM LoaiSanPham";
-                return SelectBySql(sql);
-            }
-
-            public LoaiSanPham SelectById(string maLoai)
-            {
-                const string sql = "SELECT MaLoai, TenLoai FROM LoaiSanPham WHERE MaLoai = @0";
-                var parameters = new Dictionary<string, object> { { "@0", maLoai } };
-                var results = SelectBySql(sql, parameters);
-                return results.FirstOrDefault();
-            }
-
-            public string GenerateMaLoaiSanPham()
-            {
-                const string prefix = "LSP";
-                const string sql = "SELECT MAX(MaLoai) FROM LoaiSanPham WHERE MaLoai LIKE @0";
-
-                var parameters = new Dictionary<string, object>
+        public List<LoaiSanPham> SelectBySql(string sql, List<object> args, CommandType cmdType = CommandType.Text)
         {
-            { "@0", $"{prefix}%" }
-        };
-
-                    var result = DBUtil.ScalarQuery(sql, parameters.Values.ToList());
-                    if (result != null && result != DBNull.Value && result.ToString().StartsWith(prefix))
-                    {
-                        string maxCode = result.ToString();
-                        int number = int.Parse(maxCode.Substring(prefix.Length));
-                        return $"{prefix}{(number + 1):D3}";
-                    }
-                    return $"{prefix}001";
-            }
-
-            public int Insert(LoaiSanPham loaiSP)
+            List<LoaiSanPham> list = new List<LoaiSanPham>();
+            try
             {
-                const string sql = @"INSERT INTO LoaiSanPham (MaLoai, TenLoai) 
-                           VALUES (@0, @1)";
-
-                var parameters = new Dictionary<string, object>
+                SqlDataReader reader = DBUtil.Query(sql, args);
+                while (reader.Read())
+                {
+                    LoaiSanPham entity = new LoaiSanPham();
+                    entity.MaLoai = reader.GetString("MaLoai");
+                    entity.TenLoai = reader.GetString("TenLoai");
+                    list.Add(entity);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return list;
+        }
+        public List<LoaiSanPham> selectAll()
         {
-            { "@0", loaiSP.MaLoai },
-            { "@1", loaiSP.TenLoai }
-        };
-
-                try
-                {
-                    DBUtil.Update(sql, parameters.Values.ToList());
-                    return 1;
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-            }
-
-            public int Update(LoaiSanPham loaiSP)
-            {
-                const string sql = @"UPDATE LoaiSanPham 
-                           SET TenLoai = @0
-                           WHERE MaLoai = @1";
-
-                var parameters = new Dictionary<string, object>
+            String sql = "SELECT * FROM LoaiSanPham";
+            return SelectBySql(sql, new List<object>());
+        }
+        public string genereteMaLoaiSP()
         {
-            { "@0", loaiSP.TenLoai },
-            { "@1", loaiSP.MaLoai }
-        };
-
-                try
-                {
-                    DBUtil.Update(sql, parameters.Values.ToList());
-                    return 1;
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+            string prefix = "LSP";
+            string sql = "SELECT MAX(MaLoai) FROM SanPham";
+            List<object> thamSo = new List<object>();
+            object result = DBUtil.ScalarQuery(sql, thamSo);
+            if (result != null && result.ToString().StartsWith(prefix))
+            {
+                string maxCode = result.ToString().Substring(3);
+                int newNumber = int.Parse(maxCode) + 1;
+                return $"{prefix}{newNumber:D3}";
             }
 
-            public int Delete(string maLoai)
+            return $"{prefix}001";
+        }
+        public void addLoaiSampham(LoaiSanPham lsp)
+        {
+            try
             {
-                const string sql = "DELETE FROM LoaiSanPham WHERE MaLoai = @0";
-                var parameters = new Dictionary<string, object> { { "@0", maLoai } };
-
-                try
-                {
-                    DBUtil.Update(sql, parameters.Values.ToList());
-                    return 1;
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                string sql = @"INSERT INTO SanPham(MaLoai,Tenloai) VALUES(@0,@1)";
+                List<object> thamso = new List<object>();
+                thamso.Add(lsp.MaLoai);
+                thamso.Add(lsp.TenLoai);
+                DBUtil.Update(sql, thamso);
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
+        public void updateLoaiSanPham(LoaiSanPham lsp)
+        {
+            try
+            {
+                string sql = @"UPDATE SanPham
+                SET TenLoai=@1
+                WHERE  MaLoai=@0";
+                List<object> thamso = new List<object>();
+                thamso.Add(lsp.MaLoai);
+                thamso.Add(lsp.TenLoai);
+                DBUtil.Update(sql, thamso);
+            }
+            catch (Exception) { throw; }
+        }
+        public void deleteLoaisanpham(string lsp)
+        {
+            try
+            {
+                string sql = @"DELETE FROM SanPham WHERE MaLoai=@0";
+                List<object> thamso = new List<object>();
+                thamso.Add(lsp);
+                DBUtil.Update(sql, thamso);
+            }
+            catch (Exception) { throw; }
+        }
+        public List<LoaiSanPham> GetNhanVienByMa(string MaLoai)
+        {
+            string sql = "SELECT * FROM SanPham WHERE MaLoai LIKE '%' + @0 + '%'";
+            List<object> thamSo = new List<object>();
+            thamSo.Add(MaLoai);
+            return SelectBySql(sql, thamSo);
+        }
+        public List<LoaiSanPham> GetNhanVienByTen(string TenLoai)
+        {
+            string sql = "SELECT * FROM SanPham WHERE TenLoai LIKE '%' + @0 + '%'";
+            List<object> thamSo = new List<object>();
+            thamSo.Add(TenLoai);
+            return SelectBySql(sql, thamSo);
+        }
+    }
     }

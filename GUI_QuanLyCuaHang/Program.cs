@@ -15,9 +15,9 @@ namespace GUI_QuanLyCuaHang
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            //Application.Run(new frmDangNhap());
+            Application.Run(new frmDangNhap());
 
-            Application.Run(new frmmain());
+            //Application.Run(new frmQuanLyNhanVien());
         }
     }
 }

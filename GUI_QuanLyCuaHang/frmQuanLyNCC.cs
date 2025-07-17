@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL_QuanLyCuaHang;
+using DTO_QuanLyCuaHang;
 
 namespace GUI_QuanLyThuVien
 {
@@ -19,6 +21,20 @@ namespace GUI_QuanLyThuVien
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void frmQuanLyNCC_Load(object sender, EventArgs e)
+        {
+            LoadNhaCungCap();
+        }
+        private void LoadNhaCungCap()
+        {
+
+            BUSNhaCungCap bUSNhaCungCap = new BUSNhaCungCap();
+            guna2DataGridView1.DataSource = null;
+            List<NhaCungCap> lstSP = bUSNhaCungCap.GetNhaCungCapList();
+            guna2DataGridView1.DataSource = lstSP;
 
         }
     }

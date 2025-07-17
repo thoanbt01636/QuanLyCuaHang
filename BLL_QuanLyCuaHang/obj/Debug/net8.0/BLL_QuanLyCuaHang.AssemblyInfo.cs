@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BLL_QuanLyCuaHang")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6651d21df80f0caa24f0602ab96874e30e23ad50")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ea249c45803339e20a81694a6a0fc81a26201f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("BLL_QuanLyCuaHang")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BLL_QuanLyCuaHang")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -29,20 +29,18 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            checkBox3 = new CheckBox();
+            checkBox2 = new CheckBox();
             checkBox1 = new CheckBox();
             button1 = new Button();
             txtXacNhanMK = new TextBox();
             txtMatKhauMoi = new TextBox();
             txtMatKhauCu = new TextBox();
-            txtTenNV = new TextBox();
+            textTaiKhoan = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            txtMaNV = new TextBox();
-            label1 = new Label();
-            checkBox2 = new CheckBox();
-            checkBox3 = new CheckBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,13 +54,11 @@
             groupBox1.Controls.Add(txtXacNhanMK);
             groupBox1.Controls.Add(txtMatKhauMoi);
             groupBox1.Controls.Add(txtMatKhauCu);
-            groupBox1.Controls.Add(txtTenNV);
+            groupBox1.Controls.Add(textTaiKhoan);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txtMaNV);
-            groupBox1.Controls.Add(label1);
             groupBox1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.Location = new Point(244, 99);
             groupBox1.Name = "groupBox1";
@@ -70,6 +66,30 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Đổi Mật Khẩu";
+            // 
+            // checkBox3
+            // 
+            checkBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(349, 280);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(248, 45);
+            checkBox3.TabIndex = 13;
+            checkBox3.Text = "Hiện mật Khẩu";
+            checkBox3.UseVisualStyleBackColor = true;
+            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
+            // 
+            // checkBox2
+            // 
+            checkBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(349, 398);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(248, 45);
+            checkBox2.TabIndex = 12;
+            checkBox2.Text = "Hiện mật Khẩu";
+            checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
             // 
             // checkBox1
             // 
@@ -117,12 +137,12 @@
             txtMatKhauCu.Size = new Size(571, 47);
             txtMatKhauCu.TabIndex = 7;
             // 
-            // txtTenNV
+            // textTaiKhoan
             // 
-            txtTenNV.Location = new Point(349, 133);
-            txtTenNV.Name = "txtTenNV";
-            txtTenNV.Size = new Size(571, 47);
-            txtTenNV.TabIndex = 6;
+            textTaiKhoan.Location = new Point(349, 133);
+            textTaiKhoan.Name = "textTaiKhoan";
+            textTaiKhoan.Size = new Size(571, 47);
+            textTaiKhoan.TabIndex = 6;
             // 
             // label5
             // 
@@ -157,50 +177,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(15, 133);
             label2.Name = "label2";
-            label2.Size = new Size(222, 41);
+            label2.Size = new Size(153, 41);
             label2.TabIndex = 2;
-            label2.Text = "Tên Nhân Viên";
-            // 
-            // txtMaNV
-            // 
-            txtMaNV.Location = new Point(349, 49);
-            txtMaNV.Name = "txtMaNV";
-            txtMaNV.Size = new Size(571, 47);
-            txtMaNV.TabIndex = 1;
-            txtMaNV.TextChanged += txtMaNV_TextChanged;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(15, 55);
-            label1.Name = "label1";
-            label1.Size = new Size(218, 41);
-            label1.TabIndex = 0;
-            label1.Text = "Mã Nhân Viên";
-            // 
-            // checkBox2
-            // 
-            checkBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(349, 398);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(248, 45);
-            checkBox2.TabIndex = 12;
-            checkBox2.Text = "Hiện mật Khẩu";
-            checkBox2.UseVisualStyleBackColor = true;
-            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
-            // 
-            // checkBox3
-            // 
-            checkBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(349, 280);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(248, 45);
-            checkBox3.TabIndex = 13;
-            checkBox3.Text = "Hiện mật Khẩu";
-            checkBox3.UseVisualStyleBackColor = true;
-            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
+            label2.Text = "Tài khoản";
             // 
             // frmMatkhau
             // 
@@ -212,6 +191,7 @@
             Name = "frmMatkhau";
             Text = "Form1";
             FormClosed += frmMatkhau_FormClosed;
+            Load += frmMatkhau_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -220,15 +200,13 @@
         #endregion
 
         private GroupBox groupBox1;
-        private TextBox txtMaNV;
-        private Label label1;
         private Label label3;
         private Label label2;
         private Button button1;
         private TextBox txtXacNhanMK;
         private TextBox txtMatKhauMoi;
         private TextBox txtMatKhauCu;
-        private TextBox txtTenNV;
+        private TextBox textTaiKhoan;
         private Label label5;
         private Label label4;
         private CheckBox checkBox1;

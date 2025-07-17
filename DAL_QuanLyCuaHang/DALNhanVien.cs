@@ -39,6 +39,22 @@ namespace DAL_QuanLyCuaHang
             string sql = "SELECT * FROM NhanVien";
             return selectBySql(sql, new List<object>());
         }
+        public void ResetMatKhau(string mk, string email)
+        {
+            try
+            {
+                string sql = "UPDATE NhanVien SET MatKhau = @0 WHERE Gmail = @1";
+                List<object> thamSo = new List<object>();
+                thamSo.Add(mk);
+                thamSo.Add(email);
+                DBUtil.Update(sql, thamSo);
+
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
 
         public List<NhanVien> selectBySql(string sql, List<object> args, CommandType cmdType = CommandType.Text)
         {
@@ -69,7 +85,7 @@ namespace DAL_QuanLyCuaHang
         public string generateMaNhanVien()
         {
             string prefix = "NV";
-            string sql = "SELECT MAX(MaNhanVien) FROM NhanVien";
+            string sql = "SELECT MAX(MaNV) FROM NhanVien";
             List<object> thamSo = new List<object>();
             object result = DBUtil.ScalarQuery(sql, thamSo);
             if (result != null && result.ToString().StartsWith(prefix))
@@ -81,5 +97,79 @@ namespace DAL_QuanLyCuaHang
 
             return $"{prefix}001";
         }
+        public void addNhanVien(NhanVien nv)
+        {
+            try
+            {
+                string sql = @"INSERT INTO NhanVien 
+                       (MaNV, TenNV, NgaySinh, DienThoai, ChucVu, Gmail, MatKhau, TrangThai)
+                       VALUES (@0, @1, @2, @3, @4, @5, @6, @7)";
+
+                List<object> thamSo = new List<object>
+        {
+            nv.MaNV,
+            nv.TenNV,
+            nv.NgaySinh,
+            nv.DienThoai,
+            nv.ChucVu,
+            nv.Gmail,
+            nv.MatKhau,
+            nv.TrangThai
+        };
+
+                DBUtil.Update(sql, thamSo);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi thêm nhân viên.", ex);
+            }
+        }
+        public void updateNhanVien(NhanVien nv)
+        {
+            try
+            {
+                string sql = @"UPDATE NhanVien
+                       SET TenNV = @1,
+                           NgaySinh = @2,
+                           DienThoai = @3,
+                           ChucVu = @4,
+                           Gmail = @5,
+                           MatKhau = @6,
+                           TrangThai = @7
+                       WHERE MaNV = @0";
+
+                List<object> thamSo = new List<object>
+        {
+            nv.MaNV,
+            nv.TenNV,
+            nv.NgaySinh,
+            nv.DienThoai,
+            nv.ChucVu,
+            nv.Gmail,
+            nv.MatKhau,
+            nv.TrangThai
+        };
+
+                DBUtil.Update(sql, thamSo);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi cập nhật nhân viên.", ex);
+            }
+        }
+        public void deleteNhanVien(string maNv)
+        {
+            try
+            {
+                string sql = "DELETE FROM NhanVien WHERE MaNV = @0";
+                List<object> thamSo = new List<object> { maNv };
+                DBUtil.Update(sql, thamSo);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi xóa nhân viên.", ex);
+            }
+        }
+
     }
 }

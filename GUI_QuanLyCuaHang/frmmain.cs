@@ -67,7 +67,7 @@ namespace GUI_QuanLyThuVien
 
         private void guna2GradientButton5_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmQuanLyNCC());
         }
 
         private void guna2PictureBox2_Click(object sender, EventArgs e)
@@ -82,38 +82,24 @@ namespace GUI_QuanLyThuVien
 
         private void guna2GradientButton7_Click(object sender, EventArgs e)
         {
-            if (!AuthUtil.User.ChucVu)
-            {
-                MessageBox.Show("Bạn không có quyền truy cập vào danh sách nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                openChildForm(new frmthongkeNV());
-            }
+
+            openChildForm(new frmthongkeNV());
+
         }
 
         private void guna2GradientButton2_Click_1(object sender, EventArgs e)
         {
-            if (!AuthUtil.User.ChucVu)
-            {
-                MessageBox.Show("Bạn không có quyền truy cập vào danh sách nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                openChildForm(new frmPhieuNhap());
-            }
+
+
+            openChildForm(new frmPhieuNhap());
+
         }
 
         private void guna2GradientButton6_Click(object sender, EventArgs e)
         {
-            if (!AuthUtil.User.ChucVu)
-            {
-                MessageBox.Show("Bạn không có quyền truy cập vào danh sách nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                openChildForm(new frmSP());
-            }
+
+            openChildForm(new frmSP());
+
         }
 
         private void guna2GradientButton4_Click(object sender, EventArgs e)
@@ -126,6 +112,20 @@ namespace GUI_QuanLyThuVien
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
             openChildForm(new frmloaiSP());
+        }
+
+        private void guna2GradientButton3_Click(object sender, EventArgs e)
+        {
+            frmMatkhau reset = new frmMatkhau();
+            reset.ShowDialog();
+        }
+
+        private void guna2GradientButton8_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("bạn có muốn thoát khỏi chương trình ", "thoát",
+                           MessageBoxButtons.YesNo,
+                           MessageBoxIcon.Question);
+            if (result == DialogResult.Yes) { Application.Exit(); }
         }
     }
 }

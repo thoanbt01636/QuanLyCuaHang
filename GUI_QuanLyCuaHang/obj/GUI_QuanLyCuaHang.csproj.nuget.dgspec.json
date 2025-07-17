@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\SO_TB01844\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj": {}
+    "D:\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj": {}
   },
   "projects": {
-    "E:\\SO_TB01844\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj": {
+    "D:\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SO_TB01844\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj",
+        "projectUniqueName": "D:\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj",
         "projectName": "BLL_QuanLyCuaHang",
-        "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj",
-        "packagesPath": "C:\\Users\\tohoa\\.nuget\\packages\\",
-        "outputPath": "E:\\SO_TB01844\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\obj\\",
+        "projectPath": "D:\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tohoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,17 +26,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\SO_TB01844\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj": {
-                "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj"
+              "D:\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj": {
+                "projectPath": "D:\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj"
               },
-              "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
-                "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj"
+              "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
+                "projectPath": "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj"
               }
             }
           }
@@ -72,24 +73,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\SO_TB01844\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj": {
+    "D:\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SO_TB01844\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj",
+        "projectUniqueName": "D:\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj",
         "projectName": "DAL_QuanLyCuaHang",
-        "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj",
-        "packagesPath": "C:\\Users\\tohoa\\.nuget\\packages\\",
-        "outputPath": "E:\\SO_TB01844\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\obj\\",
+        "projectPath": "D:\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tohoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -98,14 +99,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
-                "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj"
+              "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
+                "projectPath": "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj"
               }
             }
           }
@@ -147,24 +149,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
+    "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj",
+        "projectUniqueName": "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj",
         "projectName": "DTO_QuanLyCuaHang",
-        "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj",
-        "packagesPath": "C:\\Users\\tohoa\\.nuget\\packages\\",
-        "outputPath": "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\obj\\",
+        "projectPath": "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tohoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -173,6 +175,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -212,24 +215,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\SO_TB01844\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj": {
+    "D:\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SO_TB01844\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj",
+        "projectUniqueName": "D:\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj",
         "projectName": "GUI_QuanLyCuaHang",
-        "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj",
-        "packagesPath": "C:\\Users\\tohoa\\.nuget\\packages\\",
-        "outputPath": "E:\\SO_TB01844\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\obj\\",
+        "projectPath": "D:\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tohoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -238,20 +241,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "E:\\SO_TB01844\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj": {
-                "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj"
+              "D:\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj": {
+                "projectPath": "D:\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj"
               },
-              "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
-                "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj"
+              "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
+                "projectPath": "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj"
               },
-              "E:\\SO_TB01844\\QuanLyCuaHang\\UTIL_QuanLyCuaHang\\UTIL_QuanLyCuaHang.csproj": {
-                "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\UTIL_QuanLyCuaHang\\UTIL_QuanLyCuaHang.csproj"
+              "D:\\QuanLyCuaHang\\UTIL_QuanLyCuaHang\\UTIL_QuanLyCuaHang.csproj": {
+                "projectPath": "D:\\QuanLyCuaHang\\UTIL_QuanLyCuaHang\\UTIL_QuanLyCuaHang.csproj"
               }
             }
           }
@@ -296,24 +300,24 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\SO_TB01844\\QuanLyCuaHang\\UTIL_QuanLyCuaHang\\UTIL_QuanLyCuaHang.csproj": {
+    "D:\\QuanLyCuaHang\\UTIL_QuanLyCuaHang\\UTIL_QuanLyCuaHang.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SO_TB01844\\QuanLyCuaHang\\UTIL_QuanLyCuaHang\\UTIL_QuanLyCuaHang.csproj",
+        "projectUniqueName": "D:\\QuanLyCuaHang\\UTIL_QuanLyCuaHang\\UTIL_QuanLyCuaHang.csproj",
         "projectName": "UTIL_QuanLyCuaHang",
-        "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\UTIL_QuanLyCuaHang\\UTIL_QuanLyCuaHang.csproj",
-        "packagesPath": "C:\\Users\\tohoa\\.nuget\\packages\\",
-        "outputPath": "E:\\SO_TB01844\\QuanLyCuaHang\\UTIL_QuanLyCuaHang\\obj\\",
+        "projectPath": "D:\\QuanLyCuaHang\\UTIL_QuanLyCuaHang\\UTIL_QuanLyCuaHang.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\QuanLyCuaHang\\UTIL_QuanLyCuaHang\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tohoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -322,14 +326,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
-                "projectPath": "E:\\SO_TB01844\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj"
+              "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
+                "projectPath": "D:\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj"
               }
             }
           }
@@ -365,7 +370,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

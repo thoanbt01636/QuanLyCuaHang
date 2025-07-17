@@ -592,6 +592,7 @@
             Controls.Add(panel2);
             Name = "frmQuanLyNCC";
             Text = "frmQuanLyKhachHang";
+            Load += frmQuanLyNCC_Load;
             guna2GradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             guna2GroupBox2.ResumeLayout(false);

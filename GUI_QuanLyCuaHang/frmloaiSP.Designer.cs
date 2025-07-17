@@ -55,7 +55,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel2 = new Panel();
             btntimkiem = new Guna.UI2.WinForms.Guna2ImageButton();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            textTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -63,9 +63,9 @@
             btnlamoi = new Guna.UI2.WinForms.Guna2GradientButton();
             btncapnhat = new Guna.UI2.WinForms.Guna2GradientButton();
             btnxoa = new Guna.UI2.WinForms.Guna2GradientButton();
-            btnthem1111 = new Guna.UI2.WinForms.Guna2GradientButton();
-            guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
+            btnthem = new Guna.UI2.WinForms.Guna2GradientButton();
+            textTenLoaiSP = new Guna.UI2.WinForms.Guna2TextBox();
+            textMaLoaiSP = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panel2.SuspendLayout();
@@ -80,7 +80,7 @@
             panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             panel2.BackColor = Color.FromArgb(255, 237, 168);
             panel2.Controls.Add(btntimkiem);
-            panel2.Controls.Add(guna2TextBox1);
+            panel2.Controls.Add(textTimKiem);
             panel2.Location = new Point(3, 467);
             panel2.Name = "panel2";
             panel2.Size = new Size(574, 114);
@@ -102,28 +102,29 @@
             btntimkiem.ShadowDecoration.CustomizableEdges = customizableEdges1;
             btntimkiem.Size = new Size(46, 45);
             btntimkiem.TabIndex = 80;
+            btntimkiem.Click += btntimkiem_Click;
             // 
-            // guna2TextBox1
+            // textTimKiem
             // 
-            guna2TextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2TextBox1.CustomizableEdges = customizableEdges2;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(180, 30);
-            guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            guna2TextBox1.Size = new Size(382, 48);
-            guna2TextBox1.TabIndex = 79;
+            textTimKiem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            textTimKiem.CustomizableEdges = customizableEdges2;
+            textTimKiem.DefaultText = "";
+            textTimKiem.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            textTimKiem.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            textTimKiem.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            textTimKiem.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textTimKiem.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            textTimKiem.Font = new Font("Segoe UI", 9F);
+            textTimKiem.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            textTimKiem.Location = new Point(180, 30);
+            textTimKiem.Margin = new Padding(3, 4, 3, 4);
+            textTimKiem.Name = "textTimKiem";
+            textTimKiem.PasswordChar = '\0';
+            textTimKiem.PlaceholderText = "";
+            textTimKiem.SelectedText = "";
+            textTimKiem.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            textTimKiem.Size = new Size(382, 48);
+            textTimKiem.TabIndex = 79;
             // 
             // guna2GradientPanel2
             // 
@@ -149,7 +150,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeight = 4;
+            guna2DataGridView1.ColumnHeadersHeight = 50;
             guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
@@ -160,11 +161,11 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(-9, 3);
+            guna2DataGridView1.Location = new Point(0, 3);
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.Size = new Size(819, 571);
+            guna2DataGridView1.Size = new Size(810, 571);
             guna2DataGridView1.TabIndex = 0;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -178,7 +179,7 @@
             guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
+            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 50;
             guna2DataGridView1.ThemeStyle.ReadOnly = false;
             guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -187,6 +188,7 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.Height = 29;
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            guna2DataGridView1.CellContentDoubleClick += guna2DataGridView1_CellContentDoubleClick;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -205,9 +207,9 @@
             guna2GroupBox2.Controls.Add(btnlamoi);
             guna2GroupBox2.Controls.Add(btncapnhat);
             guna2GroupBox2.Controls.Add(btnxoa);
-            guna2GroupBox2.Controls.Add(btnthem1111);
-            guna2GroupBox2.Controls.Add(guna2TextBox7);
-            guna2GroupBox2.Controls.Add(guna2TextBox8);
+            guna2GroupBox2.Controls.Add(btnthem);
+            guna2GroupBox2.Controls.Add(textTenLoaiSP);
+            guna2GroupBox2.Controls.Add(textMaLoaiSP);
             guna2GroupBox2.Controls.Add(guna2HtmlLabel12);
             guna2GroupBox2.Controls.Add(guna2HtmlLabel13);
             guna2GroupBox2.CustomBorderColor = Color.FromArgb(255, 237, 168);
@@ -241,6 +243,7 @@
             btnlamoi.Size = new Size(200, 55);
             btnlamoi.TabIndex = 123;
             btnlamoi.Text = "Làm Mới";
+            btnlamoi.Click += btnlamoi_Click;
             // 
             // btncapnhat
             // 
@@ -261,6 +264,7 @@
             btncapnhat.Size = new Size(200, 55);
             btncapnhat.TabIndex = 121;
             btncapnhat.Text = "Cập Nhật";
+            btncapnhat.Click += btncapnhat_Click;
             // 
             // btnxoa
             // 
@@ -281,68 +285,70 @@
             btnxoa.Size = new Size(200, 55);
             btnxoa.TabIndex = 122;
             btnxoa.Text = "Xóa";
+            btnxoa.Click += btnxoa_Click;
             // 
-            // btnthem1111
+            // btnthem
             // 
-            btnthem1111.Anchor = AnchorStyles.Bottom;
-            btnthem1111.CustomizableEdges = customizableEdges12;
-            btnthem1111.DisabledState.BorderColor = Color.DarkGray;
-            btnthem1111.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnthem1111.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnthem1111.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-            btnthem1111.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnthem1111.FillColor = Color.FromArgb(0, 192, 0);
-            btnthem1111.FillColor2 = Color.FromArgb(0, 192, 0);
-            btnthem1111.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnthem1111.ForeColor = Color.White;
-            btnthem1111.Location = new Point(18, 254);
-            btnthem1111.Name = "btnthem1111";
-            btnthem1111.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            btnthem1111.Size = new Size(200, 55);
-            btnthem1111.TabIndex = 120;
-            btnthem1111.Text = "Thêm";
+            btnthem.Anchor = AnchorStyles.Bottom;
+            btnthem.CustomizableEdges = customizableEdges12;
+            btnthem.DisabledState.BorderColor = Color.DarkGray;
+            btnthem.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnthem.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnthem.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnthem.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnthem.FillColor = Color.FromArgb(0, 192, 0);
+            btnthem.FillColor2 = Color.FromArgb(0, 192, 0);
+            btnthem.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnthem.ForeColor = Color.White;
+            btnthem.Location = new Point(18, 254);
+            btnthem.Name = "btnthem";
+            btnthem.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            btnthem.Size = new Size(200, 55);
+            btnthem.TabIndex = 120;
+            btnthem.Text = "Thêm";
+            btnthem.Click += btnthem1111_Click;
             // 
-            // guna2TextBox7
+            // textTenLoaiSP
             // 
-            guna2TextBox7.CustomizableEdges = customizableEdges14;
-            guna2TextBox7.DefaultText = "";
-            guna2TextBox7.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox7.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox7.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox7.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox7.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            guna2TextBox7.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox7.Location = new Point(175, 135);
-            guna2TextBox7.Margin = new Padding(5);
-            guna2TextBox7.Name = "guna2TextBox7";
-            guna2TextBox7.PasswordChar = '\0';
-            guna2TextBox7.PlaceholderText = "";
-            guna2TextBox7.SelectedText = "";
-            guna2TextBox7.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            guna2TextBox7.Size = new Size(314, 31);
-            guna2TextBox7.TabIndex = 110;
+            textTenLoaiSP.CustomizableEdges = customizableEdges14;
+            textTenLoaiSP.DefaultText = "";
+            textTenLoaiSP.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            textTenLoaiSP.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            textTenLoaiSP.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            textTenLoaiSP.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textTenLoaiSP.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            textTenLoaiSP.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            textTenLoaiSP.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            textTenLoaiSP.Location = new Point(175, 135);
+            textTenLoaiSP.Margin = new Padding(5);
+            textTenLoaiSP.Name = "textTenLoaiSP";
+            textTenLoaiSP.PasswordChar = '\0';
+            textTenLoaiSP.PlaceholderText = "";
+            textTenLoaiSP.SelectedText = "";
+            textTenLoaiSP.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            textTenLoaiSP.Size = new Size(314, 31);
+            textTenLoaiSP.TabIndex = 110;
             // 
-            // guna2TextBox8
+            // textMaLoaiSP
             // 
-            guna2TextBox8.CustomizableEdges = customizableEdges16;
-            guna2TextBox8.DefaultText = "";
-            guna2TextBox8.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox8.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox8.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox8.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox8.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            guna2TextBox8.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox8.Location = new Point(176, 56);
-            guna2TextBox8.Margin = new Padding(4, 5, 4, 5);
-            guna2TextBox8.Name = "guna2TextBox8";
-            guna2TextBox8.PasswordChar = '\0';
-            guna2TextBox8.PlaceholderText = "";
-            guna2TextBox8.SelectedText = "";
-            guna2TextBox8.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            guna2TextBox8.Size = new Size(313, 31);
-            guna2TextBox8.TabIndex = 109;
+            textMaLoaiSP.CustomizableEdges = customizableEdges16;
+            textMaLoaiSP.DefaultText = "";
+            textMaLoaiSP.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            textMaLoaiSP.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            textMaLoaiSP.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            textMaLoaiSP.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textMaLoaiSP.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            textMaLoaiSP.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
+            textMaLoaiSP.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            textMaLoaiSP.Location = new Point(176, 56);
+            textMaLoaiSP.Margin = new Padding(4, 5, 4, 5);
+            textMaLoaiSP.Name = "textMaLoaiSP";
+            textMaLoaiSP.PasswordChar = '\0';
+            textMaLoaiSP.PlaceholderText = "";
+            textMaLoaiSP.SelectedText = "";
+            textMaLoaiSP.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            textMaLoaiSP.Size = new Size(313, 31);
+            textMaLoaiSP.TabIndex = 109;
             // 
             // guna2HtmlLabel12
             // 
@@ -374,6 +380,7 @@
             Controls.Add(panel2);
             Name = "frmloaiSP";
             Text = "frmPhiSach";
+            Load += frmloaiSP_Load;
             panel2.ResumeLayout(false);
             guna2GradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
@@ -392,12 +399,12 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnlamoi;
         private Guna.UI2.WinForms.Guna2GradientButton btncapnhat;
         private Guna.UI2.WinForms.Guna2GradientButton btnxoa;
-        private Guna.UI2.WinForms.Guna2GradientButton btnthem1111;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox8;
+        private Guna.UI2.WinForms.Guna2GradientButton btnthem;
+        private Guna.UI2.WinForms.Guna2TextBox textTenLoaiSP;
+        private Guna.UI2.WinForms.Guna2TextBox textMaLoaiSP;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private Guna.UI2.WinForms.Guna2ImageButton btntimkiem;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox textTimKiem;
     }
 }
