@@ -177,6 +177,7 @@
             guna2GroupBox2.TabIndex = 103;
             guna2GroupBox2.TabStop = false;
             guna2GroupBox2.Text = "Thông Tin Phiếu Nhập";
+            guna2GroupBox2.Click += guna2GroupBox2_Click;
             // 
             // btnlamoi
             // 

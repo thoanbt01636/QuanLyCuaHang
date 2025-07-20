@@ -31,5 +31,10 @@ namespace GUI_QuanLyThuVien
         {
 
         }
+
+        private void guna2GroupBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -560,6 +560,7 @@
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges38;
             guna2Panel3.Size = new Size(1775, 99);
             guna2Panel3.TabIndex = 103;
+            guna2Panel3.Paint += guna2Panel3_Paint;
             // 
             // guna2ImageButton1
             // 

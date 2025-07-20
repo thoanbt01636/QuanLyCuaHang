@@ -345,6 +345,7 @@
             guna2PictureBox1.Size = new Size(331, 712);
             guna2PictureBox1.TabIndex = 104;
             guna2PictureBox1.TabStop = false;
+            guna2PictureBox1.Click += guna2PictureBox1_Click;
             // 
             // guna2Panel1
             // 

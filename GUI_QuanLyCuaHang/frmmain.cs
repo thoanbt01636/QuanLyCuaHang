@@ -127,5 +127,10 @@ namespace GUI_QuanLyThuVien
                            MessageBoxIcon.Question);
             if (result == DialogResult.Yes) { Application.Exit(); }
         }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
