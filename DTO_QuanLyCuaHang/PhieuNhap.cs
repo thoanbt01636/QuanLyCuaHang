@@ -13,6 +13,7 @@ namespace DTO_QuanLyCuaHang
         public string MaNV { get; set; }
         public string MaNCC { get; set; }
         public bool TrangThai { get; set; }
+        public decimal ThanhTien;
         public string TrangThaiTex => TrangThai ? "Đã Thanh Toán " : "Chờ Thanh Toán";
     }
 }

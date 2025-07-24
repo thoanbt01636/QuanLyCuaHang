@@ -181,48 +181,29 @@ namespace GUI_QuanLyThuVien
 
         private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;
+            string maPhieu = guna2DataGridView1.Rows[e.RowIndex].Cells["MaHD"].Value.ToString();
+            string maNV = guna2DataGridView1.Rows[e.RowIndex].Cells["MaNV"].Value.ToString();
+            HoaDon phieu = (HoaDon)guna2DataGridView1.CurrentRow.DataBoundItem;
 
-            try
+            NhanVien nv = new NhanVien();
+
+
+            foreach (NhanVien item in cboMaNhanVien.Items)
             {
-                DataGridViewRow selectedRow = guna2DataGridView1.Rows[e.RowIndex];
-                string maHD = selectedRow.Cells["MaHD"].Value?.ToString();
-
-                if (string.IsNullOrEmpty(maHD))
+                if (item.MaNV == maNV)
                 {
-                    MessageBox.Show("Không tìm thấy mã hóa đơn", "Thông báo",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                HoaDon hd = busHoaDon.GetHoaDonByID(maHD);
-
-                if (hd == null)
-                {
-                    MessageBox.Show("Không tìm thấy thông tin hóa đơn", "Thông báo",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-  
-                using (frmchitietHD frmChiTiet = new frmchitietHD(hd))
-                {
-                    
-                    frmChiTiet.StartPosition = FormStartPosition.CenterParent;
-
-                    
-                    frmChiTiet.ShowDialog();
-
-              
+                    nv = item;
+                    break;
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi khi mở chi tiết hóa đơn: {ex.Message}",
-                              "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-             
-            }
+            frmchitietHD ChiTiet = new frmchitietHD(phieu, nv);
+            ChiTiet.ShowDialog();
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
-    }
+}
 

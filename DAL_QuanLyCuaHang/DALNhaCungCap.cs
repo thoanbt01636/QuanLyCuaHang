@@ -39,5 +39,94 @@ namespace DAL_QuanLyCuaHang
             String sql = "SELECT * FROM NhaCungCap ";
             return SelectBySql(sql, new List<object>());
         }
+        public string generateMaNCC()
+        {
+            string prefix = "NCC";
+            string sql = "SELECT MAX(MaNCC) FROM NhaCungCap";
+            List<object> thamSo = new List<object>();
+            object result = DBUtil.ScalarQuery(sql, thamSo);
+            if (result != null && result.ToString().StartsWith(prefix))
+            {
+                string maxCode = result.ToString().Substring(3);
+                int newNumber = int.Parse(maxCode) + 1;
+                return $"{prefix}{newNumber:D3}";
+            }
+
+            return $"{prefix}001";
+        }
+
+        public void addNhaCungCap(NhaCungCap ncc)
+        {
+            try
+            {
+                string sql = @"INSERT INTO NhaCungCap (MaNCC, TenNCC, DiaChi, DienThoai, Email) 
+                       VALUES (@0, @1, @2, @3, @4)";
+                List<object> thamso = new List<object>
+        {
+            ncc.MaNCC,
+            ncc.TenNCC,
+            ncc.DiaChi,
+            ncc.DienThoai,
+            ncc.Email
+        };
+                DBUtil.Update(sql, thamso);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void updateNhaCungCap(NhaCungCap ncc)
+        {
+            try
+            {
+                string sql = @"UPDATE NhaCungCap
+                       SET TenNCC = @1, DiaChi = @2, DienThoai = @3, Email = @4
+                       WHERE MaNCC = @0";
+                List<object> thamso = new List<object>
+        {
+            ncc.MaNCC,
+            ncc.TenNCC,
+            ncc.DiaChi,
+            ncc.DienThoai,
+            ncc.Email
+        };
+                DBUtil.Update(sql, thamso);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void deleteNhaCungCap(string maNCC)
+        {
+            try
+            {
+                string sql = @"DELETE FROM NhaCungCap WHERE MaNCC = @0";
+                List<object> thamso = new List<object> { maNCC };
+                DBUtil.Update(sql, thamso);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public List<NhaCungCap> GetNhaCungCapByMa(string maNCC)
+        {
+            string sql = "SELECT * FROM NhaCungCap WHERE MaNCC LIKE '%' + @0 + '%'";
+            List<object> thamSo = new List<object> { maNCC };
+            return SelectBySql(sql, thamSo);
+        }
+
+        public List<NhaCungCap> GetNhaCungCapByTen(string tenNCC)
+        {
+            string sql = "SELECT * FROM NhaCungCap WHERE TenNCC LIKE '%' + @0 + '%'";
+            List<object> thamSo = new List<object> { tenNCC };
+            return SelectBySql(sql, thamSo);
+        }
+
     }
 }

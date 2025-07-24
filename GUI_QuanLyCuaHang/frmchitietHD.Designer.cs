@@ -83,9 +83,9 @@
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtTongTien = new Guna.UI2.WinForms.Guna2TextBox();
+            txtThanhTien = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            txtGiamGia = new Guna.UI2.WinForms.Guna2TextBox();
             txtMaHD = new Guna.UI2.WinForms.Guna2TextBox();
             txtTenNV = new Guna.UI2.WinForms.Guna2TextBox();
             NgayLap = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -111,7 +111,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvSanPham.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvSanPham.ColumnHeadersHeight = 4;
+            dgvSanPham.ColumnHeadersHeight = 50;
             dgvSanPham.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
@@ -140,7 +140,7 @@
             dgvSanPham.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             dgvSanPham.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dgvSanPham.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvSanPham.ThemeStyle.HeaderStyle.Height = 4;
+            dgvSanPham.ThemeStyle.HeaderStyle.Height = 50;
             dgvSanPham.ThemeStyle.ReadOnly = false;
             dgvSanPham.ThemeStyle.RowsStyle.BackColor = Color.White;
             dgvSanPham.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -299,7 +299,7 @@
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
             dgvChiTietHD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dgvChiTietHD.ColumnHeadersHeight = 4;
+            dgvChiTietHD.ColumnHeadersHeight = 50;
             dgvChiTietHD.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = Color.White;
@@ -328,7 +328,7 @@
             dgvChiTietHD.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             dgvChiTietHD.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dgvChiTietHD.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvChiTietHD.ThemeStyle.HeaderStyle.Height = 4;
+            dgvChiTietHD.ThemeStyle.HeaderStyle.Height = 50;
             dgvChiTietHD.ThemeStyle.ReadOnly = false;
             dgvChiTietHD.ThemeStyle.RowsStyle.BackColor = Color.White;
             dgvChiTietHD.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -354,7 +354,7 @@
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2Button1.Size = new Size(124, 52);
             guna2Button1.TabIndex = 122;
-            guna2Button1.Text = "<<";
+            guna2Button1.Text = "them";
             guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2Button2
@@ -371,7 +371,7 @@
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2Button2.Size = new Size(124, 52);
             guna2Button2.TabIndex = 123;
-            guna2Button2.Text = ">>";
+            guna2Button2.Text = "xóa";
             guna2Button2.Click += guna2Button2_Click;
             // 
             // guna2HtmlLabel1
@@ -426,9 +426,9 @@
             // guna2Panel2
             // 
             guna2Panel2.Controls.Add(guna2HtmlLabel9);
-            guna2Panel2.Controls.Add(txtTongTien);
+            guna2Panel2.Controls.Add(txtThanhTien);
             guna2Panel2.Controls.Add(guna2HtmlLabel8);
-            guna2Panel2.Controls.Add(guna2TextBox2);
+            guna2Panel2.Controls.Add(txtGiamGia);
             guna2Panel2.CustomizableEdges = customizableEdges21;
             guna2Panel2.Location = new Point(6, 655);
             guna2Panel2.Name = "guna2Panel2";
@@ -446,26 +446,26 @@
             guna2HtmlLabel9.TabIndex = 3;
             guna2HtmlLabel9.Text = "Tổng :";
             // 
-            // txtTongTien
+            // txtThanhTien
             // 
-            txtTongTien.CustomizableEdges = customizableEdges17;
-            txtTongTien.DefaultText = "";
-            txtTongTien.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtTongTien.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtTongTien.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtTongTien.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtTongTien.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTongTien.Font = new Font("Segoe UI", 9F);
-            txtTongTien.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTongTien.Location = new Point(87, 81);
-            txtTongTien.Margin = new Padding(3, 4, 3, 4);
-            txtTongTien.Name = "txtTongTien";
-            txtTongTien.PasswordChar = '\0';
-            txtTongTien.PlaceholderText = "";
-            txtTongTien.SelectedText = "";
-            txtTongTien.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            txtTongTien.Size = new Size(317, 33);
-            txtTongTien.TabIndex = 2;
+            txtThanhTien.CustomizableEdges = customizableEdges17;
+            txtThanhTien.DefaultText = "";
+            txtThanhTien.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtThanhTien.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtThanhTien.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtThanhTien.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtThanhTien.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtThanhTien.Font = new Font("Segoe UI", 9F);
+            txtThanhTien.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtThanhTien.Location = new Point(87, 81);
+            txtThanhTien.Margin = new Padding(3, 4, 3, 4);
+            txtThanhTien.Name = "txtThanhTien";
+            txtThanhTien.PasswordChar = '\0';
+            txtThanhTien.PlaceholderText = "";
+            txtThanhTien.SelectedText = "";
+            txtThanhTien.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtThanhTien.Size = new Size(317, 33);
+            txtThanhTien.TabIndex = 2;
             // 
             // guna2HtmlLabel8
             // 
@@ -477,26 +477,26 @@
             guna2HtmlLabel8.TabIndex = 1;
             guna2HtmlLabel8.Text = "Giảm Giá";
             // 
-            // guna2TextBox2
+            // txtGiamGia
             // 
-            guna2TextBox2.CustomizableEdges = customizableEdges19;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(118, 23);
-            guna2TextBox2.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '\0';
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2TextBox2.Size = new Size(286, 33);
-            guna2TextBox2.TabIndex = 0;
+            txtGiamGia.CustomizableEdges = customizableEdges19;
+            txtGiamGia.DefaultText = "";
+            txtGiamGia.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtGiamGia.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtGiamGia.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtGiamGia.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtGiamGia.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtGiamGia.Font = new Font("Segoe UI", 9F);
+            txtGiamGia.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtGiamGia.Location = new Point(118, 23);
+            txtGiamGia.Margin = new Padding(3, 4, 3, 4);
+            txtGiamGia.Name = "txtGiamGia";
+            txtGiamGia.PasswordChar = '\0';
+            txtGiamGia.PlaceholderText = "";
+            txtGiamGia.SelectedText = "";
+            txtGiamGia.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtGiamGia.Size = new Size(286, 33);
+            txtGiamGia.TabIndex = 0;
             // 
             // txtMaHD
             // 
@@ -612,9 +612,9 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtGiamGia;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2TextBox txtTongTien;
+        private Guna.UI2.WinForms.Guna2TextBox txtThanhTien;
         private Guna.UI2.WinForms.Guna2TextBox txtMaHD;
         private Guna.UI2.WinForms.Guna2TextBox txtTenNV;
         private Guna.UI2.WinForms.Guna2DateTimePicker NgayLap;

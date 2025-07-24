@@ -11,44 +11,74 @@ namespace BLL_QuanLyCuaHang
 {
     public class BUSChiTietHoaDon
     {
-        public class BLLChiTietHD
-        {
-            private DALChiTietHoaDon dalChiTietHD = new DALChiTietHoaDon();
+       
+            DALChiTietHoaDon dalChiTietPhieu = new DALChiTietHoaDon();
 
-            public List<ChiTietHD> GetChiTietHDByMaHD(string maHD)
+            public List<ChiTietHD> GetChiTietHDList(string maPhieu)
             {
-                return dalChiTietHD.GetChiTietByMaHD(maHD);
+                if (string.IsNullOrEmpty(maPhieu))
+                {
+                    return new List<ChiTietHD>();
+                }
+
+                return dalChiTietPhieu.SelectByMaHD(maPhieu);
             }
 
-            public bool ThemChiTietHD(ChiTietHD cthd)
+            public string InsertChiTietPhieu(ChiTietHD ct)
             {
-                return dalChiTietHD.InsertChiTietHD(cthd);
+                try
+                {
+                    ct.MaCTHD = dalChiTietPhieu.GenerateChiTietID();
+
+                    if (string.IsNullOrEmpty(ct.MaCTHD))
+                    {
+                        return "Không tạo được mã chi tiết phiếu.";
+                    }
+
+                    dalChiTietPhieu.InsertChiTiet(ct);
+                    return string.Empty;
+                }
+                catch (Exception ex)
+                {
+                    return $"Lỗi khi thêm chi tiết phiếu: {ex.Message}";
+                }
             }
 
-            public bool CapNhatChiTietHD(ChiTietHD cthd)
+            public string UpdateSoLuong(ChiTietHD ct)
             {
-                return dalChiTietHD.UpdateChiTietHD(cthd);
+                try
+                {
+                    if (string.IsNullOrEmpty(ct.MaCTHD))
+                    {
+                        return "Mã chi tiết phiếu không hợp lệ.";
+                    }
+
+                    dalChiTietPhieu.UpdateSoLuong(ct);
+                    return string.Empty;
+                }
+                catch (Exception ex)
+                {
+                    return $"Lỗi khi cập nhật số lượng: {ex.Message}";
+                }
             }
 
-            public bool XoaChiTietHD(string maCTHD)
+            public string XoaChiTietHD(string maPhieu)
             {
-                return dalChiTietHD.DeleteChiTietHD(maCTHD);
-            }
+                try
+                {
+                    if (string.IsNullOrEmpty(maPhieu))
+                    {
+                        return "Mã phiếu bán hàng không hợp lệ.";
+                    }
 
-            public decimal TinhTongTien(string maHD)
-            {
-                return dalChiTietHD.GetTongTienByMaHD(maHD);
-            }
-
-            public decimal TinhThanhTien(int soLuong, decimal donGia)
-            {
-                return soLuong * donGia;
-            }
-
-            public decimal TinhTongTienSauGiamGia(decimal tongTien, decimal phanTramGiamGia)
-            {
-                return tongTien * (1 - phanTramGiamGia / 100);
+                    dalChiTietPhieu.deleteChiTietHD(maPhieu);
+                    return string.Empty;
+                }
+                catch (Exception ex)
+                {
+                    return $"Lỗi khi xóa chi tiết: {ex.Message}";
+                }
             }
         }
     }
-}
+

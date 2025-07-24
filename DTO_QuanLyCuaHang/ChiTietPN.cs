@@ -8,8 +8,10 @@ namespace DTO_QuanLyCuaHang
 {
     public class ChiTietPN
     {
+        public string MaCTPN { get; set; }
         public string MaPN { get; set; }
         public string MaSP { get; set; }
+        public string TenSP { get; set; }
         public int SoLuong { get; set; }
         public decimal DonGiaNhap { get; set; }
     }
