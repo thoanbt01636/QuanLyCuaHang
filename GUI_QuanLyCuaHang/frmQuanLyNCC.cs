@@ -15,6 +15,7 @@ namespace GUI_QuanLyThuVien
 {
     public partial class frmQuanLyNCC : Form
     {
+
         public frmQuanLyNCC()
         {
             InitializeComponent();
@@ -22,11 +23,10 @@ namespace GUI_QuanLyThuVien
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-
             string tuKhoa = textTimKiem.Text.Trim();
 
-            BUSNhaCungCap busPhieuNhap = new BUSNhaCungCap();
-            List<NhaCungCap> danhSach = busPhieuNhap.GetNhaCungCapList();
+            BUSNhaCungCap bUS = new BUSNhaCungCap();
+            List<NhaCungCap> danhSach = bUS.GetNhaCungCapList();
 
             if (!AuthUtil.User.ChucVu)
             {
@@ -36,8 +36,7 @@ namespace GUI_QuanLyThuVien
             if (!string.IsNullOrEmpty(tuKhoa))
             {
                 danhSach = danhSach.Where(pn =>
-             
-                 
+                    
                     pn.MaNCC.Contains(tuKhoa, StringComparison.OrdinalIgnoreCase)
                 ).ToList();
             }
@@ -46,26 +45,17 @@ namespace GUI_QuanLyThuVien
             guna2DataGridView1.Columns.Clear();
             guna2DataGridView1.DataSource = danhSach;
 
-            DataGridViewImageColumn buttonColumn = new DataGridViewImageColumn();
-            buttonColumn.Name = "XemHang";
-            buttonColumn.HeaderText = "xem đơn hàng";
-            buttonColumn.Image = GUI_QuanLyCuaHang.Properties.Resources.may;
-            buttonColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            buttonColumn.DefaultCellStyle.BackColor = Color.LightBlue;
-            buttonColumn.DefaultCellStyle.ForeColor = Color.DarkBlue;
-            buttonColumn.DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
-            guna2DataGridView1.Columns.Add(buttonColumn);
-            guna2DataGridView1.Columns["xemHang"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            guna2DataGridView1.RowTemplate.Height = 50;
+
             guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         
+
 
         private void frmQuanLyNCC_Load(object sender, EventArgs e)
         {
             ClearForm();
             LoadNhaCungCap();
-            
+
         }
         private void LoadNhaCungCap()
         {
@@ -83,23 +73,19 @@ namespace GUI_QuanLyThuVien
             string diaChi = textDiaChi.Text.Trim();
             string dienThoai = textDienThoai.Text.Trim();
             string email = textEmail.Text.Trim();
+            BUSNhaCungCap busNCC = new BUSNhaCungCap();
 
-            if (string.IsNullOrEmpty(tenNCC))
-            {
-                MessageBox.Show("Vui lòng nhập tên nhà cung cấp.");
-                return;
-            }
 
             NhaCungCap ncc = new NhaCungCap
             {
+                MaNCC = busNCC.TaoMaTuDong(),
                 TenNCC = tenNCC,
                 DiaChi = diaChi,
                 DienThoai = dienThoai,
                 Email = email
             };
 
-            BUSNhaCungCap busNCC = new BUSNhaCungCap();
-            string result = busNCC.TaoMaTuDong();
+            string result = busNCC.AddNhaCungCap(ncc);
 
             if (string.IsNullOrEmpty(result))
             {
@@ -111,7 +97,6 @@ namespace GUI_QuanLyThuVien
                 MessageBox.Show(result);
             }
             ClearForm();
-
         }
         private void ClearForm()
         {
@@ -235,6 +220,12 @@ namespace GUI_QuanLyThuVien
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            ClearForm();
+            LoadNhaCungCap();
         }
     }
 }

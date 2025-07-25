@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x4tmGlfS3zw=",
+  "dgSpecHash": "jVauBxBpR2Y=",
   "success": true,
-  "projectFilePath": "D:\\thu\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj",
+  "projectFilePath": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

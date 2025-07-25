@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\thu\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {}
+    "D:\\QuanLyCuaHang\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {}
   },
   "projects": {
-    "D:\\thu\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
+    "D:\\QuanLyCuaHang\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\thu\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj",
+        "projectUniqueName": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj",
         "projectName": "DTO_QuanLyCuaHang",
-        "projectPath": "D:\\thu\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj",
+        "projectPath": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\DTO_QuanLyCuaHang.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\thu\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\obj\\",
+        "outputPath": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\DTO_QuanLyCuaHang\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
