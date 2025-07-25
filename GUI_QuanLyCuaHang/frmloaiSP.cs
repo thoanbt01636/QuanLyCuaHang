@@ -73,16 +73,22 @@ namespace GUI_QuanLyThuVien
             {
                 MessageBox.Show(result);
             }
+            btnthem.Enabled = false;
+            btnxoa.Enabled = true;
+            btncapnhat.Enabled = true;
 
         }
         private void ClearFrom()
         {
+            BUSLoaiSP bUSLoaiSP = new BUSLoaiSP();
+            textMaLoaiSP.Enabled = false;
+            textMaLoaiSP.Text = bUSLoaiSP.TaoMaTuDong();
             btnthem.Enabled = true;
             btncapnhat.Enabled = false;
             btnxoa.Enabled = true;
-            textMaLoaiSP.Clear();
             textTenLoaiSP.Clear();
             textMaLoaiSP.Enabled = false;
+            btnxoa.Enabled = false;
         }
 
         private void btnxoa_Click(object sender, EventArgs e)
@@ -198,11 +204,16 @@ namespace GUI_QuanLyThuVien
 
             textMaLoaiSP.Text = row.Cells["MaLoai"].Value.ToString();
             textTenLoaiSP.Text = row.Cells["TenLoai"].Value.ToString();
-            
+
             btnthem.Enabled = false;
             btncapnhat.Enabled = true;
             btnxoa.Enabled = true;
             textMaLoaiSP.Enabled = false;
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

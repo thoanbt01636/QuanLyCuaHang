@@ -16,6 +16,10 @@ namespace BLL_QuanLyCuaHang
         {
             return dalnhacungcap.selectAll();
         }
+        public string TaoMaTuDong()
+        {
+            return dalnhacungcap.generateMaNCC();
+        }
         public string AddNhaCungCap(NhaCungCap ncc)
         {
             try

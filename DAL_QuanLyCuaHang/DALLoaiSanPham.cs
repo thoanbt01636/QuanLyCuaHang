@@ -39,17 +39,41 @@ namespace DAL_QuanLyCuaHang
         public string genereteMaLoaiSP()
         {
             string prefix = "LSP";
-            string sql = "SELECT MAX(MaLoai) FROM SanPham";
-            List<object> thamSo = new List<object>();
-            object result = DBUtil.ScalarQuery(sql, thamSo);
-            if (result != null && result.ToString().StartsWith(prefix))
+            string sql = "SELECT MaLoai FROM LoaiSanPham";
+            List<object> args = new List<object>();
+            List<int> existingNumbers = new List<int>();
+
+            try
             {
-                string maxCode = result.ToString().Substring(3);
-                int newNumber = int.Parse(maxCode) + 1;
+                using (SqlDataReader reader = DBUtil.Query(sql, args, CommandType.Text))
+                {
+                    while (reader.Read())
+                    {
+                        string malsp = reader["MaLoai"].ToString();
+                        if (malsp.StartsWith(prefix) && int.TryParse(malsp.Substring(prefix.Length), out int number))
+                        {
+                            existingNumbers.Add(number);
+                        }
+                    }
+                }
+
+                int newNumber = 1;
+                existingNumbers.Sort();
+
+                foreach (int number in existingNumbers)
+                {
+                    if (number == newNumber)
+                        newNumber++;
+                    else if (number > newNumber)
+                        break;
+                }
+
                 return $"{prefix}{newNumber:D3}";
             }
-
-            return $"{prefix}001";
+            catch (Exception)
+            {
+                throw;
+            }
         }
         public void addLoaiSampham(LoaiSanPham lsp)
         {

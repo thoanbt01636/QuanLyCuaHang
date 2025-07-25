@@ -29,7 +29,9 @@ namespace GUI_QuanLyThuVien
         }
         private void ClearForm()
         {
+            BUSNhanVien bUSNhanVien = new BUSNhanVien();
             textMaNV.Clear();
+            textMaNV.Text = bUSNhanVien.TaoMaTuDong();
             textHoTen.Clear();
             textEmail.Clear();
             textMatKhau.Clear();
@@ -41,9 +43,9 @@ namespace GUI_QuanLyThuVien
             rbNhanVien.Enabled = true;
             rbQuanLy.Enabled = true;
             textMaNV.Enabled = false;
-            btnthem1111.Enabled = true;
-            btncapnhat.Enabled = false;
-            btnxoa.Enabled = false;
+            btnCapNhat.Enabled = false;
+            btnXoa.Enabled = false;
+
         }
 
         private void loadNhanvien()
@@ -221,9 +223,9 @@ namespace GUI_QuanLyThuVien
                 rbConHoatDong.Checked = true;
             else
                 rbKhongHoatDong.Checked = true;
-            btnthem1111.Enabled = false;
-            btncapnhat.Enabled = true;
-            btnxoa.Enabled = true;
+            btnThem.Enabled = false;
+            btnCapNhat.Enabled = true;
+            btnXoa.Enabled = true;
             textMaNV.Enabled = false;
 
         }
@@ -232,6 +234,37 @@ namespace GUI_QuanLyThuVien
         {
             ClearForm();
             loadNhanvien();
+        }
+
+        private void btntimkiem_Click(object sender, EventArgs e)
+        {
+            string keyword = txtTimKiem.Text.Trim().ToLower();
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                MessageBox.Show("Vui lòng nhập từ khóa tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            BUSNhanVien busNhanVien = new BUSNhanVien();
+            List<NhanVien> danhSachNhanVien = busNhanVien.GetNhanViensList();
+
+            var ketQua = danhSachNhanVien
+                .Where(nv =>
+                    (!string.IsNullOrEmpty(nv.MaNV) && nv.MaNV.ToLower().Contains(keyword)) ||
+                    (!string.IsNullOrEmpty(nv.TenNV) && nv.TenNV.ToLower().Contains(keyword)) ||
+                    (!string.IsNullOrEmpty(nv.Gmail) && nv.Gmail.ToLower().Contains(keyword))
+                ).ToList();
+
+            if (ketQua.Count > 0)
+            {
+                guna2DataGridView1.DataSource = ketQua;
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy nhân viên nào phù hợp!", "Kết quả tìm kiếm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 

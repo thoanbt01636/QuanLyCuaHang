@@ -15,6 +15,10 @@ namespace BLL_QuanLyCuaHang
         {
             return dalloaisp.selectAll();
         }
+        public string TaoMaTuDong()
+        {
+            return dalloaisp.genereteMaLoaiSP();
+        }
         public string AddLoaiSanPham(LoaiSanPham lsp)
         {
             try

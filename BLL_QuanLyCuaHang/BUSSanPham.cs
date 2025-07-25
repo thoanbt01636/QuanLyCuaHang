@@ -16,7 +16,10 @@ namespace BLL_QuanLyCuaHang
         {
             return dalSanPham.selectAll(trangThai);
         }
-
+        public string TaoMaTuDong()
+        {
+            return dalSanPham.generateMaSanPham();
+        }
 
         public string AddSanPham(SanPham sp)
         {

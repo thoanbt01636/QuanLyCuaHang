@@ -11,6 +11,45 @@ namespace DAL_QuanLyCuaHang
 {
     public class DALNhanVien
     {
+        public string TaoMaTuDong()
+        {
+            string prefix = "NV";
+            string sql = "SELECT MaNV FROM NhanVien";
+            List<object> args = new List<object>();
+            List<int> existingNumbers = new List<int>();
+
+            try
+            {
+                using (SqlDataReader reader = DBUtil.Query(sql, args, CommandType.Text))
+                {
+                    while (reader.Read())
+                    {
+                        string maNV = reader["MaNV"].ToString();
+                        if (maNV.StartsWith(prefix) && int.TryParse(maNV.Substring(prefix.Length), out int number))
+                        {
+                            existingNumbers.Add(number);
+                        }
+                    }
+                }
+
+                int newNumber = 1;
+                existingNumbers.Sort();
+
+                foreach (int number in existingNumbers)
+                {
+                    if (number == newNumber)
+                        newNumber++;
+                    else if (number > newNumber)
+                        break;
+                }
+
+                return $"{prefix}{newNumber:D3}";
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         public NhanVien? getNhanVien1(string email, string password)
         {
             string sql = "SELECT TOP 1 * FROM NhanVien WHERE Gmail = @0 AND MatKhau = @1";

@@ -19,6 +19,10 @@ namespace BLL_QuanLyCuaHang
             }
             return dalNhanVien.getNhanVien1(username, password);
         }
+        public string TaoMaTuDong()
+        {
+            return dalNhanVien.TaoMaTuDong();
+        }
         public List<NhanVien> GetNhanViensList()
         {
             return dalNhanVien.seletAll();
@@ -67,7 +71,7 @@ namespace BLL_QuanLyCuaHang
                     return "Mã nhân viên không hợp lệ.";
                 }
 
-                dalNhanVien.addNhanVien(nv);
+                dalNhanVien.TaoMaTuDong();
                 return string.Empty;
             }
             catch (Exception e)

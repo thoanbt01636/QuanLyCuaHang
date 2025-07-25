@@ -31,20 +31,24 @@ namespace GUI_QuanLyThuVien
 
         private void frmSP_Load(object sender, EventArgs e)
         {
-            ClearForm();
             LoadSanPham();
+            ClearForm();
             LoadLoaiSanPham();
+            
         }
         private void ClearForm()
         {
+            BUSSanPham bUSSanPham = new BUSSanPham();
+            textMaSP.Clear();
+            textMaSP.Text = bUSSanPham.TaoMaTuDong();
             btnThem.Enabled = true;
             btnCapNhat.Enabled = false;
             btnXoa.Enabled = true;
-            textMaSP.Clear();
             textTenSP.Clear();
             textDonGIa.Clear();
             txtSoluongton.Clear();
             textMaSP.Enabled = false;
+            btnXoa.Enabled = false;
 
         }
         private void LoadSanPham()

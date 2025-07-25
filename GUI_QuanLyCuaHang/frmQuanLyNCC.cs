@@ -26,7 +26,9 @@ namespace GUI_QuanLyThuVien
 
         private void frmQuanLyNCC_Load(object sender, EventArgs e)
         {
+            ClearForm();
             LoadNhaCungCap();
+            
         }
         private void LoadNhaCungCap()
         {
@@ -40,7 +42,6 @@ namespace GUI_QuanLyThuVien
 
         private void guna2GradientButton4_Click(object sender, EventArgs e)
         {
-
             string tenNCC = textTenNCC.Text.Trim();
             string diaChi = textDiaChi.Text.Trim();
             string dienThoai = textDienThoai.Text.Trim();
@@ -61,37 +62,40 @@ namespace GUI_QuanLyThuVien
             };
 
             BUSNhaCungCap busNCC = new BUSNhaCungCap();
-            string result = busNCC.AddNhaCungCap(ncc);
+            string result = busNCC.TaoMaTuDong();
 
             if (string.IsNullOrEmpty(result))
             {
                 MessageBox.Show("Thêm nhà cung cấp thành công.");
-                ClearForm();
                 LoadNhaCungCap();
             }
             else
             {
                 MessageBox.Show(result);
             }
+            ClearForm();
 
         }
         private void ClearForm()
         {
-            btnthem1111.Enabled = true;
-            btncapnhat.Enabled = false;
-            btnxoa.Enabled = true;
-            textMaNCC.Clear();
+            BUSNhaCungCap bUSNhaCungCap = new BUSNhaCungCap();
+            txtMaNCC.Clear();
+            txtMaNCC.Text = bUSNhaCungCap.TaoMaTuDong();
+            txtMaNCC.Enabled = false;
             textTenNCC.Clear();
             textDienThoai.Clear();
             textEmail.Clear();
             textDiaChi.Clear();
-            textMaNCC.Enabled = false;
+            txtMaNCC.Enabled = false;
+            btnXoa.Enabled = false;
+            btnCapNhat.Enabled = false;
+
         }
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
 
-            string maNCC = textMaNCC.Text.Trim();
+            string maNCC = txtMaNCC.Text.Trim();
             string tenNCC = textTenNCC.Text.Trim();
             string diaChi = textDiaChi.Text.Trim();
             string dienThoai = textDienThoai.Text.Trim();
@@ -130,7 +134,7 @@ namespace GUI_QuanLyThuVien
         private void guna2GradientButton3_Click(object sender, EventArgs e)
         {
 
-            string maNCC = textMaNCC.Text.Trim();
+            string maNCC = txtMaNCC.Text.Trim();
             string tenNCC = textTenNCC.Text.Trim();
 
             if (string.IsNullOrEmpty(maNCC))
@@ -180,15 +184,20 @@ namespace GUI_QuanLyThuVien
         {
             DataGridViewRow row = guna2DataGridView1.Rows[e.RowIndex];
 
-            textMaNCC.Text = row.Cells["MaNCC"].Value.ToString();
+            txtMaNCC.Text = row.Cells["MaNCC"].Value.ToString();
             textTenNCC.Text = row.Cells["TenNCC"].Value.ToString();
             textDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
             textDienThoai.Text = row.Cells["DienThoai"].Value.ToString();
-            textEmail.Text = row.Cells["Email"].Value.ToString();            
-            btnthem1111.Enabled = false;
-            btncapnhat.Enabled = true;
-            btnxoa.Enabled = true;
-            textMaNCC.Enabled = false;
+            textEmail.Text = row.Cells["Email"].Value.ToString();
+            btnCapNhat.Enabled = true;
+            btnThem.Enabled = false;
+            btnXoa.Enabled = true;
+        }
+
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

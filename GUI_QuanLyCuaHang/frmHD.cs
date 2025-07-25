@@ -73,6 +73,8 @@ namespace GUI_QuanLyThuVien
             picQRCode.Image = null;
             btnCapNhat.Enabled = false;
             btnXoa.Enabled = false;
+            txtTimKiem.Clear();
+
         }
 
         private void guna2GradientButton4_Click(object sender, EventArgs e)
@@ -185,7 +187,7 @@ namespace GUI_QuanLyThuVien
                 }
                 btnThem.Enabled = false;
                 btnCapNhat.Enabled = true;
-                btnXoa.Enabled = true;  
+                btnXoa.Enabled = true;
             }
         }
 
@@ -245,6 +247,33 @@ namespace GUI_QuanLyThuVien
             picQRCode.Image = qrCodeImage;
 
             MessageBox.Show("Tạo QR Code thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btntimkiem_Click(object sender, EventArgs e)
+        {
+            string keyword = txtTimKiem.Text.Trim().ToLower();
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                LoadHoaDon();
+                return;
+            }
+
+            try
+            {
+                List<HoaDon> danhSachGoc = busHoaDon.GetHoaDonList();
+
+                var danhSachLoc = danhSachGoc.Where(hd =>
+                    (hd.MaHD != null && hd.MaHD.ToLower().Contains(keyword)) ||
+                    (hd.MaNV != null && hd.MaNV.ToLower().Contains(keyword))
+                ).ToList();
+
+                guna2DataGridView1.DataSource = danhSachLoc;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tìm kiếm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

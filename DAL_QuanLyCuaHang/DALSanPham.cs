@@ -134,17 +134,41 @@ namespace DAL_QuanLyCuaHang
         public string generateMaSanPham()
         {
             string prefix = "SP";
-            string sql = "SELECT MAX(MaSP) FROM SanPham";
-            List<object> thamSo = new List<object>();
-            object result = DBUtil.ScalarQuery(sql, thamSo);
-            if (result != null && result.ToString().StartsWith(prefix))
-            {
-                string maxCode = result.ToString().Substring(2);
-                int newNumber = int.Parse(maxCode) + 1;
-                return $"{prefix}{newNumber:D3}";
-            }
+            string sql = "SELECT MaSP FROM SanPham";
+            List<object> args = new List<object>();
+            List<int> existingNumbers = new List<int>();
 
-            return $"{prefix}001";
+            try
+            {
+                using (SqlDataReader reader = DBUtil.Query(sql, args, CommandType.Text))
+                {
+                    while (reader.Read())
+                    {
+                        string masp = reader["MaSP"].ToString();
+                        if (masp.StartsWith(prefix) && int.TryParse(masp.Substring(prefix.Length), out int number))
+                        {
+                            existingNumbers.Add(number);
+                        }
+                    }
+                }
+
+                int newNumber = 1;
+                existingNumbers.Sort();
+
+                foreach (int number in existingNumbers)
+                {
+                    if (number == newNumber)
+                        newNumber++;
+                    else if (number > newNumber)
+                        break;
+                }
+
+                return $"{prefix}{newNumber:D4}";
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
         public List<SanPham> GetSanPhamByMa(string ma)
         {
