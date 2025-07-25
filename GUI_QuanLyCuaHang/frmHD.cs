@@ -1,4 +1,8 @@
-﻿using System;
+﻿using BLL_QuanLyCuaHang;
+using DAL_QuanLyCuaHang;
+using DTO_QuanLyCuaHang;
+using QRCoder;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,9 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL_QuanLyCuaHang;
-using DAL_QuanLyCuaHang;
-using DTO_QuanLyCuaHang;
 
 namespace GUI_QuanLyThuVien
 {
@@ -23,6 +24,8 @@ namespace GUI_QuanLyThuVien
             InitializeComponent();
             LoadNhanVien();
             LoadHoaDon();
+            ClearForm();
+            txtMaHD.Enabled = false;
         }
 
         private void LoadNhanVien()
@@ -59,12 +62,17 @@ namespace GUI_QuanLyThuVien
 
         private void ClearForm()
         {
+            BUSHoaDon bUSHoaDon = new BUSHoaDon();
             txtMaHD.Clear();
-            guna2GradientButton2.Enabled = true;
+            txtMaHD.Text = bUSHoaDon.TaoMaTuDong();
+            btnCapNhat.Enabled = true;
             guna2GradientButton1.Enabled = true;
-            guna2GradientButton3.Enabled = true;
+            btnXoa.Enabled = true;
             rbChoThanhToan.Checked = true;
             rbDaThanhToan.Checked = false;
+            picQRCode.Image = null;
+            btnCapNhat.Enabled = false;
+            btnXoa.Enabled = false;
         }
 
         private void guna2GradientButton4_Click(object sender, EventArgs e)
@@ -175,7 +183,9 @@ namespace GUI_QuanLyThuVien
                     rbChoThanhToan.Checked = !trangThai;
                     rbDaThanhToan.Checked = trangThai;
                 }
-                txtMaHD.Enabled = false;
+                btnThem.Enabled = false;
+                btnCapNhat.Enabled = true;
+                btnXoa.Enabled = true;  
             }
         }
 
@@ -203,6 +213,38 @@ namespace GUI_QuanLyThuVien
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void QRCODE_Click(object sender, EventArgs e)
+        {
+            string maHD = txtMaHD.Text.Trim();
+
+            if (string.IsNullOrEmpty(maHD))
+            {
+                MessageBox.Show("Vui lòng nhập Mã Phiếu Nhập để tạo QR Code!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string sqlCheck = "SELECT COUNT(*) FROM HoaDon WHERE MaHD = @MaHD";
+
+            var args = new Dictionary<string, object> { { "MaHD", maHD } };
+
+            int count = Convert.ToInt32(DBUtil.ScalarQuery1(sqlCheck, args));
+
+            if (count == 0)
+            {
+                MessageBox.Show("Mã Hóa Đơn không tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(maHD, QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrCodeData);
+
+            Bitmap qrCodeImage = qrCode.GetGraphic(5);
+            picQRCode.Image = qrCodeImage;
+
+            MessageBox.Show("Tạo QR Code thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

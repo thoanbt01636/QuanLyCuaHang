@@ -30,7 +30,10 @@ namespace BLL_QuanLyCuaHang
                 return ex.Message;
             }
         }
-
+        public string TaoMaTuDong()
+        {
+            return dalHoaDon.TaoMaTuDong();
+        }
         public string Update(HoaDon hd)
         {
             try

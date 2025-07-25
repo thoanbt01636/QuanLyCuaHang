@@ -18,6 +18,10 @@ namespace BLL_QuanLyCuaHang
         {
             return dalPhieuNhap.selectAll();
         }
+        public string TaoMaTuDong()
+        {
+            return dalPhieuNhap.generateMaPN();
+        }
 
         public string UpdatePhieuNhap(PhieuNhap pn)
         {

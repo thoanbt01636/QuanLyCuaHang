@@ -91,16 +91,16 @@
             btntimkiem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btntimkiem.BackColor = Color.White;
             btntimkiem.CheckedState.ImageSize = new Size(64, 64);
-            btntimkiem.HoverState.ImageSize = new Size(64, 64);
+            btntimkiem.HoverState.ImageSize = new Size(45, 45);
             btntimkiem.Image = (Image)resources.GetObject("btntimkiem.Image");
             btntimkiem.ImageOffset = new Point(0, 0);
             btntimkiem.ImageRotate = 0F;
             btntimkiem.ImageSize = new Size(45, 45);
             btntimkiem.Location = new Point(516, 30);
             btntimkiem.Name = "btntimkiem";
-            btntimkiem.PressedState.ImageSize = new Size(64, 64);
+            btntimkiem.PressedState.ImageSize = new Size(45, 45);
             btntimkiem.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            btntimkiem.Size = new Size(46, 45);
+            btntimkiem.Size = new Size(45, 45);
             btntimkiem.TabIndex = 80;
             btntimkiem.Click += btntimkiem_Click;
             // 

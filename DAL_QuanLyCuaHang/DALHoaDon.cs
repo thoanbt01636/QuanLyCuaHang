@@ -14,19 +14,41 @@ namespace DAL_QuanLyCuaHang
         public string TaoMaTuDong()
         {
             string prefix = "HD";
-            string sql = "SELECT MAX(MaHD) FROM HoaDon";
-            var args = new List<object>();
-            object result = DBUtil.ScalarQuery(sql, args);
-            if (result != null && result.ToString().StartsWith(prefix))
+            string sql = "SELECT MaHD FROM HoaDon";
+            List<object> args = new List<object>();
+            List<int> existingNumbers = new List<int>();
+
+            try
             {
-                string maxCode = result.ToString().Substring(2);
-                if (int.TryParse(maxCode, out int number))
+                using (SqlDataReader reader = DBUtil.Query(sql, args, CommandType.Text))
                 {
-                    int newNumber = number + 1;
-                    return $"{prefix}{newNumber:D4}";
+                    while (reader.Read())
+                    {
+                        string maHD = reader["MaHD"].ToString();
+                        if (maHD.StartsWith(prefix) && int.TryParse(maHD.Substring(prefix.Length), out int number))
+                        {
+                            existingNumbers.Add(number);
+                        }
+                    }
                 }
+
+                int newNumber = 1;
+                existingNumbers.Sort();
+
+                foreach (int number in existingNumbers)
+                {
+                    if (number == newNumber)
+                        newNumber++;
+                    else if (number > newNumber)
+                        break;
+                }
+
+                return $"{prefix}{newNumber:D4}";
             }
-            return $"{prefix}0001";
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public void Insert(HoaDon hd)

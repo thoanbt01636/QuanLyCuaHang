@@ -63,7 +63,7 @@
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(1749, 79);
+            groupBox1.Size = new Size(1287, 79);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông Tin Nhân Viên";
@@ -74,13 +74,13 @@
             cboNhanVien.Location = new Point(152, 30);
             cboNhanVien.Margin = new Padding(4, 3, 4, 3);
             cboNhanVien.Name = "cboNhanVien";
-            cboNhanVien.Size = new Size(306, 31);
+            cboNhanVien.Size = new Size(219, 31);
             cboNhanVien.TabIndex = 6;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(979, 34);
+            label4.Location = new Point(750, 34);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(89, 23);
@@ -90,16 +90,16 @@
             // dtDenNgay
             // 
             dtDenNgay.Format = DateTimePickerFormat.Short;
-            dtDenNgay.Location = new Point(1096, 29);
+            dtDenNgay.Location = new Point(866, 29);
             dtDenNgay.Margin = new Padding(4, 3, 4, 3);
             dtDenNgay.Name = "dtDenNgay";
-            dtDenNgay.Size = new Size(396, 30);
+            dtDenNgay.Size = new Size(244, 30);
             dtDenNgay.TabIndex = 4;
             dtDenNgay.Value = new DateTime(2025, 5, 17, 0, 0, 0, 0);
             // 
             // button1
             // 
-            button1.Location = new Point(1548, 23);
+            button1.Location = new Point(1140, 22);
             button1.Margin = new Padding(4, 3, 4, 3);
             button1.Name = "button1";
             button1.Size = new Size(128, 46);
@@ -111,17 +111,17 @@
             // dtTuNgay
             // 
             dtTuNgay.Format = DateTimePickerFormat.Short;
-            dtTuNgay.Location = new Point(556, 31);
+            dtTuNgay.Location = new Point(467, 31);
             dtTuNgay.Margin = new Padding(4, 3, 4, 3);
             dtTuNgay.Name = "dtTuNgay";
-            dtTuNgay.Size = new Size(414, 30);
+            dtTuNgay.Size = new Size(247, 30);
             dtTuNgay.TabIndex = 3;
             dtTuNgay.Value = new DateTime(2025, 5, 17, 0, 0, 0, 0);
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(468, 36);
+            label3.Location = new Point(379, 36);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(78, 23);
@@ -158,7 +158,7 @@
             guna2GradientPanel2.Location = new Point(5, 246);
             guna2GradientPanel2.Name = "guna2GradientPanel2";
             guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2GradientPanel2.Size = new Size(1792, 500);
+            guna2GradientPanel2.Size = new Size(1309, 392);
             guna2GradientPanel2.TabIndex = 118;
             // 
             // guna2DataGridView1
@@ -189,7 +189,7 @@
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.Size = new Size(1786, 489);
+            guna2DataGridView1.Size = new Size(1303, 381);
             guna2DataGridView1.TabIndex = 0;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -218,7 +218,7 @@
             AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 237, 168);
-            ClientSize = new Size(1799, 750);
+            ClientSize = new Size(1316, 642);
             Controls.Add(guna2GradientPanel2);
             Controls.Add(groupBox1);
             Controls.Add(label1);

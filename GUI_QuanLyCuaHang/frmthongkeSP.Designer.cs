@@ -77,10 +77,10 @@
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(1790, 79);
+            groupBox1.Size = new Size(1281, 79);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            groupBox1.Text = "Thông Tin DanhThu";
             // 
             // guna2Button1
             // 
@@ -92,7 +92,7 @@
             guna2Button1.FillColor = Color.White;
             guna2Button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(1594, 21);
+            guna2Button1.Location = new Point(1106, 23);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button1.Size = new Size(156, 40);
@@ -107,23 +107,23 @@
             cboLoaiSanPham.Location = new Point(164, 30);
             cboLoaiSanPham.Margin = new Padding(4, 3, 4, 3);
             cboLoaiSanPham.Name = "cboLoaiSanPham";
-            cboLoaiSanPham.Size = new Size(332, 31);
+            cboLoaiSanPham.Size = new Size(181, 31);
             cboLoaiSanPham.TabIndex = 6;
             // 
             // dtDenNgay
             // 
             dtDenNgay.Format = DateTimePickerFormat.Short;
-            dtDenNgay.Location = new Point(1149, 28);
+            dtDenNgay.Location = new Point(830, 33);
             dtDenNgay.Margin = new Padding(4, 3, 4, 3);
             dtDenNgay.Name = "dtDenNgay";
-            dtDenNgay.Size = new Size(405, 30);
+            dtDenNgay.Size = new Size(237, 30);
             dtDenNgay.TabIndex = 5;
             dtDenNgay.Value = new DateTime(2025, 5, 17, 0, 0, 0, 0);
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(1048, 31);
+            label4.Location = new Point(720, 36);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(89, 23);
@@ -133,10 +133,10 @@
             // dtTuNgay
             // 
             dtTuNgay.Format = DateTimePickerFormat.Short;
-            dtTuNgay.Location = new Point(648, 28);
+            dtTuNgay.Location = new Point(450, 30);
             dtTuNgay.Margin = new Padding(4, 3, 4, 3);
             dtTuNgay.Name = "dtTuNgay";
-            dtTuNgay.Size = new Size(378, 30);
+            dtTuNgay.Size = new Size(245, 30);
             dtTuNgay.TabIndex = 3;
             dtTuNgay.Value = new DateTime(2025, 5, 17, 0, 0, 0, 0);
             // 
@@ -144,7 +144,7 @@
             // 
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Location = new Point(538, 33);
+            label3.Location = new Point(353, 37);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(78, 23);
@@ -170,7 +170,7 @@
             guna2GradientPanel2.Location = new Point(0, 222);
             guna2GradientPanel2.Name = "guna2GradientPanel2";
             guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2GradientPanel2.Size = new Size(1790, 490);
+            guna2GradientPanel2.Size = new Size(1281, 306);
             guna2GradientPanel2.TabIndex = 118;
             // 
             // guna2DataGridView2
@@ -201,7 +201,7 @@
             guna2DataGridView2.Name = "guna2DataGridView2";
             guna2DataGridView2.RowHeadersVisible = false;
             guna2DataGridView2.RowHeadersWidth = 51;
-            guna2DataGridView2.Size = new Size(1784, 484);
+            guna2DataGridView2.Size = new Size(1275, 300);
             guna2DataGridView2.TabIndex = 0;
             guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -230,7 +230,7 @@
             AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 237, 168);
-            ClientSize = new Size(1795, 715);
+            ClientSize = new Size(1286, 531);
             Controls.Add(guna2GradientPanel2);
             Controls.Add(groupBox1);
             Controls.Add(label1);

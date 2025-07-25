@@ -579,16 +579,16 @@
             guna2ImageButton1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2ImageButton1.BackColor = Color.White;
             guna2ImageButton1.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.HoverState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.HoverState.ImageSize = new Size(45, 45);
             guna2ImageButton1.Image = (Image)resources.GetObject("guna2ImageButton1.Image");
             guna2ImageButton1.ImageOffset = new Point(0, 0);
             guna2ImageButton1.ImageRotate = 0F;
             guna2ImageButton1.ImageSize = new Size(45, 45);
             guna2ImageButton1.Location = new Point(513, 32);
             guna2ImageButton1.Name = "guna2ImageButton1";
-            guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.PressedState.ImageSize = new Size(45, 45);
             guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges35;
-            guna2ImageButton1.Size = new Size(46, 45);
+            guna2ImageButton1.Size = new Size(45, 45);
             guna2ImageButton1.TabIndex = 80;
             guna2ImageButton1.Click += guna2ImageButton1_Click;
             // 

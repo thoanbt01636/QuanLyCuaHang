@@ -546,7 +546,7 @@
             NgayLap.CustomizableEdges = customizableEdges27;
             NgayLap.FillColor = Color.White;
             NgayLap.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            NgayLap.Format = DateTimePickerFormat.Long;
+            NgayLap.Format = DateTimePickerFormat.Custom;
             NgayLap.Location = new Point(1157, 156);
             NgayLap.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             NgayLap.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);

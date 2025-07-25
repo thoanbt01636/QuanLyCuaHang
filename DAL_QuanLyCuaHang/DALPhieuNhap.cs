@@ -81,17 +81,41 @@ namespace DAL_QuanLyCuaHang
         public string generateMaPN()
         {
             string prefix = "PN";
-            string sql = "SELECT MAX(MaPN) FROM PhieuNhap";
-            object result = DBUtil.ScalarQuery(sql, new List<object>());
+            string sql = "SELECT MaPN FROM PhieuNhap";
+            List<object> args = new List<object>();
+            List<int> existingNumbers = new List<int>();
 
-            if (result != null && result.ToString().StartsWith(prefix))
+            try
             {
-                string maxCode = result.ToString().Substring(prefix.Length);
-                int newNumber = int.Parse(maxCode) + 1;
+                using (SqlDataReader reader = DBUtil.Query(sql, args, CommandType.Text))
+                {
+                    while (reader.Read())
+                    {
+                        string maPN = reader["MaPN"].ToString();
+                        if (maPN.StartsWith(prefix) && int.TryParse(maPN.Substring(prefix.Length), out int number))
+                        {
+                            existingNumbers.Add(number);
+                        }
+                    }
+                }
+
+                int newNumber = 1;
+                existingNumbers.Sort();
+
+                foreach (int number in existingNumbers)
+                {
+                    if (number == newNumber)
+                        newNumber++;
+                    else if (number > newNumber)
+                        break;
+                }
+
                 return $"{prefix}{newNumber:D3}";
             }
-
-            return $"{prefix}001";
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public void addPhieuNhap(PhieuNhap pn)

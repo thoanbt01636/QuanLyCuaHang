@@ -364,24 +364,24 @@
             // 
             // btnTimKiem
             // 
-            btnTimKiem.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnTimKiem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnTimKiem.BackColor = Color.White;
             btnTimKiem.CheckedState.ImageSize = new Size(64, 64);
-            btnTimKiem.HoverState.ImageSize = new Size(64, 64);
+            btnTimKiem.HoverState.ImageSize = new Size(45, 45);
             btnTimKiem.Image = (Image)resources.GetObject("btnTimKiem.Image");
             btnTimKiem.ImageOffset = new Point(0, 0);
             btnTimKiem.ImageRotate = 0F;
             btnTimKiem.ImageSize = new Size(45, 45);
-            btnTimKiem.Location = new Point(436, 13);
+            btnTimKiem.Location = new Point(469, 18);
             btnTimKiem.Name = "btnTimKiem";
-            btnTimKiem.PressedState.ImageSize = new Size(64, 64);
+            btnTimKiem.PressedState.ImageSize = new Size(45, 45);
             btnTimKiem.ShadowDecoration.CustomizableEdges = customizableEdges21;
-            btnTimKiem.Size = new Size(46, 45);
+            btnTimKiem.Size = new Size(45, 45);
             btnTimKiem.TabIndex = 84;
             // 
             // txtTimKiem
             // 
-            txtTimKiem.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtTimKiem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtTimKiem.CustomizableEdges = customizableEdges22;
             txtTimKiem.DefaultText = "";
             txtTimKiem.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -391,7 +391,7 @@
             txtTimKiem.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTimKiem.Font = new Font("Segoe UI", 9F);
             txtTimKiem.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTimKiem.Location = new Point(100, 13);
+            txtTimKiem.Location = new Point(133, 18);
             txtTimKiem.Margin = new Padding(3, 4, 3, 4);
             txtTimKiem.Name = "txtTimKiem";
             txtTimKiem.PasswordChar = '\0';

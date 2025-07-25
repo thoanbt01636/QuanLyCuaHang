@@ -11,7 +11,7 @@ namespace DAL_QuanLyCuaHang
     public class DBUtil
     {
 
-        public static string connString = @"Data Source=THOAN2410;Initial Catalog=CuaHang;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
+        public static string connString = @"Data Source=DESKTOP-KH2OE1U\SQLEXPRESS;Initial Catalog=QuanLyCuaHang;Integrated Security=True;Trust Server Certificate=True";
         public static SqlCommand GetCommand(string sql, List<object> args, CommandType cmdType)
         {
             SqlConnection conn = new SqlConnection(connString);
@@ -23,8 +23,24 @@ namespace DAL_QuanLyCuaHang
                 cmd.Parameters.AddWithValue($"@{i}", args[i]);
             }
 
+
             return cmd;
         }
+        public static SqlCommand GetCommand(string sql, Dictionary<string, object> args, CommandType cmdType)
+        {
+            SqlConnection conn = new SqlConnection(connString);
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = cmdType;
+
+            foreach (var param in args)
+            {
+                string paramName = param.Key.StartsWith("@") ? param.Key : "@" + param.Key;
+                cmd.Parameters.AddWithValue(paramName, param.Value);
+            }
+
+            return cmd;
+        }
+
 
 
         public static void Update(string sql, List<object> args, CommandType cmdType = CommandType.Text)
@@ -68,12 +84,30 @@ namespace DAL_QuanLyCuaHang
                 cmd.Connection.Open();
                 return cmd.ExecuteScalar();
             }
+
             catch (Exception)
             {
                 throw;
             }
         }
-        public static SqlCommand GetCommand(string sql, Dictionary<string, object> args, CommandType cmdType)
+        public static object ScalarQuery1(string sql, Dictionary<string, object> parameters)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    foreach (var param in parameters)
+                    {
+                        cmd.Parameters.AddWithValue("@" + param.Key, param.Value);
+                    }
+
+                    return cmd.ExecuteScalar();
+                }
+            }
+        }
+
+        public static SqlCommand GetCommand1(string sql, Dictionary<string, object> args, CommandType cmdType)
         {
             SqlCommand cmd = new SqlCommand(sql);
             cmd.CommandType = cmdType;

@@ -250,8 +250,8 @@ namespace GUI_QuanLyThuVien
                     if (string.IsNullOrEmpty(kq))
                     {
                         MessageBox.Show("Xóa chi tiết phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ClearForm(); 
-                        LoadDanhSachChiTietPN(); 
+                        ClearForm();
+                        LoadDanhSachChiTietPN();
                     }
                     else
                     {
@@ -263,6 +263,11 @@ namespace GUI_QuanLyThuVien
                     MessageBox.Show("Lỗi khi xóa: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void guna2GradientButton5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
