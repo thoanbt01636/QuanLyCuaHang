@@ -80,7 +80,7 @@
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             panel2 = new Panel();
-            guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            textTimKiem = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             guna2GroupBox2.SuspendLayout();
@@ -474,30 +474,30 @@
             // 
             panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             panel2.BackColor = Color.FromArgb(255, 237, 168);
-            panel2.Controls.Add(guna2ImageButton1);
+            panel2.Controls.Add(textTimKiem);
             panel2.Controls.Add(guna2TextBox1);
             panel2.Location = new Point(3, 625);
             panel2.Name = "panel2";
             panel2.Size = new Size(571, 88);
             panel2.TabIndex = 115;
             // 
-            // guna2ImageButton1
+            // textTimKiem
             // 
-            guna2ImageButton1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ImageButton1.BackColor = Color.White;
-            guna2ImageButton1.CheckedState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.HoverState.ImageSize = new Size(45, 45);
-            guna2ImageButton1.Image = (Image)resources.GetObject("guna2ImageButton1.Image");
-            guna2ImageButton1.ImageOffset = new Point(0, 0);
-            guna2ImageButton1.ImageRotate = 0F;
-            guna2ImageButton1.ImageSize = new Size(45, 45);
-            guna2ImageButton1.Location = new Point(513, 32);
-            guna2ImageButton1.Name = "guna2ImageButton1";
-            guna2ImageButton1.PressedState.ImageSize = new Size(45, 45);
-            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges54;
-            guna2ImageButton1.Size = new Size(45, 45);
-            guna2ImageButton1.TabIndex = 80;
-            guna2ImageButton1.Click += guna2ImageButton1_Click;
+            textTimKiem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            textTimKiem.BackColor = Color.White;
+            textTimKiem.CheckedState.ImageSize = new Size(64, 64);
+            textTimKiem.HoverState.ImageSize = new Size(45, 45);
+            textTimKiem.Image = (Image)resources.GetObject("textTimKiem.Image");
+            textTimKiem.ImageOffset = new Point(0, 0);
+            textTimKiem.ImageRotate = 0F;
+            textTimKiem.ImageSize = new Size(45, 45);
+            textTimKiem.Location = new Point(513, 32);
+            textTimKiem.Name = "textTimKiem";
+            textTimKiem.PressedState.ImageSize = new Size(45, 45);
+            textTimKiem.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            textTimKiem.Size = new Size(45, 45);
+            textTimKiem.TabIndex = 80;
+            textTimKiem.Click += guna2ImageButton1_Click;
             // 
             // frmQuanLyNCC
             // 
@@ -540,7 +540,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox textDiaChi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton textTimKiem;
         private Guna.UI2.WinForms.Guna2TextBox textEmail;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtMaNCC;

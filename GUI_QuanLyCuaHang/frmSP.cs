@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL_QuanLyCuaHang;
 using DTO_QuanLyCuaHang;
+using UTIL_QuanLyCuaHang;
 
 namespace GUI_QuanLyThuVien
 {
@@ -34,7 +35,7 @@ namespace GUI_QuanLyThuVien
             LoadSanPham();
             ClearForm();
             LoadLoaiSanPham();
-            
+
         }
         private void ClearForm()
         {
@@ -243,6 +244,36 @@ namespace GUI_QuanLyThuVien
             ClearForm();
             LoadSanPham();
             LoadLoaiSanPham();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+
+            string tuKhoa = txtTimKiem.Text.Trim();
+
+            BUSSanPham bUS = new BUSSanPham();
+            List<SanPham> danhSach = bUS.GetSanPhamList();
+
+            if (!AuthUtil.User.ChucVu)
+            {
+                danhSach = danhSach.Where(pn => pn.MaSP == AuthUtil.User.MaNV).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(tuKhoa))
+            {
+                danhSach = danhSach.Where(pn =>
+                    pn.MaSP.Contains(tuKhoa, StringComparison.OrdinalIgnoreCase) ||
+                    pn.MaLoai.Contains(tuKhoa, StringComparison.OrdinalIgnoreCase) ||
+                    pn.TenSP.Contains(tuKhoa, StringComparison.OrdinalIgnoreCase)
+                ).ToList();
+            }
+
+            guna2DataGridView1.DataSource = null;
+            guna2DataGridView1.Columns.Clear();
+            guna2DataGridView1.DataSource = danhSach;
+
+       
+            guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

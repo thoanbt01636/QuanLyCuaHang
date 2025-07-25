@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL_QuanLyCuaHang;
 using DTO_QuanLyCuaHang;
+using UTIL_QuanLyCuaHang;
 
 namespace GUI_QuanLyThuVien
 {
@@ -22,7 +23,43 @@ namespace GUI_QuanLyThuVien
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
 
+            string tuKhoa = textTimKiem.Text.Trim();
+
+            BUSNhaCungCap busPhieuNhap = new BUSNhaCungCap();
+            List<NhaCungCap> danhSach = busPhieuNhap.GetNhaCungCapList();
+
+            if (!AuthUtil.User.ChucVu)
+            {
+                danhSach = danhSach.Where(pn => pn.MaNCC == AuthUtil.User.MaNV).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(tuKhoa))
+            {
+                danhSach = danhSach.Where(pn =>
+             
+                 
+                    pn.MaNCC.Contains(tuKhoa, StringComparison.OrdinalIgnoreCase)
+                ).ToList();
+            }
+
+            guna2DataGridView1.DataSource = null;
+            guna2DataGridView1.Columns.Clear();
+            guna2DataGridView1.DataSource = danhSach;
+
+            DataGridViewImageColumn buttonColumn = new DataGridViewImageColumn();
+            buttonColumn.Name = "XemHang";
+            buttonColumn.HeaderText = "xem đơn hàng";
+            buttonColumn.Image = GUI_QuanLyCuaHang.Properties.Resources.may;
+            buttonColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            buttonColumn.DefaultCellStyle.BackColor = Color.LightBlue;
+            buttonColumn.DefaultCellStyle.ForeColor = Color.DarkBlue;
+            buttonColumn.DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            guna2DataGridView1.Columns.Add(buttonColumn);
+            guna2DataGridView1.Columns["xemHang"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            guna2DataGridView1.RowTemplate.Height = 50;
+            guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+        
 
         private void frmQuanLyNCC_Load(object sender, EventArgs e)
         {

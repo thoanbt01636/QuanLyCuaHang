@@ -11,6 +11,7 @@ using UTIL_QuanLyCuaHang;
 using BLL_QuanLyCuaHang;
 using DTO_QuanLyCuaHang;
 using Microsoft.VisualBasic.Devices;
+using System.Text.RegularExpressions;
 namespace GUI_QuanLyThuVien
 {
     public partial class frmloaiSP : Form
@@ -180,23 +181,35 @@ namespace GUI_QuanLyThuVien
 
         private void btntimkiem_Click(object sender, EventArgs e)
         {
-            string keyword = textTimKiem.Text.Trim();
-            if (string.IsNullOrEmpty(keyword))
-            {
-                LoadDanhSachLoaiSP();
-            }
-            else
-            {
-                TimKiemLoaiSanPham(keyword);
-            }
-        }
 
-        public void TimKiemLoaiSanPham(string keyword)
-        {
+            string tuKhoa = textTimKiem.Text.Trim();
+
             BUSLoaiSP bUSLoaiSP = new BUSLoaiSP();
-            guna2DataGridView1.DataSource = bUSLoaiSP.TimKiem(keyword);
+            List<LoaiSanPham> danhSach = bUSLoaiSP.GetLoaiSanPhamList();
+
+            if (!AuthUtil.User.ChucVu)
+            {
+                danhSach = danhSach.Where(pn => pn.MaLoai == AuthUtil.User.MaNV).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(tuKhoa))
+            {
+                danhSach = danhSach.Where(pn =>
+                    pn.MaLoai.Contains(tuKhoa, StringComparison.OrdinalIgnoreCase) ||
+                    pn.TenLoai.Contains(tuKhoa, StringComparison.OrdinalIgnoreCase) 
+     
+                ).ToList();
+            }
+
+            guna2DataGridView1.DataSource = null;
+            guna2DataGridView1.Columns.Clear();
+            guna2DataGridView1.DataSource = danhSach;
+
+          
+            guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+      
         private void guna2DataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 

@@ -11,7 +11,7 @@ namespace DAL_QuanLyCuaHang
     public class DBUtil
     {
 
-        public static string connString = @"Data Source=DESKTOP-KH2OE1U\SQLEXPRESS;Initial Catalog=QuanLyCuaHang;Integrated Security=True;Trust Server Certificate=True";
+        public static string connString = @"Data Source=THOAN2410;Initial Catalog=CuaHang;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
         public static SqlCommand GetCommand(string sql, List<object> args, CommandType cmdType)
         {
             SqlConnection conn = new SqlConnection(connString);

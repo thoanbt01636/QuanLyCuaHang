@@ -378,6 +378,7 @@
             btnTimKiem.ShadowDecoration.CustomizableEdges = customizableEdges21;
             btnTimKiem.Size = new Size(45, 45);
             btnTimKiem.TabIndex = 84;
+            btnTimKiem.Click += btnTimKiem_Click;
             // 
             // txtTimKiem
             // 
