@@ -82,8 +82,11 @@ namespace GUI_QuanLyThuVien
 
         private void guna2GradientButton7_Click(object sender, EventArgs e)
         {
-
-            openChildForm(new frmthongkeNV());
+            //frmthongkeNV frmthongkeNV = new frmthongkeNV();
+            //frmthongkeNV.ShowDialog();
+            // openChildForm(new frmthongkeNV());
+            frmthongkeSP frmthongkeSP = new frmthongkeSP();
+            frmthongkeSP.ShowDialog();
 
         }
 
@@ -116,8 +119,7 @@ namespace GUI_QuanLyThuVien
 
         private void guna2GradientButton3_Click(object sender, EventArgs e)
         {
-            frmMatkhau reset = new frmMatkhau();
-            reset.ShowDialog();
+           openChildForm(new frmMatkhau());
         }
 
         private void guna2GradientButton8_Click(object sender, EventArgs e)

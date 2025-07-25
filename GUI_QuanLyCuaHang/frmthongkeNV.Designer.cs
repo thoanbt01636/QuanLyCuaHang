@@ -34,7 +34,7 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
-            comboBox1 = new ComboBox();
+            cboNhanVien = new ComboBox();
             label4 = new Label();
             dtDenNgay = new DateTimePicker();
             button1 = new Button();
@@ -52,7 +52,7 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(cboNhanVien);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(dtDenNgay);
             groupBox1.Controls.Add(button1);
@@ -68,14 +68,14 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông Tin Nhân Viên";
             // 
-            // comboBox1
+            // cboNhanVien
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(152, 30);
-            comboBox1.Margin = new Padding(4, 3, 4, 3);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(306, 31);
-            comboBox1.TabIndex = 6;
+            cboNhanVien.FormattingEnabled = true;
+            cboNhanVien.Location = new Point(152, 30);
+            cboNhanVien.Margin = new Padding(4, 3, 4, 3);
+            cboNhanVien.Name = "cboNhanVien";
+            cboNhanVien.Size = new Size(306, 31);
+            cboNhanVien.TabIndex = 6;
             // 
             // label4
             // 
@@ -106,6 +106,7 @@
             button1.TabIndex = 3;
             button1.Text = "Thống Kê";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // dtTuNgay
             // 
@@ -173,7 +174,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeight = 4;
+            guna2DataGridView1.ColumnHeadersHeight = 50;
             guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
@@ -202,7 +203,7 @@
             guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
+            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 50;
             guna2DataGridView1.ThemeStyle.ReadOnly = false;
             guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -242,7 +243,7 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private ComboBox comboBox1;
+        private ComboBox cboNhanVien;
         private DateTimePicker dtTuNgay;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
