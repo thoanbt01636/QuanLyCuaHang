@@ -295,7 +295,7 @@
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            guna2HtmlLabel1.ForeColor = Color.Black;
+            guna2HtmlLabel1.ForeColor = Color.FromArgb(125, 137, 149);
             guna2HtmlLabel1.Location = new Point(11, 223);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(101, 27);

@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using UTIL_QuanLyCuaHang;
 namespace GUI_QuanLyThuVien
 {
     public partial class frmHD : Form
@@ -33,6 +33,18 @@ namespace GUI_QuanLyThuVien
             try
             {
                 List<NhanVien> dsNhanVien = busNhanVien.GetNhanViensList();
+                if (AuthUtil.User.ChucVu)
+                {
+           
+                    dsNhanVien.Insert(0, new NhanVien() { MaNV = string.Empty, TenNV = "--Vui lòng chọn nhân viên--" });
+                    cboMaNhanVien.Enabled = true;
+                }
+                else
+                {
+
+                    dsNhanVien = dsNhanVien.Where(x => x.MaNV == AuthUtil.User.MaNV).ToList();
+                    cboMaNhanVien.Enabled = true;
+                }
                 cboMaNhanVien.DataSource = dsNhanVien;
                 cboMaNhanVien.ValueMember = "MaNV";
                 cboMaNhanVien.DisplayMember = "TenNV";
@@ -48,7 +60,16 @@ namespace GUI_QuanLyThuVien
         {
             try
             {
-                List<HoaDon> dsHoaDon = busHoaDon.GetHoaDonList(maNV);
+                List<HoaDon> dsHoaDon = busHoaDon.GetHoaDonList();
+                if (!AuthUtil.User.ChucVu)
+                {
+                    dsHoaDon = dsHoaDon.Where(x => x.MaNV == AuthUtil.User.MaNV).ToList();
+                    cboMaNhanVien.Enabled = true;
+                }
+                else
+                {
+                    cboMaNhanVien.Enabled = true;
+                }
                 guna2DataGridView1.DataSource = dsHoaDon;
             }
             catch (Exception ex)
@@ -75,10 +96,16 @@ namespace GUI_QuanLyThuVien
             btnXoa.Enabled = false;
             txtTimKiem.Clear();
 
+            cboMaNhanVien.Enabled = true;
         }
 
         private void guna2GradientButton4_Click(object sender, EventArgs e)
         {
+            if (!AuthUtil.User.ChucVu && cboMaNhanVien.SelectedValue?.ToString() != AuthUtil.User.MaNV)
+            {
+                MessageBox.Show("Bạn không có quyền xóa hóa đơn của nhân viên khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             bool trangThai = rbDaThanhToan.Checked;
             HoaDon hd = new HoaDon
             {
@@ -103,6 +130,11 @@ namespace GUI_QuanLyThuVien
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
+            if (!AuthUtil.User.ChucVu && cboMaNhanVien.SelectedValue?.ToString() != AuthUtil.User.MaNV)
+            {
+                MessageBox.Show("Bạn không có quyền xóa hóa đơn của nhân viên khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (string.IsNullOrEmpty(txtMaHD.Text))
             {
                 MessageBox.Show("Vui lòng chọn hóa đơn cần sửa", "Thông báo",
@@ -134,6 +166,11 @@ namespace GUI_QuanLyThuVien
 
         private void guna2GradientButton3_Click(object sender, EventArgs e)
         {
+            if (!AuthUtil.User.ChucVu && cboMaNhanVien.SelectedValue?.ToString() != AuthUtil.User.MaNV)
+            {
+                MessageBox.Show("Bạn không có quyền xóa hóa đơn của nhân viên khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (string.IsNullOrEmpty(txtMaHD.Text))
             {
                 MessageBox.Show("Vui lòng chọn hóa đơn cần xóa", "Thông báo",
@@ -185,7 +222,7 @@ namespace GUI_QuanLyThuVien
                     rbChoThanhToan.Checked = !trangThai;
                     rbDaThanhToan.Checked = trangThai;
                 }
-                btnThem.Enabled = false;
+                btnThem.Enabled = true;
                 btnCapNhat.Enabled = true;
                 btnXoa.Enabled = true;
             }
@@ -198,7 +235,6 @@ namespace GUI_QuanLyThuVien
             HoaDon phieu = (HoaDon)guna2DataGridView1.CurrentRow.DataBoundItem;
 
             NhanVien nv = new NhanVien();
-
 
             foreach (NhanVien item in cboMaNhanVien.Items)
             {
@@ -262,6 +298,11 @@ namespace GUI_QuanLyThuVien
             try
             {
                 List<HoaDon> danhSachGoc = busHoaDon.GetHoaDonList();
+
+                if (!AuthUtil.User.ChucVu)
+                {
+                    danhSachGoc = danhSachGoc.Where(hd => hd.MaNV == AuthUtil.User.MaNV).ToList();
+                }
 
                 var danhSachLoc = danhSachGoc.Where(hd =>
                     (hd.MaHD != null && hd.MaHD.ToLower().Contains(keyword)) ||

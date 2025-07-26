@@ -22,10 +22,10 @@ namespace GUI_QuanLyCuaHang
             string username = txtTaiKhoan.Text;
             string password = txtMatKhau.Text;
             //nhập chay
-           NhanVien nv = bUSNhanVien.DangNhap(username,password);
+            NhanVien nv = bUSNhanVien.DangNhap(username, password);
             //quản lý
-       // NhanVien nv = bUSNhanVien.DangNhap("minh2410@gmail.com", "matkhau123");
-        
+            //NhanVien nv = bUSNhanVien.DangNhap("minh2410@gmail.com", "matkhau123");
+
             if (nv == null)
             {
                 MessageBox.Show(this, "Tài khoải hoặc mật khẩu không chính xác");
@@ -52,6 +52,11 @@ namespace GUI_QuanLyCuaHang
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
             if (result == DialogResult.Yes) { Application.Exit(); }
+        }
+
+        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtMatKhau.PasswordChar = guna2CheckBox1.Checked ? '\0' : '*';
         }
     }
 }
