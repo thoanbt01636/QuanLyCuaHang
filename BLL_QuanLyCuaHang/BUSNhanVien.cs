@@ -65,13 +65,13 @@ namespace BLL_QuanLyCuaHang
         {
             try
             {
-                nv.MaNV = dalNhanVien.generateMaNhanVien();
+                nv.MaNV = dalNhanVien.TaoMaTuDong();
                 if (string.IsNullOrEmpty(nv.MaNV))
                 {
                     return "Mã nhân viên không hợp lệ.";
                 }
 
-                dalNhanVien.TaoMaTuDong();
+                dalNhanVien.addNhanVien(nv);
                 return string.Empty;
             }
             catch (Exception e)

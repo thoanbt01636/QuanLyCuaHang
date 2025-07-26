@@ -3,6 +3,50 @@
   "WorkspaceRootPath": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\gui_quanlycuahang\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\gui_quanlycuahang\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\gui_quanlycuahang\\frmhd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmhd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|D:\\QuanLyCuaHang\\QuanLyCuaHang\\gui_quanlycuahang\\frmhd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmhd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\gui_quanlycuahang\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\gui_quanlycuahang\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C93E6C-9ACC-41B0-8033-B39D5426AE69}|BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\bll_quanlycuahang\\busnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C93E6C-9ACC-41B0-8033-B39D5426AE69}|BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj|solutionrelative:bll_quanlycuahang\\busnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2DB59C1-73AD-4451-A695-91776B1718B0}|DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\dal_quanlycuahang\\dalnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2DB59C1-73AD-4451-A695-91776B1718B0}|DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj|solutionrelative:dal_quanlycuahang\\dalnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\gui_quanlycuahang\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|D:\\QuanLyCuaHang\\QuanLyCuaHang\\gui_quanlycuahang\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|D:\\QuanLyCuaHang\\QuanLyCuaHang\\gui_quanlycuahang\\frmphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\gui_quanlycuahang\\frmquanlyncc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmquanlyncc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,28 +59,12 @@
       "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\gui_quanlycuahang\\frmhd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmhd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{76C93E6C-9ACC-41B0-8033-B39D5426AE69}|BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\bll_quanlycuahang\\busnhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76C93E6C-9ACC-41B0-8033-B39D5426AE69}|BLL_QuanLyCuaHang\\BLL_QuanLyCuaHang.csproj|solutionrelative:bll_quanlycuahang\\busnhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|D:\\QuanLyCuaHang\\QuanLyCuaHang\\gui_quanlycuahang\\frmphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\gui_quanlycuahang\\frmhd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmhd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D2DB59C1-73AD-4451-A695-91776B1718B0}|DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\dal_quanlycuahang\\dalnhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2DB59C1-73AD-4451-A695-91776B1718B0}|DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj|solutionrelative:dal_quanlycuahang\\dalnhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2DB59C1-73AD-4451-A695-91776B1718B0}|DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\dal_quanlycuahang\\dalnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2DB59C1-73AD-4451-A695-91776B1718B0}|DAL_QuanLyCuaHang\\DAL_QuanLyCuaHang.csproj|solutionrelative:dal_quanlycuahang\\dalnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\gui_quanlycuahang\\frmphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,14 +81,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|D:\\QuanLyCuaHang\\QuanLyCuaHang\\gui_quanlycuahang\\frmloaisp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmloaisp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\quanlycuahang\\quanlycuahang\\gui_quanlycuahang\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|D:\\QuanLyCuaHang\\QuanLyCuaHang\\gui_quanlycuahang\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,7 +106,70 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BUSNhanVien.cs",
+              "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\BUSNhanVien.cs",
+              "RelativeDocumentMoniker": "BLL_QuanLyCuaHang\\BUSNhanVien.cs",
+              "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\BUSNhanVien.cs",
+              "RelativeToolTip": "BLL_QuanLyCuaHang\\BUSNhanVien.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAowEkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T03:15:20.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmmain.cs",
+              "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmmain.cs",
+              "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmmain.cs",
+              "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmmain.cs*",
+              "RelativeToolTip": "GUI_QuanLyCuaHang\\frmmain.cs*",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAkwE0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T03:11:07.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmmain.cs [Design]",
+              "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmmain.cs",
+              "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmmain.cs",
+              "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmmain.cs [Design]*",
+              "RelativeToolTip": "GUI_QuanLyCuaHang\\frmmain.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T03:05:25.129Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "frmDangNhap.cs",
+              "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmDangNhap.cs",
+              "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmDangNhap.cs",
+              "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmDangNhap.cs",
+              "RelativeToolTip": "GUI_QuanLyCuaHang\\frmDangNhap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwBoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T03:02:34.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmDangNhap.cs [Design]",
+              "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmDangNhap.cs",
+              "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmDangNhap.cs",
+              "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmDangNhap.cs [Design]",
+              "RelativeToolTip": "GUI_QuanLyCuaHang\\frmDangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T03:02:32.38Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "BUSNhaCungCap.cs",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\BLL_QuanLyCuaHang\\BUSNhaCungCap.cs",
               "RelativeDocumentMoniker": "BLL_QuanLyCuaHang\\BUSNhaCungCap.cs",
@@ -94,12 +177,11 @@
               "RelativeToolTip": "BLL_QuanLyCuaHang\\BUSNhaCungCap.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T14:39:21.899Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-25T14:39:21.899Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "frmPhieuNhap.cs [Design]",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmPhieuNhap.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmPhieuNhap.cs",
@@ -111,24 +193,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "frmQuanLyNCC.cs [Design]",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNCC.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmQuanLyNCC.cs",
-              "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNCC.cs [Design]*",
-              "RelativeToolTip": "GUI_QuanLyCuaHang\\frmQuanLyNCC.cs [Design]*",
+              "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNCC.cs [Design]",
+              "RelativeToolTip": "GUI_QuanLyCuaHang\\frmQuanLyNCC.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T13:46:46.229Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "frmQuanLyNCC.cs",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNCC.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmQuanLyNCC.cs",
-              "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNCC.cs*",
-              "RelativeToolTip": "GUI_QuanLyCuaHang\\frmQuanLyNCC.cs*",
+              "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNCC.cs",
+              "RelativeToolTip": "GUI_QuanLyCuaHang\\frmQuanLyNCC.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwBkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T13:46:55.993Z",
@@ -136,20 +218,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "frmHD.cs",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmHD.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmHD.cs",
               "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmHD.cs",
               "RelativeToolTip": "GUI_QuanLyCuaHang\\frmHD.cs",
-              "ViewState": "AgIAAOkAAAAAAAAAAAAtwAcBAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAswFkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T15:00:24.38Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "frmHD.cs [Design]",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmHD.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmHD.cs",
@@ -161,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "DALNhaCungCap.cs",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DALNhaCungCap.cs",
               "RelativeDocumentMoniker": "DAL_QuanLyCuaHang\\DALNhaCungCap.cs",
@@ -169,25 +251,24 @@
               "RelativeToolTip": "DAL_QuanLyCuaHang\\DALNhaCungCap.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAlwB4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T14:39:52.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-25T14:39:52.612Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "DALNhanVien.cs",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DALNhanVien.cs",
               "RelativeDocumentMoniker": "DAL_QuanLyCuaHang\\DALNhanVien.cs",
               "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\DAL_QuanLyCuaHang\\DALNhanVien.cs",
               "RelativeToolTip": "DAL_QuanLyCuaHang\\DALNhanVien.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T14:39:51.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "frmPhieuNhap.cs",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmPhieuNhap.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmPhieuNhap.cs",
@@ -195,12 +276,11 @@
               "RelativeToolTip": "GUI_QuanLyCuaHang\\frmPhieuNhap.cs",
               "ViewState": "AgIAAGkBAAAAAAAAAAAtwHQBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T13:47:41.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-25T13:47:41.208Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 13,
               "Title": "frmSP.cs",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmSP.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmSP.cs",
@@ -213,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "frmloaiSP.cs",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmloaiSP.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmloaiSP.cs",
@@ -221,11 +301,12 @@
               "RelativeToolTip": "GUI_QuanLyCuaHang\\frmloaiSP.cs",
               "ViewState": "AgIAAK8AAAAAAAAAAAAywNsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T14:00:38.061Z"
+              "WhenOpened": "2025-07-25T14:00:38.061Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "frmloaiSP.cs [Design]",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmloaiSP.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmloaiSP.cs",
@@ -236,39 +317,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "frmSP.cs [Design]",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmSP.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmSP.cs",
               "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmSP.cs [Design]",
               "RelativeToolTip": "GUI_QuanLyCuaHang\\frmSP.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T14:06:19.599Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-07-25T14:06:19.599Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 8,
               "Title": "frmQuanLyNhanVien.cs",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNhanVien.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmQuanLyNhanVien.cs",
               "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNhanVien.cs",
               "RelativeToolTip": "GUI_QuanLyCuaHang\\frmQuanLyNhanVien.cs",
-              "ViewState": "AgIAAOIAAAAAAAAAAAAtwP0AAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowGAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T13:48:59.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 9,
               "Title": "frmQuanLyNhanVien.cs [Design]",
               "DocumentMoniker": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNhanVien.cs",
               "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmQuanLyNhanVien.cs",
-              "ToolTip": "D:\\thu\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNhanVien.cs [Design]",
-              "RelativeToolTip": "..\\..\\thu\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNhanVien.cs [Design]",
+              "ToolTip": "D:\\QuanLyCuaHang\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNhanVien.cs [Design]",
+              "RelativeToolTip": "GUI_QuanLyCuaHang\\frmQuanLyNhanVien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T13:48:56.674Z"
+              "WhenOpened": "2025-07-25T13:48:56.674Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

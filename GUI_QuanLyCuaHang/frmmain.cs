@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO_QuanLyCuaHang;
 using GUI_PoLyCafe;
 using UTIL_QuanLyCuaHang;
 
@@ -67,7 +68,14 @@ namespace GUI_QuanLyThuVien
 
         private void guna2GradientButton5_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmQuanLyNCC());
+            if (!AuthUtil.User.ChucVu)
+            {
+                MessageBox.Show("Bạn không có quyền truy cập vào ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                openChildForm(new frmPhieuNhap());
+            }
         }
 
         private void guna2PictureBox2_Click(object sender, EventArgs e)
@@ -77,14 +85,27 @@ namespace GUI_QuanLyThuVien
 
         private void guna2GradientButton9_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmQuanLyNhanVien());
+            if (!AuthUtil.User.ChucVu)
+            {
+                MessageBox.Show("Bạn không có quyền truy cập vào ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                openChildForm(new frmQuanLyNhanVien());
+            }
+
         }
 
         private void guna2GradientButton7_Click(object sender, EventArgs e)
         {
-            frmthongkeNV frmthongkeNV = new frmthongkeNV();
-            frmthongkeNV.ShowDialog();
-            // openChildForm(new frmthongkeNV());
+            if (!AuthUtil.User.ChucVu)
+            {
+                MessageBox.Show("Bạn không có quyền truy cập vào ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                openChildForm(new frmthongkeNV());
+            }
 
         }
 
@@ -135,8 +156,14 @@ namespace GUI_QuanLyThuVien
 
         private void guna2GradientButton10_Click(object sender, EventArgs e)
         {
-            frmthongkeSP frmthongkeSP = new frmthongkeSP();
-            frmthongkeSP.ShowDialog();
+            if (!AuthUtil.User.ChucVu)
+            {
+                MessageBox.Show("Bạn không có quyền truy cập vào ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                openChildForm(new frmthongkeSP());
+            }
         }
     }
 }
