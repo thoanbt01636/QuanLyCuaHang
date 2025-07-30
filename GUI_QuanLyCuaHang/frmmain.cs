@@ -74,7 +74,7 @@ namespace GUI_QuanLyThuVien
             }
             else
             {
-                openChildForm(new frmPhieuNhap());
+                openChildForm(new frmQuanLyNCC());
             }
         }
 

@@ -59,8 +59,8 @@
         },
         "runtime": {
           "lib/net7.0-windows7.0/Guna.UI2.dll": {
-            "assemblyVersion": "2.0.4.6",
-            "fileVersion": "2.0.4.6"
+            "assemblyVersion": "2.0.4.4",
+            "fileVersion": "2.0.4.4"
           }
         }
       },
@@ -470,7 +470,7 @@
         },
         "runtime": {
           "BLL_QuanLyCuaHang.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -482,7 +482,7 @@
         },
         "runtime": {
           "DAL_QuanLyCuaHang.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -490,7 +490,7 @@
       "DTO_QuanLyCuaHang/1.0.0": {
         "runtime": {
           "DTO_QuanLyCuaHang.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -501,7 +501,7 @@
         },
         "runtime": {
           "UTIL_QuanLyCuaHang.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }

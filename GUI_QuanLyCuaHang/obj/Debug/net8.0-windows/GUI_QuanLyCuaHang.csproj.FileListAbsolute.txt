@@ -542,3 +542,4 @@ D:\QuanLyCuaHang\QuanLyCuaHang\GUI_QuanLyCuaHang\obj\Debug\net8.0-windows\GUI_Qu
 D:\QuanLyCuaHang\QuanLyCuaHang\GUI_QuanLyCuaHang\obj\Debug\net8.0-windows\GUI_QuanLyCuaHang.genruntimeconfig.cache
 D:\QuanLyCuaHang\QuanLyCuaHang\GUI_QuanLyCuaHang\obj\Debug\net8.0-windows\ref\GUI_QuanLyCuaHang.dll
 D:\GitSource\QuanLyCuaHang\GUI_QuanLyCuaHang\bin\Debug\net8.0-windows\QRCoder.dll
+E:\SO_TB01844\QuanLyCuaHang\GUI_QuanLyCuaHang\bin\Debug\net8.0-windows\QRCoder.dll

@@ -79,7 +79,7 @@ namespace DAL_QuanLyCuaHang
         {
             try
             {
-                string sql = @"INSERT INTO SanPham(MaLoai,Tenloai) VALUES(@0,@1)";
+                string sql = @"INSERT INTO LoaiSanPham(MaLoai,Tenloai) VALUES(@0,@1)";
                 List<object> thamso = new List<object>();
                 thamso.Add(lsp.MaLoai);
                 thamso.Add(lsp.TenLoai);
@@ -94,7 +94,7 @@ namespace DAL_QuanLyCuaHang
         {
             try
             {
-                string sql = @"UPDATE SanPham
+                string sql = @"UPDATE LoaiSanPham
                 SET TenLoai=@1
                 WHERE  MaLoai=@0";
                 List<object> thamso = new List<object>();
@@ -108,7 +108,7 @@ namespace DAL_QuanLyCuaHang
         {
             try
             {
-                string sql = @"DELETE FROM SanPham WHERE MaLoai=@0";
+                string sql = @"DELETE FROM LoaiSanPham WHERE MaLoai=@0";
                 List<object> thamso = new List<object>();
                 thamso.Add(lsp);
                 DBUtil.Update(sql, thamso);
@@ -117,14 +117,14 @@ namespace DAL_QuanLyCuaHang
         }
         public List<LoaiSanPham> GetNhanVienByMa(string MaLoai)
         {
-            string sql = "SELECT * FROM SanPham WHERE MaLoai LIKE '%' + @0 + '%'";
+            string sql = "SELECT * FROM LoaiSanPham WHERE MaLoai LIKE '%' + @0 + '%'";
             List<object> thamSo = new List<object>();
             thamSo.Add(MaLoai);
             return SelectBySql(sql, thamSo);
         }
         public List<LoaiSanPham> GetNhanVienByTen(string TenLoai)
         {
-            string sql = "SELECT * FROM SanPham WHERE TenLoai LIKE '%' + @0 + '%'";
+            string sql = "SELECT * FROM LoaiSanPham WHERE TenLoai LIKE '%' + @0 + '%'";
             List<object> thamSo = new List<object>();
             thamSo.Add(TenLoai);
             return SelectBySql(sql, thamSo);
