@@ -74,7 +74,11 @@ namespace GUI_QuanLyThuVien
             string dienThoai = textDienThoai.Text.Trim();
             string email = textEmail.Text.Trim();
             BUSNhaCungCap busNCC = new BUSNhaCungCap();
-
+            if (string.IsNullOrEmpty(tenNCC) || string.IsNullOrEmpty(diaChi) || string.IsNullOrEmpty(dienThoai) || string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin.", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             NhaCungCap ncc = new NhaCungCap
             {

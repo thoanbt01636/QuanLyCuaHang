@@ -22,9 +22,9 @@ namespace GUI_QuanLyCuaHang
             string username = txtTaiKhoan.Text;
             string password = txtMatKhau.Text;
             //nhập chay
-            NhanVien nv = bUSNhanVien.DangNhap(username, password);
+            //NhanVien nv = bUSNhanVien.DangNhap(username, password);
             //quản lý
-            //NhanVien nv = bUSNhanVien.DangNhap("minh2410@gmail.com", "matkhau123");
+            NhanVien nv = bUSNhanVien.DangNhap("minh2410@gmail.com", "matkhau123");
 
             if (nv == null)
             {
