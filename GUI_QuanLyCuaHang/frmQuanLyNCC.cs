@@ -112,6 +112,7 @@ namespace GUI_QuanLyThuVien
             textDienThoai.Clear();
             textEmail.Clear();
             textDiaChi.Clear();
+            btnThem.Enabled = true;
             txtMaNCC.Enabled = false;
             btnXoa.Enabled = false;
             btnCapNhat.Enabled = false;
