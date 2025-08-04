@@ -6,98 +6,57 @@ using System.Threading.Tasks;
 using DAL_QuanLyCuaHang;
 using DTO_QuanLyCuaHang;
 using Microsoft.Data.SqlClient;
+using static DAL_QuanLyCuaHang.DALChiTietPhieuNhap;
 
 namespace BLL_QuanLyCuaHang
 {
     public class BUSPhieuNhap
     {
         DALPhieuNhap dalPhieuNhap = new DALPhieuNhap();
+        DALChiTietPN dalChiTiet = new DALChiTietPN();
 
-
-        public List<PhieuNhap> GetListPhieuNhap()
-        {
-            return dalPhieuNhap.selectAll();
-        }
-        public string TaoMaTuDong()
-        {
-            return dalPhieuNhap.generateMaPN();
-        }
-
-        public string UpdatePhieuNhap(PhieuNhap pn)
+        public List<PhieuNhap> GetPhieuNhapList(string maNV = null)
         {
             try
             {
-                if (string.IsNullOrEmpty(pn.MaPN))
-                {
-                    return "Mã phiếu nhập không hợp lệ.";
-                }
+                return dalPhieuNhap.SelectAll(maNV);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+       
+        public PhieuNhap GetPhieuNhapByID(string maHD)
+        {
+            try
+            {
+                return dalPhieuNhap.SelectByID(maHD);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
-                dalPhieuNhap.updatePhieuNhap(pn);
-                return string.Empty;
+        public void ThemPhieuNhap(PhieuNhap pn)
+        {
+            if (!dalPhieuNhap.Exists(pn.MaPN))
+            {
+                dalPhieuNhap.Insert(pn);
+            }
+
+        }
+        public void XoaPhieuNhap(string maPN)
+        {
+            try
+            {
+               dalChiTiet.DeleteByMaPN(maPN);
+                dalPhieuNhap.Delete(maPN);
             }
             catch (Exception ex)
             {
-                return "Lỗi: " + ex.Message;
-            }
-        }
-
-        public string AddPhieuNhap(PhieuNhap pn)
-        {
-            try
-            {
-                pn.MaPN = dalPhieuNhap.generateMaPN();
-                if (string.IsNullOrEmpty(pn.MaPN))
-                {
-                    return "Mã phiếu nhập không hợp lệ.";
-                }
-
-                dalPhieuNhap.addPhieuNhap(pn);
-                return string.Empty;
-            }
-            catch (Exception ex)
-            {
-                return "Lỗi: " + ex.Message;
-            }
-        }
-
-        public string DeletePhieuNhap(string maPN)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(maPN))
-                {
-                    return "Mã phiếu nhập không hợp lệ.";
-                }
-
-                dalPhieuNhap.deletePhieuNhap(maPN);
-                return string.Empty;
-            }
-            catch (Exception ex)
-            {
-                return "Lỗi: " + ex.Message;
-            }
-        }
-
-        public List<PhieuNhap> TimKiem(string input)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(input))
-                {
-                    return dalPhieuNhap.selectAll();
-                }
-                else if (input.StartsWith("PN"))
-                {
-                    return dalPhieuNhap.GetPhieuNhapByMa(input);
-                }
-                else
-                {
-                    return dalPhieuNhap.GetPhieuNhapByMaNCC(input);
-                }
-            }
-            catch (SqlException sqlEx)
-            {
-                throw new Exception("Lỗi SQL khi tìm kiếm phiếu nhập: " + sqlEx.Message);
+                throw new Exception("Lỗi khi xóa Phiếu nhập: " + ex.Message);
             }
         }
     }

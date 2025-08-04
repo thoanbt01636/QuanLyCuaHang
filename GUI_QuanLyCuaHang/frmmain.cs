@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_QuanLyCuaHang;
 using GUI_PoLyCafe;
+using GUI_QuanLyCuaHang;
 using UTIL_QuanLyCuaHang;
 
 namespace GUI_QuanLyThuVien
@@ -113,7 +114,7 @@ namespace GUI_QuanLyThuVien
         {
 
 
-            openChildForm(new frmPhieuNhap());
+            openChildForm(new formPN());
 
         }
 
@@ -127,7 +128,7 @@ namespace GUI_QuanLyThuVien
         private void guna2GradientButton4_Click(object sender, EventArgs e)
         {
 
-            openChildForm(new frmHD());
+            openChildForm(new HD());
 
         }
 

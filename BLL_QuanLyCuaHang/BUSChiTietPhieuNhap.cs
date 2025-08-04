@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL_QuanLyCuaHang;
 using DTO_QuanLyCuaHang;
 using static DAL_QuanLyCuaHang.DALChiTietPhieuNhap;
 
@@ -10,83 +11,38 @@ namespace BLL_QuanLyCuaHang
 {
     public class BUSChiTietPhieuNhap
     {
-        DAOChiTietPN daoChiTietPN = new DAOChiTietPN();
+        DALChiTietPN daoChiTietPN = new DALChiTietPN();
 
-        public List<ChiTietPN> GetChiTietPNList()
+      
+        public List<ChiTietPN> GetChiTietHDList(string maPhieu)
         {
-            return daoChiTietPN.SelectAll();
+            if (string.IsNullOrEmpty(maPhieu))
+            {
+                return new List<ChiTietPN>();
+            }
+
+            return daoChiTietPN.SelectByMaPN(maPhieu);
         }
 
-        public string AddChiTietPN(ChiTietPN ct)
-        {
-            try
-            {
-                ct.MaCTPN = daoChiTietPN.GenerateMaCTPN();
-                if (string.IsNullOrEmpty(ct.MaCTPN))
-                {
-                    return "Mã chi tiết phiếu nhập không hợp lệ.";
-                }
 
-                daoChiTietPN.AddChiTietPN(ct);
-                return string.Empty;
-            }
-            catch (Exception ex)
-            {
-                return "Lỗi khi thêm chi tiết phiếu nhập: " + ex.Message;
-            }
+        public ChiTietPN KiemtraMaSP(string maHD, string maSP)
+        {
+            return daoChiTietPN.kiemtraMaSP(maHD, maSP);
         }
 
-        public string UpdateChiTietPN(ChiTietPN ct)
+        public void LuuChiTietPN(ChiTietPN ct)
         {
-            try
-            {
-                if (string.IsNullOrEmpty(ct.MaCTPN))
-                {
-                    return "Mã chi tiết phiếu nhập không hợp lệ.";
-                }
-
-                daoChiTietPN.UpdateChiTietPN(ct);
-                return string.Empty;
-            }
-            catch (Exception ex)
-            {
-                return "Lỗi khi cập nhật chi tiết phiếu nhập: " + ex.Message;
-            }
+            daoChiTietPN.Insert(ct);
+        }
+        public void CapNhatChiTietPN(ChiTietPN ct)
+        {
+            daoChiTietPN.UpdateChiTiet(ct);
         }
 
-        public string DeleteChiTietPN(string maCTPN)
+        public void XoaChiTietHoaDon(string maHD, string maHang)
         {
-            try
-            {
-                if (string.IsNullOrEmpty(maCTPN))
-                {
-                    return "Mã chi tiết phiếu nhập không hợp lệ.";
-                }
 
-                daoChiTietPN.DeleteChiTietPN(maCTPN);
-                return string.Empty;
-            }
-            catch (Exception ex)
-            {
-                return "Lỗi khi xóa chi tiết phiếu nhập: " + ex.Message;
-            }
-        }
-
-        public List<ChiTietPN> TimKiemTheoMaPN(string maPN)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(maPN))
-                {
-                    return daoChiTietPN.SelectAll();
-                }
-
-                return daoChiTietPN.SelectByMaPN(maPN);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi tìm kiếm chi tiết phiếu nhập: " + ex.Message);
-            }
+            daoChiTietPN.DeleteChiTiet(maHD, maHang);
         }
     }
 }

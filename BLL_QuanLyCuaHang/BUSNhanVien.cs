@@ -97,6 +97,27 @@ namespace BLL_QuanLyCuaHang
                 return "Lỗi: " + ex.Message;
             }
         }
+        public List<NhanVien> LayTenNV(string manv)
+        {
 
+            try
+            {
+                if (string.IsNullOrEmpty(manv))
+                {
+                    return dalNhanVien.seletAll();
+                }
+
+                else if (manv.StartsWith("NV"))
+                {
+                    return dalNhanVien.GetNhanVienByMa(manv);
+                }
+                return new List<NhanVien>();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi tìm kiếm nhân viên: " + ex.Message);
+            }
+        }
     }
 }

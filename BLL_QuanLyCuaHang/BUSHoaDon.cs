@@ -10,66 +10,9 @@ namespace BLL_QuanLyCuaHang
 {
     public class BUSHoaDon
     {
+
         private DALHoaDon dalHoaDon = new DALHoaDon();
-
-        public string Insert(HoaDon hd)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(hd.MaNV))
-                    return "Vui lòng chọn nhân viên";
-                if (hd.NgayLap > DateTime.Now)
-                    return "Ngày lập không hợp lệ";
-
-                hd.MaHD = dalHoaDon.TaoMaTuDong();
-                dalHoaDon.Insert(hd);
-                return string.Empty;
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
-        }
-        public string TaoMaTuDong()
-        {
-            return dalHoaDon.TaoMaTuDong();
-        }
-        public string Update(HoaDon hd)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(hd.MaHD))
-                    return "Mã hóa đơn không hợp lệ";
-                if (string.IsNullOrEmpty(hd.MaNV))
-                    return "Vui lòng chọn nhân viên";
-                if (hd.NgayLap > DateTime.Now)
-                    return "Ngày lập không hợp lệ";
-
-                dalHoaDon.Update(hd);
-                return string.Empty;
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
-        }
-
-        public string Delete(string maHD)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(maHD))
-                    return "Mã hóa đơn không hợp lệ";
-
-                dalHoaDon.Delete(maHD);
-                return string.Empty;
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
-        }
-
+        private DALChiTietHoaDon dalChiTiet = new DALChiTietHoaDon();
         public List<HoaDon> GetHoaDonList(string maNV = null)
         {
             try
@@ -93,5 +36,27 @@ namespace BLL_QuanLyCuaHang
                 throw;
             }
         }
+
+        public void ThemHoaDon(HoaDon hd)
+        {
+            if (!dalHoaDon.Exists(hd.MaHD))
+            {
+                dalHoaDon.Insert(hd);
+            }
+        }
+
+        public void XoaHoaDon(string maHD)
+        {
+            try
+            {
+
+                dalChiTiet.DeleteByMaHD(maHD);
+                dalHoaDon.Delete(maHD);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi xóa hóa đơn: " + ex.Message);
+            }
+        }
     }
-    }
+}

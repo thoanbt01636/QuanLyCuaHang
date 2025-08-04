@@ -18,9 +18,12 @@ namespace DAL_QuanLyCuaHang
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = cmdType;
 
-            for (int i = 0; i < args.Count; i++)
+            if (args != null)
             {
-                cmd.Parameters.AddWithValue($"@{i}", args[i]);
+                for (int i = 0; i < args.Count; i++)
+                {
+                    cmd.Parameters.AddWithValue($"@{i}", args[i]);
+                }
             }
 
 
@@ -161,6 +164,16 @@ namespace DAL_QuanLyCuaHang
         {
             return new SqlConnection(connString);
         }
-
+        public static DataTable QueryDataTable(string sql, List<object> args, CommandType cmdType = CommandType.Text)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlCommand cmd = GetCommand(sql, args, cmdType))
+            using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+            {
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
+        }
     }
 }

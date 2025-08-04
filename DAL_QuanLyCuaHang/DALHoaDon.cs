@@ -11,165 +11,127 @@ namespace DAL_QuanLyCuaHang
 {
     public class DALHoaDon
     {
+        private readonly string prefix = "HD";
+
+
         public string TaoMaTuDong()
         {
-            string prefix = "HD";
             string sql = "SELECT MaHD FROM HoaDon";
             List<object> args = new List<object>();
             List<int> existingNumbers = new List<int>();
 
-            try
+            using (SqlDataReader reader = DBUtil.Query(sql, args, CommandType.Text))
             {
-                using (SqlDataReader reader = DBUtil.Query(sql, args, CommandType.Text))
+                while (reader.Read())
                 {
-                    while (reader.Read())
+                    string maHD = reader["MaHD"].ToString();
+                    if (maHD.StartsWith(prefix) && int.TryParse(maHD.Substring(prefix.Length), out int number))
                     {
-                        string maHD = reader["MaHD"].ToString();
-                        if (maHD.StartsWith(prefix) && int.TryParse(maHD.Substring(prefix.Length), out int number))
-                        {
-                            existingNumbers.Add(number);
-                        }
+                        existingNumbers.Add(number);
                     }
                 }
-
-                int newNumber = 1;
-                existingNumbers.Sort();
-
-                foreach (int number in existingNumbers)
-                {
-                    if (number == newNumber)
-                        newNumber++;
-                    else if (number > newNumber)
-                        break;
-                }
-
-                return $"{prefix}{newNumber:D4}";
             }
-            catch (Exception)
+
+            int newNumber = 1;
+            existingNumbers.Sort();
+            foreach (int number in existingNumbers)
             {
-                throw;
+                if (number == newNumber)
+                    newNumber++;
+                else if (number > newNumber)
+                    break;
             }
+
+            return $"{prefix}{newNumber:D3}";
         }
+
+
+
 
         public void Insert(HoaDon hd)
         {
-            try
-            {
-                string sql = @"INSERT INTO HoaDon (MaHD, MaNV, NgayLap, TrangThai) 
-                                   VALUES (@0, @1, @2, @3)";
-                var args = new List<object>
-                    {
-                        hd.MaHD,
-                        hd.MaNV,
-                        hd.NgayLap,
-                        hd.TrangThai
-                    };
-                DBUtil.Update(sql, args);
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Lỗi thêm hóa đơn: " + e.Message);
-            }
+            string sql = @"INSERT INTO HoaDon (MaHD, MaNV, TenKhach, NgayLap) 
+                       VALUES (@0, @1, @2, @3)";
+            var args = new List<object> { hd.MaHD, hd.MaNV, hd.TenKhach, hd.NgayLap };
+            DBUtil.Update(sql, args);
         }
 
-        public void Update(HoaDon hd)
+        public bool Exists(string maHD)
         {
-            try
-            {
-                string sql = @"UPDATE HoaDon 
-                                   SET MaNV = @0, NgayLap = @1, TrangThai = @2 
-                                   WHERE MaHD = @3";
-                var args = new List<object>
-                    {
-                        hd.MaNV,
-                        hd.NgayLap,
-                        hd.TrangThai,
-                        hd.MaHD
-                    };
-                DBUtil.Update(sql, args);
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Lỗi cập nhật hóa đơn: " + e.Message);
-            }
+            string sql = "SELECT COUNT(*) FROM HoaDon WHERE MaHD = @0";
+            var args = new List<object> { maHD };
+            return Convert.ToInt32(DBUtil.ScalarQuery(sql, args)) > 0;
         }
 
-        public void Delete(string maHD)
-        {
-            try
-            {
-                string sql = "DELETE FROM HoaDon WHERE MaHD = @0";
-                var args = new List<object> { maHD };
-                DBUtil.Update(sql, args);
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Lỗi xóa hóa đơn: " + e.Message);
-            }
-        }
+
+
 
         public List<HoaDon> SelectAll(string maNV = null)
         {
             var list = new List<HoaDon>();
-            try
-            {
-                string sql = "SELECT MaHD, MaNV, NgayLap, TrangThai FROM HoaDon";
-                var args = new List<object>();
-                if (!string.IsNullOrEmpty(maNV))
-                {
-                    sql += " WHERE MaNV = @0";
-                    args.Add(maNV);
-                }
+            string sql = "  SELECT MaHD, MaNV, TenKhach,NgayLap FROM HoaDon";
+            var args = new List<object>();
 
-                using (SqlDataReader reader = DBUtil.Query(sql, args))
+            if (!string.IsNullOrEmpty(maNV))
+            {
+                sql += " WHERE MaNV = @0";
+                args.Add(maNV);
+            }
+
+            using (SqlDataReader reader = DBUtil.Query(sql, args))
+            {
+                while (reader.Read())
                 {
-                    while (reader.Read())
+                    var hd = new HoaDon
                     {
-                        var hd = new HoaDon
-                        {
-                            MaHD = reader["MaHD"].ToString(),
-                            MaNV = reader["MaNV"].ToString(),
-                            NgayLap = Convert.ToDateTime(reader["NgayLap"]),
-                            TrangThai = Convert.ToBoolean(reader["TrangThai"])
-                        };
-                        list.Add(hd);
-                    }
+                        MaHD = reader["MaHD"].ToString(),
+                        MaNV = reader["MaNV"].ToString(),
+                        TenKhach = reader["TenKhach"].ToString(),
+                        NgayLap = Convert.ToDateTime(reader["NgayLap"]),
+
+                    };
+                    list.Add(hd);
                 }
             }
-            catch (Exception)
-            {
-                throw;
-            }
+
             return list;
         }
 
+
         public HoaDon SelectByID(string maHD)
+        {
+            string sql = "  SELECT MaHD, MaNV, TenKhach,NgayLap FROM HoaDon WHERE MaHD = @0";
+            var args = new List<object> { maHD };
+
+            using (SqlDataReader reader = DBUtil.Query(sql, args))
+            {
+                if (reader.Read())
+                {
+                    return new HoaDon
+                    {
+                        MaHD = reader["MaHD"].ToString(),
+                        MaNV = reader["MaNV"].ToString(),
+                        TenKhach = reader["TenKhach"].ToString(),
+                        NgayLap = Convert.ToDateTime(reader["NgayLap"]),
+
+                    };
+                }
+            }
+
+            return null;
+        }
+        public void Delete(string maHD)
         {
             try
             {
-                string sql = "SELECT MaHD, MaNV, NgayLap, TrangThai FROM HoaDon WHERE MaHD = @0";
+                string sql = "DELETE  FROM HoaDon WHERE MaHD = @0";
                 var args = new List<object> { maHD };
-
-                using (SqlDataReader reader = DBUtil.Query(sql, args))
-                {
-                    if (reader.Read())
-                    {
-                        var hd = new HoaDon
-                        {
-                            MaHD = reader["MaHD"].ToString(),
-                            MaNV = reader["MaNV"].ToString(),
-                            NgayLap = Convert.ToDateTime(reader["NgayLap"]),
-                            TrangThai = Convert.ToBoolean(reader["TrangThai"])
-                        };
-                        return hd;
-                    }
-                }
-                return null;
+                DBUtil.Update(sql, args);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception("Lỗi xóa hóa đơn: " + ex.Message);
             }
         }
     }
-    }
+}

@@ -11,146 +11,116 @@ namespace DAL_QuanLyCuaHang
 {
     public class DALPhieuNhap
     {
-        public List<PhieuNhap> SelectBySql(string sql, List<object> args, CommandType cmdType = CommandType.Text)
-        {
-            List<PhieuNhap> list = new List<PhieuNhap>();
-            try
-            {
-                SqlDataReader reader = DBUtil.Query(sql, args);
-                while (reader.Read())
-                {
-                    PhieuNhap entity = new PhieuNhap();
-                    entity.MaPN = reader.GetString("MaPN");
-                    entity.NgayNhap = reader.GetDateTime("NgayNhap");
-                    entity.MaNV = reader.GetString("MaNV");
-                    entity.MaNCC = reader.GetString("MaNCC");
-                    entity.TrangThai = reader.GetBoolean("TrangThai");
-                    list.Add(entity);
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            return list;
-        }
+        private readonly string prefix = "PN";
 
-        public List<PhieuNhap> selectAll()
+       
+        public string TaoMaTuDong()
         {
-            string sql = "SELECT * FROM PhieuNhap";
-            return SelectBySql(sql, new List<object>());
-        }
-
-        public List<PhieuNhap> GetPhieuNhapByMa(string maPN)
-        {
-            string sql = "SELECT * FROM PhieuNhap WHERE MaPN LIKE '%' + @0 + '%'";
-            List<object> thamSo = new List<object> { maPN };
-            return SelectBySql(sql, thamSo);
-        }
-
-        public List<PhieuNhap> GetPhieuNhapByMaNCC(string maNCC)
-        {
-            string sql = "SELECT * FROM PhieuNhap WHERE MaNCC LIKE '%' + @0 + '%'";
-            List<object> thamSo = new List<object> { maNCC };
-            return SelectBySql(sql, thamSo);
-        }
-
-        public void updatePhieuNhap(PhieuNhap pn)
-        {
-            try
-            {
-                string sql = @"UPDATE PhieuNhap 
-                       SET MaNV = @1, MaNCC = @2, NgayNhap = @3, TrangThai = @4 
-                       WHERE MaPN = @0";
-                List<object> thamSo = new List<object>
-        {
-            pn.MaPN,
-            pn.MaNV,
-            pn.MaNCC,
-            pn.NgayNhap,
-            pn.TrangThai
-        };
-                DBUtil.Update(sql, thamSo);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        public string generateMaPN()
-        {
-            string prefix = "PN";
             string sql = "SELECT MaPN FROM PhieuNhap";
             List<object> args = new List<object>();
             List<int> existingNumbers = new List<int>();
 
-            try
+            using (SqlDataReader reader = DBUtil.Query(sql, args, CommandType.Text))
             {
-                using (SqlDataReader reader = DBUtil.Query(sql, args, CommandType.Text))
+                while (reader.Read())
                 {
-                    while (reader.Read())
+                    string maHD = reader["MaPN"].ToString();
+                    if (maHD.StartsWith(prefix) && int.TryParse(maHD.Substring(prefix.Length), out int number))
                     {
-                        string maPN = reader["MaPN"].ToString();
-                        if (maPN.StartsWith(prefix) && int.TryParse(maPN.Substring(prefix.Length), out int number))
-                        {
-                            existingNumbers.Add(number);
-                        }
+                        existingNumbers.Add(number);
                     }
                 }
+            }
 
-                int newNumber = 1;
-                existingNumbers.Sort();
+            int newNumber = 1;
+            existingNumbers.Sort();
+            foreach (int number in existingNumbers)
+            {
+                if (number == newNumber)
+                    newNumber++;
+                else if (number > newNumber)
+                    break;
+            }
 
-                foreach (int number in existingNumbers)
+            return $"{prefix}{newNumber:D3}";
+        }
+        public PhieuNhap SelectByID(string maPN)
+        {
+            string sql = "SELECT MaPN, NgayNhap, MaNV, MaNCC FROM PhieuNhap WHERE MaPN = @0";
+            var args = new List<object> { maPN };
+
+            using (SqlDataReader reader = DBUtil.Query(sql, args))
+            {
+                if (reader.Read())
                 {
-                    if (number == newNumber)
-                        newNumber++;
-                    else if (number > newNumber)
-                        break;
+                    return new PhieuNhap
+                    {
+                        MaPN = reader["MaPN"].ToString(),
+                        NgayNhap = Convert.ToDateTime(reader["NgayNhap"]),
+                        MaNV = reader["MaNV"].ToString(),
+                        MaNCC = reader["MaNCC"].ToString()
+                    };
                 }
+            }
 
-                return $"{prefix}{newNumber:D3}";
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return null;
         }
 
-        public void addPhieuNhap(PhieuNhap pn)
+
+        public List<PhieuNhap> SelectAll(string maNV = null)
+        {
+            var list = new List<PhieuNhap>();
+            string sql = "SELECT MaPN, NgayNhap, MaNV, MaNCC FROM PhieuNhap";
+            var args = new List<object>();
+
+            if (!string.IsNullOrEmpty(maNV))
+            {
+                sql += " WHERE MaNV = @0";
+                args.Add(maNV);
+            }
+
+            using (SqlDataReader reader = DBUtil.Query(sql, args))
+            {
+                while (reader.Read())
+                {
+                    var pn = new PhieuNhap
+                    {
+                        MaPN = reader["MaPN"].ToString(),
+                        NgayNhap = Convert.ToDateTime(reader["NgayNhap"]),
+                        MaNV = reader["MaNV"].ToString(),
+                        MaNCC = reader["MaNCC"].ToString()
+                    };
+                    list.Add(pn);
+                }
+            }
+
+            return list;
+        }
+        public void Insert(PhieuNhap hd)
+        {
+            string sql = @"INSERT INTO PhieuNhap (MaPN, MaNV, MaNCC, NgayNhap) 
+                       VALUES (@0, @1, @2, @3)";
+            var args = new List<object> { hd.MaPN, hd.MaNV, hd.MaNCC, hd.NgayNhap };
+            DBUtil.Update(sql, args);
+        }
+
+        public bool Exists(string maHD)
+        {
+            string sql = " SELECT COUNT(*) FROM PhieuNhap WHERE MaPN  = @0";
+            var args = new List<object> { maHD };
+            return Convert.ToInt32(DBUtil.ScalarQuery(sql, args)) > 0;
+        }
+        public void Delete(string maHD)
         {
             try
             {
-                string sql = @"INSERT INTO PhieuNhap (MaPN, MaNV, MaNCC, NgayNhap, TrangThai) 
-                       VALUES (@0, @1, @2, @3, @4)";
-                List<object> thamSo = new List<object>
-        {
-            pn.MaPN,
-            pn.MaNV,
-            pn.MaNCC,
-            pn.NgayNhap,
-            pn.TrangThai
-        };
-                DBUtil.Update(sql, thamSo);
+                string sql = "DELETE  FROM PhieuNhap WHERE MaPN = @0";
+                var args = new List<object> { maHD };
+                DBUtil.Update(sql, args);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
-            }
-        }
-
-        public void deletePhieuNhap(string maPN)
-        {
-            try
-            {
-                string sql = "DELETE FROM PhieuNhap WHERE MaPN = @0";
-                List<object> thamSo = new List<object> { maPN };
-                DBUtil.Update(sql, thamSo);
-            }
-            catch (Exception)
-            {
-                throw;
+                throw new Exception("Lỗi xóa Phiếu Nhập: " + ex.Message);
             }
         }
     }

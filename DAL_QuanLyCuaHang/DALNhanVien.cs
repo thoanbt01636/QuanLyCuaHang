@@ -209,6 +209,12 @@ namespace DAL_QuanLyCuaHang
                 throw new Exception("Lỗi khi xóa nhân viên.", ex);
             }
         }
-
+        public List<NhanVien> GetNhanVienByMa(string maNV)
+        {
+            string sql = "SELECT * FROM NhanVien WHERE MaNV = @0";
+            List<object> thamSo = new List<object>();
+            thamSo.Add(maNV);
+            return selectBySql(sql, thamSo);
+        }
     }
 }

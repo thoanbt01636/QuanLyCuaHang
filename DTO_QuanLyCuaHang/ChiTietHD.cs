@@ -14,6 +14,7 @@ namespace DTO_QuanLyCuaHang
         public string TenSP { get; set; }
         public int SoLuong { get; set; }
         public decimal DonGia { get; set; }
-        public decimal ThanhTien => DonGia * SoLuong;
+        public decimal GiamGia { get; set; }
+        public decimal ThanhTien => DonGia * SoLuong * (1 - GiamGia / 100);
     }
 }

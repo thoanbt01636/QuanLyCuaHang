@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace DAL_QuanLyCuaHang
 {
     public class DALChiTietPhieuNhap
     {
-        public class DAOChiTietPN
+        public class DALChiTietPN
         {
      
             private List<ChiTietPN> SelectBySql(string sql, List<object> args)
@@ -21,7 +22,7 @@ namespace DAL_QuanLyCuaHang
                 {
                     ChiTietPN ct = new ChiTietPN
                     {
-                        MaCTPN = reader["MaCTPN"].ToString(),
+                      
                         MaPN = reader["MaPN"].ToString(),
                         MaSP = reader["MaSP"].ToString(),
                         TenSP = reader["TenSP"].ToString(),
@@ -33,66 +34,82 @@ namespace DAL_QuanLyCuaHang
                 return list;
             }
 
-            public List<ChiTietPN> SelectAll()
-            {
-                string sql = @"SELECT MaCTPN,MaPN, SanPham.MaSP, SanPham.TenSP,  SoLuong  ,DonGiaNhap
-                        FROM ChiTietPN INNER JOIN SanPham ON SanPham.MaSP = ChiTietPN.MaSP ";
-                return SelectBySql(sql, new List<object>());
-            }
+           
 
             public List<ChiTietPN> SelectByMaPN(string maPN)
             {
-                string sql = "SELECT * FROM ChiTietPN WHERE MaPN = @0";
-                return SelectBySql(sql, new List<object> { maPN });
+
+                string sql = @"
+                SELECT  ct.MaPN, ct.MaSP, ct.SoLuong, ct.DonGiaNhap, sp.TenSP 
+                                FROM ChiTietPN ct 
+                                INNER JOIN SanPham sp ON ct.MaSP = sp.MaSP
+			                    WHERE ct.MaPN =  @0";
+                List<object> thamSo = new List<object>();
+                thamSo.Add(maPN);
+                return SelectBySql(sql, thamSo);
             }
-
-            public void AddChiTietPN(ChiTietPN ct)
+            public ChiTietPN kiemtraMaSP(string maPN, string maSP)
             {
-                string sql = @"INSERT INTO ChiTietPN (MaCTPN, MaPN, MaSP, SoLuong, DonGiaNhap)
-                       VALUES (@0, @1, @2, @3, @4)";
-                List<object> parameters = new List<object>
-        {
-            ct.MaCTPN, ct.MaPN, ct.MaSP, ct.SoLuong, ct.DonGiaNhap
-        };
-                DBUtil.Update(sql, parameters);
-            }
+                string sql = $"SELECT * FROM ChiTietPN WHERE MaPN = '{maPN}' AND MaSP = '{maSP}'";
 
-
-
-
-            public void UpdateChiTietPN(ChiTietPN ct)
-            {
-                string sql = @"UPDATE ChiTietPN 
-                       SET MaPN = @1, MaSP = @2, SoLuong = @3, DonGiaNhap = @4 
-                       WHERE MaCTPN = @0";
-                List<object> parameters = new List<object>
-        {
-            ct.MaCTPN, ct.MaPN, ct.MaSP, ct.SoLuong, ct.DonGiaNhap
-        };
-                DBUtil.Update(sql, parameters);
-            }
-
-            public void DeleteChiTietPN(string maCTPN)
-            {
-                string sql = "DELETE FROM ChiTietPN WHERE MaCTPN = @0";
-                DBUtil.Update(sql, new List<object> { maCTPN });
-            }
-
-            public string GenerateMaCTPN()
-            {
-                string prefix = "CTPN";
-                string sql = "SELECT MAX(MaCTPN) FROM ChiTietPN";
-                object result = DBUtil.ScalarQuery(sql, new List<object>());
-                if (result != null && result.ToString().StartsWith(prefix))
+                using (SqlDataReader reader = DBUtil.Query(sql, null, CommandType.Text))
                 {
-                    string maxCode = result.ToString().Substring(prefix.Length);
-                    int newNumber = int.Parse(maxCode) + 1;
-                    return $"{prefix}{newNumber:D3}";
+                    if (reader.Read())
+                    {
+                        return new ChiTietPN()
+                        {
+                            MaPN = reader["MaPN"].ToString(),
+                            MaSP = reader["MaSP"].ToString(),
+                            SoLuong = Convert.ToInt32(reader["SoLuong"]),
+                            DonGiaNhap = Convert.ToDecimal(reader["DonGia"])
+                        };
+                    }
                 }
-                return $"{prefix}001";
+                return null;
+            }
+            public void Insert(ChiTietPN ct)
+            {
+                string sql = @" INSERT INTO ChiTietPN (MaPN, MaSP, SoLuong, DonGiaNhap, ThanhTien)
+                       VALUES (@0, @1, @2, @3, @4)";
+                var args = new List<object>
+        {
+            ct.MaPN,
+            ct.MaSP,
+            ct.SoLuong,
+            ct.DonGiaNhap,        
+            ct.ThanhTien
+        };
+                DBUtil.Update(sql, args);
+            }
+
+            public void DeleteByMaPN(string maPN)
+            {
+                string sql = "DELETE FROM ChiTietPN WHERE MaPN = @0";
+                var args = new List<object> { maPN };
+                DBUtil.Update(sql, args);
+            }
+            public void UpdateChiTiet(ChiTietPN ct)
+            {
+                string sql = " UPDATE ChiTietPN SET SoLuong = @SoLuong WHERE MaPN = @MaPN AND MaSP = @MaSP";
+
+                using (SqlConnection conn = new SqlConnection(DBUtil.connString))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@SoLuong", ct.SoLuong);
+                        cmd.Parameters.AddWithValue("@MaPN", ct.MaPN);
+                        cmd.Parameters.AddWithValue("@MaSP", ct.MaSP);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            public void DeleteChiTiet(string maHD, string maSP)
+            {
+                string sql = "DELETE FROM ChiTietPN WHERE MaPN = @0 AND MaSP = @1";
+                DBUtil.Update(sql, new List<object> { maHD, maSP });
             }
         }
-
-
     }
 }

@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\a\\QuanLyCuaHang\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\a\\quanlycuahang\\gui_quanlycuahang\\frmquanlyncc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmquanlyncc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|d:\\a\\quanlycuahang\\gui_quanlycuahang\\frmquanlyncc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F7879156-D942-415A-89A8-F785B454D241}|GUI_QuanLyCuaHang\\GUI_QuanLyCuaHang.csproj|solutionrelative:gui_quanlycuahang\\frmquanlyncc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,31 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmQuanLyNCC.cs",
-              "DocumentMoniker": "D:\\a\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNCC.cs",
-              "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmQuanLyNCC.cs",
-              "ToolTip": "D:\\a\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNCC.cs",
-              "RelativeToolTip": "GUI_QuanLyCuaHang\\frmQuanLyNCC.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAApwHIAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T16:42:42.113Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmQuanLyNCC.cs [Design]",
-              "DocumentMoniker": "D:\\a\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNCC.cs",
-              "RelativeDocumentMoniker": "GUI_QuanLyCuaHang\\frmQuanLyNCC.cs",
-              "ToolTip": "D:\\a\\QuanLyCuaHang\\GUI_QuanLyCuaHang\\frmQuanLyNCC.cs [Design]",
-              "RelativeToolTip": "GUI_QuanLyCuaHang\\frmQuanLyNCC.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T16:42:26.717Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -163,7 +163,7 @@ namespace DAL_QuanLyCuaHang
                         break;
                 }
 
-                return $"{prefix}{newNumber:D4}";
+                return $"{prefix}{newNumber:D3}";
             }
             catch (Exception)
             {
@@ -180,6 +180,18 @@ namespace DAL_QuanLyCuaHang
         {
             string sql = "SELECT * FROM SanPham WHERE TenSP LIKE '%' + @0 + '%'";
             return SelectBySql(sql, new List<object> { ten });
+        }
+        public int GetSoLuongTon(string maSP)
+        {
+            string sql = "SELECT SoLuongTon FROM SanPham WHERE MaSP = @0";
+            using (var reader = DBUtil.Query(sql, new List<object> { maSP }) as SqlDataReader)
+            {
+                if (reader != null && reader.Read())
+                {
+                    return reader.GetInt32(0);
+                }
+            }
+            return 0;
         }
     }
 }

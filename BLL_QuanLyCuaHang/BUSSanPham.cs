@@ -47,7 +47,7 @@ namespace BLL_QuanLyCuaHang
                 if (string.IsNullOrEmpty(sp.MaSP))
                 {
                     return "Mã sản phẩm không hợp lệ.";
-                }              
+                }
 
                 dalSanPham.updateSanPham(sp);
                 return string.Empty;
@@ -94,6 +94,10 @@ namespace BLL_QuanLyCuaHang
             {
                 throw new Exception("Lỗi khi tìm kiếm Sản phẩm: " + ex.Message);
             }
+        }
+        public int GetSoLuongTon(string maSP)
+        {
+            return dalSanPham.GetSoLuongTon(maSP);
         }
     }
 }

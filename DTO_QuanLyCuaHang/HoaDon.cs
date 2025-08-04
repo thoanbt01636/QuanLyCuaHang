@@ -9,9 +9,8 @@ namespace DTO_QuanLyCuaHang
     public class HoaDon
     {
         public string MaHD { get; set; }
+        public string TenKhach { get; set; }
         public DateTime NgayLap { get; set; }
         public string MaNV { get; set; }
-        public bool TrangThai { get; set; }
-        public string TrangThaiTex => TrangThai ? "Đã Thanh Toán " : "Chờ Thanh Toán";
     }
 }
