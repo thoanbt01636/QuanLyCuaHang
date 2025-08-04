@@ -83,7 +83,6 @@ namespace GUI_QuanLyThuVien
         {
             BUSLoaiSP bUSLoaiSP = new BUSLoaiSP();
             textMaLoaiSP.Enabled = false;
-            textMaLoaiSP.Text = bUSLoaiSP.TaoMaTuDong();
             btnthem.Enabled = true;
             btncapnhat.Enabled = false;
             btnxoa.Enabled = true;

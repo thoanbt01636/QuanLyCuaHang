@@ -113,7 +113,7 @@
             guna2GroupBox2.Size = new Size(534, 541);
             guna2GroupBox2.TabIndex = 103;
             guna2GroupBox2.TabStop = false;
-            guna2GroupBox2.Text = "Thông Tin Nhân Viên";
+            guna2GroupBox2.Text = "Thông Tin Sản Phẩm";
             guna2GroupBox2.Click += guna2GroupBox2_Click;
             // 
             // txtSoluongton

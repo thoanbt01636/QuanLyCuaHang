@@ -82,3 +82,15 @@ D:\a\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\DTO_QuanLyCuaHang.dll
 D:\a\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\refint\DTO_QuanLyCuaHang.dll
 D:\a\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\DTO_QuanLyCuaHang.pdb
 D:\a\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\ref\DTO_QuanLyCuaHang.dll
+E:\New folder\QuanLyCuaHang\DTO_QuanLyCuaHang\bin\Debug\net8.0\DTO_QuanLyCuaHang.deps.json
+E:\New folder\QuanLyCuaHang\DTO_QuanLyCuaHang\bin\Debug\net8.0\DTO_QuanLyCuaHang.dll
+E:\New folder\QuanLyCuaHang\DTO_QuanLyCuaHang\bin\Debug\net8.0\DTO_QuanLyCuaHang.pdb
+E:\New folder\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\DTO_QuanLyCuaHang.GeneratedMSBuildEditorConfig.editorconfig
+E:\New folder\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\DTO_QuanLyCuaHang.AssemblyInfoInputs.cache
+E:\New folder\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\DTO_QuanLyCuaHang.AssemblyInfo.cs
+E:\New folder\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\DTO_QuanLyCuaHang.csproj.CoreCompileInputs.cache
+E:\New folder\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\DTO_QuanLyCuaHang.sourcelink.json
+E:\New folder\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\DTO_QuanLyCuaHang.dll
+E:\New folder\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\refint\DTO_QuanLyCuaHang.dll
+E:\New folder\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\DTO_QuanLyCuaHang.pdb
+E:\New folder\QuanLyCuaHang\DTO_QuanLyCuaHang\obj\Debug\net8.0\ref\DTO_QuanLyCuaHang.dll

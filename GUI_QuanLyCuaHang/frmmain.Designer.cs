@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmain));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -56,10 +59,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmain));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel3 = new Panel();
+            guna2GradientButton10 = new Guna.UI2.WinForms.Guna2GradientButton();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2GradientButton9 = new Guna.UI2.WinForms.Guna2GradientButton();
             guna2GradientButton8 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -74,7 +75,6 @@
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2GradientButton10 = new Guna.UI2.WinForms.Guna2GradientButton();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -102,6 +102,30 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(338, 796);
             panel3.TabIndex = 106;
+            // 
+            // guna2GradientButton10
+            // 
+            guna2GradientButton10.CustomizableEdges = customizableEdges1;
+            guna2GradientButton10.DisabledState.BorderColor = Color.DarkGray;
+            guna2GradientButton10.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2GradientButton10.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2GradientButton10.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            guna2GradientButton10.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2GradientButton10.FillColor = Color.FromArgb(255, 237, 168);
+            guna2GradientButton10.FillColor2 = Color.FromArgb(255, 237, 168);
+            guna2GradientButton10.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            guna2GradientButton10.ForeColor = Color.Black;
+            guna2GradientButton10.HoverState.FillColor = Color.FromArgb(253, 191, 55);
+            guna2GradientButton10.Image = (Image)resources.GetObject("guna2GradientButton10.Image");
+            guna2GradientButton10.ImageAlign = HorizontalAlignment.Left;
+            guna2GradientButton10.ImageSize = new Size(50, 50);
+            guna2GradientButton10.Location = new Point(3, 468);
+            guna2GradientButton10.Name = "guna2GradientButton10";
+            guna2GradientButton10.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2GradientButton10.Size = new Size(331, 51);
+            guna2GradientButton10.TabIndex = 118;
+            guna2GradientButton10.Text = "Thống Kê LSP";
+            guna2GradientButton10.Click += guna2GradientButton10_Click;
             // 
             // guna2PictureBox2
             // 
@@ -142,7 +166,7 @@
             guna2GradientButton9.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2GradientButton9.Size = new Size(331, 51);
             guna2GradientButton9.TabIndex = 116;
-            guna2GradientButton9.Text = "Quản Lý Nhân Viên";
+            guna2GradientButton9.Text = "Nhân Viên";
             guna2GradientButton9.Click += guna2GradientButton9_Click;
             // 
             // guna2GradientButton8
@@ -185,12 +209,12 @@
             guna2GradientButton7.Image = (Image)resources.GetObject("guna2GradientButton7.Image");
             guna2GradientButton7.ImageAlign = HorizontalAlignment.Left;
             guna2GradientButton7.ImageSize = new Size(50, 50);
-            guna2GradientButton7.Location = new Point(3, 199);
+            guna2GradientButton7.Location = new Point(1, 535);
             guna2GradientButton7.Name = "guna2GradientButton7";
             guna2GradientButton7.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2GradientButton7.Size = new Size(331, 51);
             guna2GradientButton7.TabIndex = 114;
-            guna2GradientButton7.Text = "Quản Lý Thống Kê NV";
+            guna2GradientButton7.Text = "Thống Kê NV";
             guna2GradientButton7.Click += guna2GradientButton7_Click;
             // 
             // guna2GradientButton6
@@ -209,12 +233,12 @@
             guna2GradientButton6.Image = (Image)resources.GetObject("guna2GradientButton6.Image");
             guna2GradientButton6.ImageAlign = HorizontalAlignment.Left;
             guna2GradientButton6.ImageSize = new Size(50, 50);
-            guna2GradientButton6.Location = new Point(4, 416);
+            guna2GradientButton6.Location = new Point(5, 271);
             guna2GradientButton6.Name = "guna2GradientButton6";
             guna2GradientButton6.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2GradientButton6.Size = new Size(330, 51);
             guna2GradientButton6.TabIndex = 113;
-            guna2GradientButton6.Text = "Quản Lý Sản Phẩm";
+            guna2GradientButton6.Text = "Sản Phẩm";
             guna2GradientButton6.Click += guna2GradientButton6_Click;
             // 
             // guna2GradientButton5
@@ -233,12 +257,12 @@
             guna2GradientButton5.Image = GUI_QuanLyCuaHang.Properties.Resources.icons8_management_50;
             guna2GradientButton5.ImageAlign = HorizontalAlignment.Left;
             guna2GradientButton5.ImageSize = new Size(50, 50);
-            guna2GradientButton5.Location = new Point(7, 474);
+            guna2GradientButton5.Location = new Point(6, 335);
             guna2GradientButton5.Name = "guna2GradientButton5";
             guna2GradientButton5.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2GradientButton5.Size = new Size(327, 51);
             guna2GradientButton5.TabIndex = 112;
-            guna2GradientButton5.Text = "Quản Lý Nhà Cung Cấp";
+            guna2GradientButton5.Text = "Nhà Cung Cấp";
             guna2GradientButton5.Click += guna2GradientButton5_Click;
             // 
             // guna2GradientButton4
@@ -305,12 +329,12 @@
             guna2GradientButton1.Image = (Image)resources.GetObject("guna2GradientButton1.Image");
             guna2GradientButton1.ImageAlign = HorizontalAlignment.Left;
             guna2GradientButton1.ImageSize = new Size(50, 50);
-            guna2GradientButton1.Location = new Point(4, 538);
+            guna2GradientButton1.Location = new Point(3, 204);
             guna2GradientButton1.Name = "guna2GradientButton1";
             guna2GradientButton1.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2GradientButton1.Size = new Size(330, 51);
             guna2GradientButton1.TabIndex = 109;
-            guna2GradientButton1.Text = "Quản Lý Loại Sản Phẩm";
+            guna2GradientButton1.Text = "Loại Sản Phẩm";
             guna2GradientButton1.Click += guna2GradientButton1_Click;
             // 
             // guna2GradientButton2
@@ -329,12 +353,12 @@
             guna2GradientButton2.Image = (Image)resources.GetObject("guna2GradientButton2.Image");
             guna2GradientButton2.ImageAlign = HorizontalAlignment.Left;
             guna2GradientButton2.ImageSize = new Size(50, 50);
-            guna2GradientButton2.Location = new Point(4, 344);
+            guna2GradientButton2.Location = new Point(3, 401);
             guna2GradientButton2.Name = "guna2GradientButton2";
             guna2GradientButton2.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2GradientButton2.Size = new Size(330, 54);
             guna2GradientButton2.TabIndex = 106;
-            guna2GradientButton2.Text = "Quản Lý Phiếu Nhập";
+            guna2GradientButton2.Text = "Phiếu Nhập";
             guna2GradientButton2.Click += guna2GradientButton2_Click_1;
             // 
             // guna2PictureBox1
@@ -386,30 +410,6 @@
             guna2PictureBox4.Size = new Size(8, 8);
             guna2PictureBox4.TabIndex = 108;
             guna2PictureBox4.TabStop = false;
-            // 
-            // guna2GradientButton10
-            // 
-            guna2GradientButton10.CustomizableEdges = customizableEdges1;
-            guna2GradientButton10.DisabledState.BorderColor = Color.DarkGray;
-            guna2GradientButton10.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2GradientButton10.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2GradientButton10.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-            guna2GradientButton10.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2GradientButton10.FillColor = Color.FromArgb(255, 237, 168);
-            guna2GradientButton10.FillColor2 = Color.FromArgb(255, 237, 168);
-            guna2GradientButton10.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
-            guna2GradientButton10.ForeColor = Color.Black;
-            guna2GradientButton10.HoverState.FillColor = Color.FromArgb(253, 191, 55);
-            guna2GradientButton10.Image = (Image)resources.GetObject("guna2GradientButton10.Image");
-            guna2GradientButton10.ImageAlign = HorizontalAlignment.Left;
-            guna2GradientButton10.ImageSize = new Size(50, 50);
-            guna2GradientButton10.Location = new Point(4, 268);
-            guna2GradientButton10.Name = "guna2GradientButton10";
-            guna2GradientButton10.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2GradientButton10.Size = new Size(331, 51);
-            guna2GradientButton10.TabIndex = 118;
-            guna2GradientButton10.Text = "Quản Lý Thống Kê LSP";
-            guna2GradientButton10.Click += guna2GradientButton10_Click;
             // 
             // frmmain
             // 

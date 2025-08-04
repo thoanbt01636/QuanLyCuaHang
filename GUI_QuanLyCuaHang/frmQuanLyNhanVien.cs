@@ -31,7 +31,7 @@ namespace GUI_QuanLyThuVien
         {
             BUSNhanVien bUSNhanVien = new BUSNhanVien();
             textMaNV.Clear();
-            textMaNV.Text = bUSNhanVien.TaoMaTuDong();
+ 
             textHoTen.Clear();
             textEmail.Clear();
             textMatKhau.Clear();

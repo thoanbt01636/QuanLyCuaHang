@@ -22,9 +22,9 @@ namespace GUI_QuanLyCuaHang
             string username = txtTaiKhoan.Text;
             string password = txtMatKhau.Text;
             //nhập chay
-            //NhanVien nv = bUSNhanVien.DangNhap(username, password);
+            NhanVien nv = bUSNhanVien.DangNhap(username, password);
             //quản lý
-            NhanVien nv = bUSNhanVien.DangNhap("minh2410@gmail.com", "matkhau123");
+            //NhanVien nv = bUSNhanVien.DangNhap("minh2410@gmail.com", "matkhau123");
 
             if (nv == null)
             {
@@ -37,8 +37,11 @@ namespace GUI_QuanLyCuaHang
                 MessageBox.Show(this, "đăng nhập thành công");
                 frmmain home = new frmmain();
                 home.Show();
+                this.Hide();
+
             }
             AuthUtil.User = nv;
+            
         }
         private void loadlai()
         {

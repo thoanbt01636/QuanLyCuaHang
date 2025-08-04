@@ -41,7 +41,6 @@ namespace GUI_QuanLyThuVien
         {
             BUSSanPham bUSSanPham = new BUSSanPham();
             textMaSP.Clear();
-            textMaSP.Text = bUSSanPham.TaoMaTuDong();
             btnThem.Enabled = true;
             btnCapNhat.Enabled = false;
             btnXoa.Enabled = true;

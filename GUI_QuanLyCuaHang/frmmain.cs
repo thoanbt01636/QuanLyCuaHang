@@ -147,7 +147,10 @@ namespace GUI_QuanLyThuVien
             DialogResult result = MessageBox.Show("bạn có muốn thoát khỏi chương trình ", "thoát",
                            MessageBoxButtons.YesNo,
                            MessageBoxIcon.Question);
-            if (result == DialogResult.Yes) { Application.Exit(); }
+            AuthUtil.User = null;
+            frmDangNhap login = new frmDangNhap();
+            login.Show();
+            this.Hide();
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)

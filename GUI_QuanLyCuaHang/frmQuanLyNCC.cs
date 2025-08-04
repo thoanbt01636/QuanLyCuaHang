@@ -106,7 +106,6 @@ namespace GUI_QuanLyThuVien
         {
             BUSNhaCungCap bUSNhaCungCap = new BUSNhaCungCap();
             txtMaNCC.Clear();
-            txtMaNCC.Text = bUSNhaCungCap.TaoMaTuDong();
             txtMaNCC.Enabled = false;
             textTenNCC.Clear();
             textDienThoai.Clear();
