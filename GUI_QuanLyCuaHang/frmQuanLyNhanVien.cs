@@ -31,7 +31,7 @@ namespace GUI_QuanLyThuVien
         {
             BUSNhanVien bUSNhanVien = new BUSNhanVien();
             textMaNV.Clear();
- 
+
             textHoTen.Clear();
             textEmail.Clear();
             textMatKhau.Clear();
@@ -264,6 +264,11 @@ namespace GUI_QuanLyThuVien
             {
                 MessageBox.Show("Không tìm thấy nhân viên nào phù hợp!", "Kết quả tìm kiếm", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+        }
+
+        private void guna2GradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

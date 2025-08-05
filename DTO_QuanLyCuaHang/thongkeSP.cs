@@ -14,6 +14,6 @@ namespace DTO_QuanLyCuaHang
         public int SoLuongPhieu { get; set; }
         public string NgayBan { get; set; }
         public string TongTien { get; set; }
-        public string DaThanhToan { get; set; }
+        public string TrangThai { get; set; }
     }
 }

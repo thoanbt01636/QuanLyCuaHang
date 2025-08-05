@@ -41,7 +41,8 @@ namespace DAL_QuanLyCuaHang
                             tk.SoLy = reader["SoLuongBan"] != DBNull.Value ? Convert.ToInt32(reader["SoLuongBan"]) : 0;
                             tk.SoLuongPhieu = reader["SoLuongHoaDon"] != DBNull.Value ? Convert.ToInt32(reader["SoLuongHoaDon"]) : 0;
                             tk.NgayBan = reader["NgayBan"] != DBNull.Value ? Convert.ToDateTime(reader["NgayBan"]).ToString("dd/MM/yyyy") : "";
-                            tk.TongTien = reader["TongTien"] != DBNull.Value ? Convert.ToDecimal(reader["TongTien"]).ToString("#,0") : "0";                           
+                            tk.TongTien = reader["TongTien"] != DBNull.Value ? Convert.ToDecimal(reader["TongTien"]).ToString("#,0") : "0";
+                            tk.TrangThai = reader["TrangThai"] != DBNull.Value && Convert.ToBoolean(reader["TrangThai"]) ? "Đã Thanh Toán" : "Chưa Thanh Toán";
                             result.Add(tk);
                             }
                         }
@@ -81,7 +82,7 @@ namespace DAL_QuanLyCuaHang
                             tksp.SoLuongPhieu = reader["SoLuongHoaDon"] != DBNull.Value ? Convert.ToInt32(reader["SoLuongHoaDon"]) : 0;
                             tksp.NgayBan = reader["NgayBan"] != DBNull.Value ? Convert.ToDateTime(reader["NgayBan"]).ToString("dd/MM/yyyy") : "";
                             tksp.TongTien = reader["TongTien"] != DBNull.Value ? Convert.ToDecimal(reader["TongTien"]).ToString("#,0") : "0";
-
+                            tksp.TrangThai = reader["TrangThai"] != DBNull.Value && Convert.ToBoolean(reader["TrangThai"]) ? "Đã Thanh Toán" : "Chưa Thanh Toán";
                             result.Add(tksp);
                         }
 

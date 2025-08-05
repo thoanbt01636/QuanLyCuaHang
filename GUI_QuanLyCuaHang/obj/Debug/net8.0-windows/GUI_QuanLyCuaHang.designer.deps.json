@@ -47,8 +47,8 @@
         },
         "runtime": {
           "lib/net7.0-windows7.0/Guna.UI2.dll": {
-            "assemblyVersion": "2.0.4.4",
-            "fileVersion": "2.0.4.4"
+            "assemblyVersion": "2.0.4.6",
+            "fileVersion": "2.0.4.6"
           }
         }
       },

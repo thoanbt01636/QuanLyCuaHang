@@ -36,7 +36,7 @@ namespace GUI_QuanLyThuVien
             if (!string.IsNullOrEmpty(tuKhoa))
             {
                 danhSach = danhSach.Where(pn =>
-                    
+
                     pn.MaNCC.Contains(tuKhoa, StringComparison.OrdinalIgnoreCase)
                 ).ToList();
             }
@@ -48,7 +48,7 @@ namespace GUI_QuanLyThuVien
 
             guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-        
+
 
 
         private void frmQuanLyNCC_Load(object sender, EventArgs e)
@@ -230,6 +230,16 @@ namespace GUI_QuanLyThuVien
         {
             ClearForm();
             LoadNhaCungCap();
+        }
+
+        private void guna2GroupBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textTimKiem_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
